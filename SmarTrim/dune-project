@@ -1,0 +1,34 @@
+(lang dune 3.17)
+
+(name verismart)
+
+(maintainers "")
+
+(generate_opam_files true)
+
+(license LICENSE)
+
+(documentation https://not/implemented)
+
+(package
+ (name verismart)
+ (synopsis "An automated verificator for Solidity smart contracts")
+ (description "An automated verificator for Solidity smart contracts but a longer description")
+ (depends 
+  (ocaml (>= 5.1.1))
+  dune
+  (batteries (>= 3.9.0))
+  (climate (= 0.8.2)) ; modern CLI parser
+  csv
+  digestif ; cryptohash (e.g. keccak256)
+  lwt ; lightweight threads, parallel programming
+  ocamlgraph
+  (ppx_jane (>= 0.17.0)) ; inline tests, string interpolation, auto getter generation, etc
+  (ppx_yojson_conv (>= 0.17.0)) ; automation of yojson loading
+  (ppx_deriving (>= 6.0.3)) ; automation of to-string generation
+  (pyml (>= 20231101))
+  re ; regex combinator
+  (yojson (>= 2.2.2))
+  z3))
+
+; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project

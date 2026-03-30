@@ -1,0 +1,8 @@
+(library
+ (name options)
+ (public_name verismart.options)
+ (flags
+  (:standard -open Ppx_compare_lib.Builtin))
+ (preprocess
+  (pps ppx_jane ppx_deriving.show))
+ (libraries batteries yojson climate vocab solc))

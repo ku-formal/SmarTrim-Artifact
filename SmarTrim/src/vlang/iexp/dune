@@ -1,0 +1,6 @@
+(library
+ (name iexp)
+ (public_name verismart.iexp)
+ (preprocess
+  (pps ppx_deriving.show))
+ (libraries vocab))

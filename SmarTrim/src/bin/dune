@@ -1,0 +1,9 @@
+(executables
+ (names main solver_test)
+ (public_names verismart valismartest)
+ (flags
+  (:standard -open Vocab -open Vocab.Batteries -open Vocab.Shadow_batteries))
+ (libraries verify frontend exploit pre repair bugsynth)
+ (promote
+  (until-clean)
+  (into ../..)))

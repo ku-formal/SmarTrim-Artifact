@@ -1,0 +1,6 @@
+(library
+ (name checker)
+ (public_name verismart.checker)
+ (preprocess
+  (pps ppx_deriving.show ppx_jane))
+ (libraries semantics))

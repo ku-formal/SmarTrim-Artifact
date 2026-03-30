@@ -1,0 +1,11 @@
+id,main_name,loc,address,compiler_version,is_multiple,fail,code_hash,duplicate_of,actual_order
+0390,TetherUSD,146,0xf115A174789a87B55E0f70D425Ee7d581a23cB54,v0.8.0+commit.c7dfd78e,False,,96343c39c02b4f55,,1489.0
+1515,BitCalling,131,0x2f5841ba9836de7f4ff9f7a243c9acb2a2265818,v0.8.26+commit.8a97fa7a,False,,7d449230af68c445,,1232.0
+1547,BitCalling,140,0xa338267c3fdcd89b702b6cfa0840ea6e12f8847d,v0.8.26+commit.8a97fa7a,False,,a8bb33fcd7f53eb6,,1661.0
+1580,USDT,183,0xe35a55c31a6b65c1492009b3e0af5085e13e727b,v0.8.26+commit.8a97fa7a,False,,d0c203d0a633ba60,,2082.0
+1625,BitCalling,156,0xe6bf8387d85641fb478e90ac02c28bab5b85a0ae,v0.8.26+commit.8a97fa7a,False,,b20cef5be3da676d,,1769.0
+1722,BitCalling,93,0x678eef67d56f2e09655ca8ee8a683fbcac94a625,v0.8.26+commit.8a97fa7a,False,,5d0d15035fa849f6,,910.0
+1727,BitCalling,91,0x55ba02ce42052326ec37fc0ace3e7f5cafb97d0d,v0.8.26+commit.8a97fa7a,False,,cc04b799f893e654,,2041.0
+2289,Token,1210,0xa8a9f36935ad461516306ded2218ff2673daec7b,v0.8.28+commit.7893614a,False,,ae26c6de5d82756e,,1716.0
+2716,DeFiAg,782,0x309d1caC4E4093b1DD7C9D7721e33d851780F947,v0.8.22+commit.4fc1097e,False,,377c06649858e4af,,540.0
+4975,JiffPom,415,0x0754aabd256fc6af94b33cfb382a582a3cea0280,v0.8.19+commit.7dd6d404,True,,d0ab2f2b513c0724,,2080.0

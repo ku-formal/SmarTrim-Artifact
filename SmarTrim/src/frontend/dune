@@ -1,0 +1,16 @@
+(library
+ (name frontend)
+ (public_name verismart.frontend)
+ (flags
+  (:standard
+   -open
+   Vocab
+   -open
+   Vocab.Batteries
+   -open
+   Vocab.Shadow_batteries
+   -open
+   Ppx_compare_lib.Builtin))
+ (preprocess
+  (pps ppx_jane ppx_deriving.show))
+ (libraries bv say ocamlgraph options))

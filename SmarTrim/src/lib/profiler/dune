@@ -1,0 +1,4 @@
+(library
+ (name profiler)
+ (public_name verismart.profiler)
+ (libraries unix))

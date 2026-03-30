@@ -1,0 +1,9 @@
+(library
+ (name pre)
+ (public_name verismart.pre)
+ (wrapped false)
+ (preprocess
+  (pps ppx_jane ppx_deriving.show))
+ (libraries frontend vlang profiler))
+
+(include_subdirs unqualified)

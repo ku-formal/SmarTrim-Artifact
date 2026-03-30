@@ -1,0 +1,8 @@
+src/bugsynth/**
+src/pre/callGraph.ml
+src/pre/makeCfg.ml
+src/pre/patternAnalysis.ml
+src/pre/interval/**
+src/repair/**
+src/verify/**
+src/exploit/unused/**

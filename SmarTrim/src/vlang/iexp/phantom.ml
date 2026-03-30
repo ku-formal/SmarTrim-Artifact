@@ -1,0 +1,7 @@
+type signed = [ `S ]
+type unsigned = [ `U ]
+type t_bool = [ `Bl ]
+type ('sign, 'bit) t_bv = [ `Bv of 'sign * 'bit ] constraint 'sign = [< signed | unsigned ]
+type t_str = [ `St ]
+type 'id t_uninterp = [ `Un of 'id ]
+type ('dom, 'codom) t_arr = [ `Ar of 'dom * 'codom ]

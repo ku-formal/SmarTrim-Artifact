@@ -1,0 +1,7 @@
+(library
+ (name test)
+ (public_name verismart.test)
+ (inline_tests)
+ (preprocess
+  (pps ppx_inline_test))
+ (libraries exploit))

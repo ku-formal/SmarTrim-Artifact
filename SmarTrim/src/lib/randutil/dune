@@ -1,0 +1,4 @@
+(library
+ (name randutil)
+ (public_name verismart.randutil)
+ (libraries crypto))

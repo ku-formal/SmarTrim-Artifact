@@ -1,0 +1,60 @@
+validation-files
+outdir
+_build
+_opam/
+dune.lock
+
+# executable file built by ./build
+main.native
+
+# executable file built by dune
+/*.exe
+
+# ignore workspace
+_build/
+.model/*
+.solc/*
+!.solc/.empty
+_validator_workspace/*
+_workspace/*
+__pycache__
+
+/*.sol
+/*.csv
+*.swp
+20*
+src/exploit/train/*.csv
+src/exploit/train/*.txt
+result_cve*
+result_leak*
+xyzp_*
+repair_results/*
+!repair_results/.empty
+output/*
+!output/.empty
+__pycache__
+
+resource/*
+!resource/.empty
+!resource/pretrained
+!resource/setup_bugsynth.sh
+resource/pretrained/*
+!resource/pretrained/.empty
+
+a.py
+scripts/a25/*.csv
+scripts/a25/sim.py
+
+# outputs
+.expr_result/*
+output.png
+output.txt
+/.*.txt
+
+# Webhook API KEY
+slack-webhook.txt
+
+# Some system files
+.vscode
+.DS_Store
+wget-log

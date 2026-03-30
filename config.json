@@ -1,0 +1,10 @@
+{
+    "jobs": {
+        "ls:rlf": 3,
+        "default": 24
+    },
+    "timeout": 3,
+    "kill_timeout": 10,
+    "start_alarm_to_slack": false,
+    "end_alarm_to_slack": false
+}

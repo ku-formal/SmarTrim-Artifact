@@ -1,0 +1,387 @@
+{
+  "contractName": "Destroyable",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "destroy",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.25+commit.59dbf8f1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"destroy\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/0x34afa7ff9a8eb4d8e61145ca81e2d0dab7b03662.sol\":\"Destroyable\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/0x34afa7ff9a8eb4d8e61145ca81e2d0dab7b03662.sol\":{\"keccak256\":\"0x90b2f8daebfe87bc1d5e4b2d7d477419ec3b6e7e9f1fa9fbd059b3aae42c059f\",\"urls\":[\"bzzr://a11e975c3cb95cb563a4c4d35d85b46ecebe3178dd5841c49070c073be44bd29\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50609d8061001e6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806383197ef0146044575b600080fd5b348015604f57600080fd5b5060566058565b005b3073ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a72305820e657e181f182867e1493eed47c7ac5dbe3b020c073dd2566c05ad44a3ea14e390029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806383197ef0146044575b600080fd5b348015604f57600080fd5b5060566058565b005b3073ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a72305820e657e181f182867e1493eed47c7ac5dbe3b020c073dd2566c05ad44a3ea14e390029",
+  "sourceMap": "2:102:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2:102:0;;;;;;;",
+  "deployedSourceMap": "2:102:0:-;;;;;;;;;;;;;;;;;;;;;;;;33:69;;8:9:-1;5:2;;;30:1;27;20:12;5:2;33:69:0;;;;;;;89:4;68:27;;",
+  "source": "\n\ncontract Destroyable{\n    \n    function destroy() public{\n        selfdestruct(address(this));\n    }\n}",
+  "sourcePath": "/home/XXX-1/smartrim-experiment/for-rlf/0x34afa7ff9a8eb4d8e61145ca81e2d0dab7b03662/contracts/0x34afa7ff9a8eb4d8e61145ca81e2d0dab7b03662.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/0x34afa7ff9a8eb4d8e61145ca81e2d0dab7b03662.sol",
+    "exportedSymbols": {
+      "Destroyable": [
+        11
+      ]
+    },
+    "id": 12,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 11,
+        "linearizedBaseContracts": [
+          11
+        ],
+        "name": "Destroyable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 9,
+              "nodeType": "Block",
+              "src": "58:44:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 5,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 96,
+                            "src": "89:4:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Destroyable_$11",
+                              "typeString": "contract Destroyable"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_Destroyable_$11",
+                              "typeString": "contract Destroyable"
+                            }
+                          ],
+                          "id": 4,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "81:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 6,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "81:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 3,
+                      "name": "selfdestruct",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 91,
+                      "src": "68:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 7,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "68:27:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 8,
+                  "nodeType": "ExpressionStatement",
+                  "src": "68:27:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "destroy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "49:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "58:0:0"
+            },
+            "scope": 11,
+            "src": "33:69:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 12,
+        "src": "2:102:0"
+      }
+    ],
+    "src": "2:102:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/0x34afa7ff9a8eb4d8e61145ca81e2d0dab7b03662.sol",
+      "exportedSymbols": {
+        "Destroyable": [
+          11
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            11
+          ],
+          "name": "Destroyable",
+          "scope": 12
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "destroy",
+              "payable": false,
+              "scope": 11,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1,
+                "name": "ParameterList",
+                "src": "49:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2,
+                "name": "ParameterList",
+                "src": "58:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 91,
+                              "type": "function (address)",
+                              "value": "selfdestruct"
+                            },
+                            "id": 3,
+                            "name": "Identifier",
+                            "src": "68:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "address",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_contract$_Destroyable_$11",
+                                      "typeString": "contract Destroyable"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(address)",
+                                  "value": "address"
+                                },
+                                "id": 4,
+                                "name": "ElementaryTypeNameExpression",
+                                "src": "81:7:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 96,
+                                  "type": "contract Destroyable",
+                                  "value": "this"
+                                },
+                                "id": 5,
+                                "name": "Identifier",
+                                "src": "89:4:0"
+                              }
+                            ],
+                            "id": 6,
+                            "name": "FunctionCall",
+                            "src": "81:13:0"
+                          }
+                        ],
+                        "id": 7,
+                        "name": "FunctionCall",
+                        "src": "68:27:0"
+                      }
+                    ],
+                    "id": 8,
+                    "name": "ExpressionStatement",
+                    "src": "68:27:0"
+                  }
+                ],
+                "id": 9,
+                "name": "Block",
+                "src": "58:44:0"
+              }
+            ],
+            "id": 10,
+            "name": "FunctionDefinition",
+            "src": "33:69:0"
+          }
+        ],
+        "id": 11,
+        "name": "ContractDefinition",
+        "src": "2:102:0"
+      }
+    ],
+    "id": 12,
+    "name": "SourceUnit",
+    "src": "2:102:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
+  },
+  "networks": {
+    "1755142789299": {
+      "events": {},
+      "links": {},
+      "address": "0x724F259aEe54E29b78536457a05BB992C771D252",
+      "transactionHash": "0xf9dbfa20b4129e7c3c774ce89d6a9502e5db1ecc9515c52d10fef2209687942c"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2025-08-14T03:39:52.085Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

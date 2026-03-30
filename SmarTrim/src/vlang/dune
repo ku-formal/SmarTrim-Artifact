@@ -1,0 +1,8 @@
+(library
+ (name vlang)
+ (public_name verismart.vlang)
+ (flags
+  (:standard -open Vocab -open Vocab.Batteries -open Ppx_compare_lib.Builtin))
+ (preprocess
+  (pps ppx_jane ppx_deriving.show))
+ (libraries z3 frontend union_find say))

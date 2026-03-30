@@ -1,0 +1,6 @@
+(library
+ (name solc)
+ (public_name verismart.solc)
+ (preprocess
+  (pps ppx_deriving.show ppx_jane))
+ (libraries dfa digestif lwt.unix re vocab yojson))

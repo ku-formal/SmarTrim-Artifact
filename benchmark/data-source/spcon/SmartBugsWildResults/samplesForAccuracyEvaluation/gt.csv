@@ -1,0 +1,341 @@
+address,tp:origin,fp:origin,reason:origin
+"0xf3dce610acbfbcbb4efc12c4c2e3be063128baad",,"1","No unrestricted ether transfer, No suicidal"
+"0x17e5f19d430788323863c6798ecd762a40de29f5","1",,"change owners and then withdraw ether"
+"0x05f8b281410c9327a1bbf508db380fd967c31df6","1",,"suicidal contract"
+"0xe923dd860176d3ef69d7852257cc773900807f7c",,"1","No unrestricted ether transfer, No suicidal"
+"0xd152f549545093347a162dce210e7293f1452150",,"1","Contract ether always kept zero. No ether to steal"
+"0x724e3a236d3e9c8ad2c3d1aff181118e6e9b3026","1",,"change owners and then withdraw ether"
+"0xf34839b310097fcb4cf3a302dda8cc9b57501083","1",,"change owners and then withdraw ether"
+"0x9db3fd94a5bb1acdaef28ae483fe6b0d49746678","1",,"change owners and then withdraw ether"
+"0x13a517751318cce71a524006b16f7930b3515ccf","1",,"change owners and then withdraw ether"
+"0x3bcaf56923335062e8f272d011efd2e40fa42147","1",,"change owners and then withdraw ether"
+"0x07419940b9a2d1eb54e123bd4853240ffac77186",,"1","No unrestricted ether transfer, No suicidal"
+"0xa5fccc3f1a4e56fda5a86f0fe8b7558881b67523",,"1","No unrestricted ether transfer, No suicidal"
+"0x612f1bdbe93523b7f5036efa87493b76341726e3","1",,"change owners and then withdraw ether"
+"0x43f208d94a82cc2749a140b5e82636f31ce0390d","1",,"loser and draw can unrestrictedly withdraw ether"
+"0x9f4fd6c336388f2ab7dc7bbe4740ae7b88b880d7",,"1","No unrestricted ether transfer, No suicidal"
+"0xd58132f2fbd65f02beee0626542e6ee059009ab4","1",,"change owners and then withdraw ether"
+"0xfc79774fb9dedeea2325d0d5570554eddc4e6747","1",,"change owners and then withdraw ether"
+"0x8e9f6181371013194d48bc031adf7fe179fb37e3","1",,"change owners and then withdraw ether"
+"0x94603d4a41856bccb75cc3603af19fc161a7b6b6",,"1","No unrestricted ether transfer, No suicidal"
+"0x0f7524d64ceb92dae1d1a56b20b6d520134795d4",,"1","No unrestricted ether transfer, No suicidal"
+"0xa21c9a3ae47103b1fd1dfa04766c4d00c19e1ff6","1",,"change owners and then withdraw ether"
+"0xf55a32f0107523c14027c4a1e6177cd7291395a0","1",,"change owners and then withdraw ether"
+"0x50430b6201c9859c91a5590ac71700cc71499a0e","1",,"change owners and then withdraw ether"
+"0x310b15ad0a8b282ee8011d91c79feba80cb179c8",,"1","No unrestricted ether transfer, No suicidal"
+"0x7bd9084fdd5d021c226918d86c0721cb088b9b4a",,"1","Contract ether always kept zero. No ether to steal"
+"0xe30a76ec9168639f09061e602924ae601d341066","1",,"change owners and then withdraw ether"
+"0xb5630e5dfd604b3b88965f2a5103bbf5e31a7340","1",,"change owners and then withdraw ether"
+"0xc825aa83f12e4d225ea1f21511a68e7aa78a002f",,"1","No unrestricted ether transfer, No suicidal"
+"0xb34aa41593deabb2b17e7507e3e413c58f6e0c71",,"1","No unrestricted ether transfer, No suicidal"
+"0x371f24324e223a5ca99f26c4993aae53149b2597",,"1","No unrestricted ether transfer, No suicidal"
+"0x3da034753b42bda1bcfa682f29685e2fd6729016","1",,"change owners and then withdraw ether"
+"0xa7ca36f7273d4d38fc2aec5a454c497f86728a7a",,"1","No unrestricted ether transfer, No suicidal"
+"0x43efc486d1c7c5cb0193e409a73aa33786f5197c","1",,"change owners and then withdraw etherå"
+"0x5aef06ec39e98c05201ee1e54b653c372ecb9cf3","1",,"change owners and then withdraw ether"
+"0xd7290307c040f4089f8650b7f7aac3cfe39cd6bd","1",,"change owners and then withdraw ether"
+"0x1c98eea5fe5e15d77feeabc0dfcfad32314fd481",,"1","No unrestricted ether transfer, No suicidal"
+"0x8960eb9d4a2d153fd7b175c0f3eef8026eb95dfc","1",,"change owners and then withdraw ether"
+"0xb5c0e43a6330b9eb904ec57ea24d70269ae4652e",,"1","No unrestricted ether transfer, No suicidal"
+"0xead71f4d060ddc7656c959b482fbdfaca95c5d9d","1",,"suicidal contract"
+"0xdd97853ba34af302f3d6a6415a750ae38e26d1fc","1",,"loser and draw can unrestrictedly withdraw ether "
+"0xeefdfa0f6a921044e7901d18e6794c0a7baff4d7","1",,"change owners and then withdraw ether"
+"0x39730ebfeb4e0c9c2e2645c528c00ee7b98ecfb2","1",,"change owners and then withdraw ether"
+"0xb60e133dacf00b6f560909dc0a5311ae7f9a659b",,"1","No unrestricted ether transfer, No suicidal"
+"0x781fb4f25d07de3f3cfe2476645e52e0c661eefc","1",,"change owners and then withdraw ether"
+0x00000100f2a2bd000715001920eb70d229700085,1,,"the delegated contract is protected, but function can be specified "
+0xe4d0c33807b4180fcbd3acff8ef0bf97cda7b9a5,,1,"No unrestricted ether transfer, No suicidal, No delegated call"
+0x2b943c2a0df32de5edec2c0a3638a28bc4c84ece,,1,"No unrestricted ether transfer, No suicidal, No delegated call"
+0xa25560d083fe0ea3e303c11577b5a345b236fac7,,1,"No unrestricted ether transfer, No suicidal, No delegated call"
+0x081396ba70b5ad0c0e3c2c34e368ace95bdd72e4,,1,"No unrestricted ether transfer, No suicidal, No delegated call"
+0x36649d5c33dff01abe05f769e5f2a1e8de178695,,1,"No unrestricted ether transfer, No suicidal, No delegated call"
+0xa4c09aa7fb154d4769547d1f21f9172c0b74f7a7,,1,"No unrestricted ether transfer, No suicidal, No delegated call"
+0x31072fa5554814990f44c98bce088ab934110eb9,,1,"No unrestricted ether transfer, No suicidal, No delegated call"
+0x31cf40fe52d0118020f0ccd78a4996ac6e350006,,1,"No unrestricted ether transfer, No suicidal, No delegated call"
+0xbaa3de6504690efb064420d89e871c27065cdd52,1,,change owner and then withdraw money
+0xc22a3bda66578d5d6359b249cb106c39fb040ad9,,1,"No unrestricted ether transfer, No suicidal, No delegated call"
+0x6bd33d49d48f76abcd96652e5347e398aa3fda96,1,,call buy function to withdraw ether
+0x0000852600ceb001e08e00bc008be620d60031f2,1,,"the delegated contract is protected, but function can be specified "
+0x164cd8bc19402c7bd49c2a97d5248310d7e1ec02,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x240f9f86b1465bf1b8eb29bc88cbf65573dfdd97,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xf5632f8f24ab4d3834f3a16ea1ad6def59b443f5,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x855152c9b98babadc996a0dd71c8b3682b8f4786,1,,"the delegated contract is protected, but function can be specified "
+0x116444d553aa2d71f02006f4ed728131f3138147,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x56d06701fd44a4a857cb96b266f505a2832950c5,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x35d28772130c325403b5ed3cc591368f3baa8250,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x02c60d28be3338014fef3fdf50a3218b946c0609,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x39a765ecf417f5eecbb58d6b0482f81f4d825fff,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xd079acf6491bbf8bbbbee6a5d73eaa0dcedec0c2,1,,call sell function to withdraw ether
+0x318bf186c7681ed7efd57839e6415cd8a162713c,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x00000000441378008ea67f4284a57932b1c000a5,1,,"the delegated contract is protected, but function can be specified "
+0x1ca4a86bba124426507d1ef67ad271cc5a02820a,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x00006100f7090010005f1bd7ae6122c3c2cf0090,1,,"the delegated contract is protected, but function can be specified "
+0xeeedac8686ae12183129e80e632e922dd8daecc4,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x0a2ea71d943bf917b410593194595e1f48d40e54,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x35a1700ac75f6e9e096d9a5c90e3221b658096e0,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x73388dc2f89777cbdf53e5352f516cd703d070a6,,1,Keccak256 Hash collision problem. Impossible to achieve it.
+0xb671c3883307cf05bb3dff77a9754e87b4347195,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xe19ca313512e0231340e778abe7110401c737c23,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x16e73d276b2163c49db410350bfefd9f48898821,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x365443b7b06b86f1f560873de723b6d4fb3927ce,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x3df616ee25ba3fa146544ab595f106bff5ac4397,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x960b236a07cf122663c4303350609a66a7b288c0,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x7b307c1f0039f5d38770e15f8043b3dd26da5e8f,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x6519d6dfd11363cf0821809b919b55f794fe0cb5,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x6dd188556cfaef2f4c361cf4f1f8f3eaf5d05ee2,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xaf8eabf89f5664a2bc82ca415a4337821cd54d65,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x23141df767233776f7cbbec497800ddedaa4c684,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x59061b6f26bb4a9ce5828a19d35cfd5a4b80f056,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xa3db33ccfe990fdf89ff311754391b5c3af4ef04,1,,"the delegated contract is protected, but function can be specified "
+0x1f5b7179a643570effb4da05a0ca0760b36ceed3,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xa15b24b7b883aac6bc6582b0057c09d62a7a1b2c,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x91ca7998d3f9eb568ae33a73df21a2b1184f69d5,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xefbfc3f373c9cc5c0375403177d71bcc387d3597,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x1040c6fe8420a85697b03c28add9c105bcf3eda8,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x0595d187cac88f04466371eff3a6b6d1b12fb013,1,,write closed variable
+0x1486ddbe6735eed12d6d5e13635d97039d5b9c9a,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xea7cbf19027087ba91ad110e95a5c2a532d35100,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x098b6f16c0e6fff51b891cb3ef0248fda4c9f53b,1,,suicidal contract
+0x794765a50b1ede126f9d2dca9d66227af057ef25,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xe746993eb1b03327a8f432b93090aaa2314f8c07,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xa96e6dbf0f21cfcc9934ad52dec8229e3321254e,1,,call freeze function to set frozen to true
+0xe50b0cefeb80bdd9e3d03517976909765c96e962,1,,"mintTo, unrestrictedly mint tokens"
+0x69c9e34a64b6ba1e39fb15ffaefdc7e75524f600,1,,"mintTo, unrestrictedly mint tokens"
+0x5fba6dc859a305f890ec3911b9be2d7777c635ef,1,,"the delegated contract is protected, but function can be specified "
+0xc04829e8edd4402d030cf81eff3e25df0e84baa1,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xb6c4267c4877bb0d6b1685cfd85b0fbe82f105ec,1,,"the delegated contract is protected, but function can be specified "
+0xf0cc17aa0ce1c6595e56c9c60b19c1c546ade50d,1,,call setRelease function to set Date variable
+0x2066a2e0cd7f19589f582e2fc9af9669cc9e02f1,1,,"mintTo, unrestrictedly mint tokens"
+0x00000000441378008ea67f4284a57932b1c000a5,1,,"the delegated contract is protected, but function can be specified "
+0x8446563e75cd7821b5bf2199c26976efc5cac803,1,,"mintTo, unrestrictedly mint tokens"
+0x0f7524d64ceb92dae1d1a56b20b6d520134795d4,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x50eae8e1505e46c6d35f64ec88e7693a0ac1d59e,1,,call withdrawETH function to withdraw money
+0x7d999f41d08a3769b652074482e31c850c560d08,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x900e2729701c794cbe9d8a9dfa861dd73e61c403,1,,"the delegated contract is protected, but function can be specified "
+0x13a517751318cce71a524006b16f7930b3515ccf,1,,change owner and then withdraw money
+0xbddd99e8aaeb85847703c31a83277856d49961d9,1,,call setRelease function to set Date variable
+0x91151abe8cea8ee574b50cc01c18ce36cbba3195,1,,call setRelease function to set Date variable
+0x4bbdeadf8334e8a85d3e22ec090af74c3a673118,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xa2562cd0d8620dc2bec07872ecaadd4b6fbdc02f,1,,suicidal contract
+0x42db5bfe8828f12f164586af8a992b3a7b038164,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x84004ca3b679b94d5c27c59d710e8201068bb93b,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x5e9b52a9909df76cc846876faee62be72a6d5a7b,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xdd4950f977ee28d2c132f1353d1595035db444ee,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x777777d1123591df7f68e053bc182de3cd4fa6de,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xed9ed56f704cd8847eeb052fe5ae3294efb1dbb0,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x2a45cc8d5239c41960b70740367fd9dabff379e1,,1,"tx.origin use is protected. No unrestricted ether transfer,  suicidal, and delegated call"
+0x31b9eb2bb4bd06b56132282c82d0437d77d2339e,,1,"tx.origin use is protected. No unrestricted ether transfer,  suicidal, and delegated call"
+0x791d0463b8813b827807a36852e4778be01b704e,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xd81fe2c11edd560c4d44fdd4f651f3608452beed,1,,call setRelease function to set Date variable
+0x998ffe1e43facffb941dc337dd0468d52ba5b48a,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x656038e97cee7c095673f7b9fad695b323a6f098,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xd03cdb4206084f15778ff6388b139d96c93ccaf7,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xaab96542c07508809b99787f100767838240a3c7,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x806a6bd219f162442d992bdc4ee6eba1f2c5a707,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x403e518f21f5ce308085dcf6637758c61f92446a,1,,misuse of tx.origin
+0x64bb42f7012cbfef9e036dd8929cbc9d61c7c3ca,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xb49b1dddf1b3d6e878fd9b73874da7ab0da7e004,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x95cd217da207e35e3ac4cade6e766d5fb6fdaf8d,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xe26fce7f2ba3f8f1c56c2ef88b06aaec3b513277,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xbbec003ba94f1bf7089fb3f96ece03aed218c1b5,,1,"tx.origin use is protected. No unrestricted ether transfer,  suicidal, and delegated call"
+0x223b0ee581719d4c6ae36f1ba1dd4101e5409c1c,,1,"tx.origin use is safe. No unrestricted ether transfer,  suicidal, and delegated call"
+0xd079acf6491bbf8bbbbee6a5d73eaa0dcedec0c2,,1,"tx.origin use is safe. No unrestricted ether transfer,  suicidal, and delegated call"
+0xd7cf8eae66f26e13a400772a054b19fb3d98c269,,1,"No unstricted ether transfer, misuse of tx.origin, delegatecall, or suicidal"
+0x645f0c9695f2b970e623ae29538fdb1a67bd6b6e,,1,"No unstricted ether transfer, misuse of tx.origin, delegatecall, or suicidal"
+0xfd4e7b9f4f97330356f7d1b5ddb9843f2c3e9d87,,1,"No unstricted ether transfer, misuse of tx.origin, delegatecall, or suicidal"
+0x753c3d68fe0a3102a033a7d2333c447b69f6c1ea,,1,"No unstricted ether transfer, misuse of tx.origin, delegatecall, or suicidal"
+0xae3bf0f077ed66dda9fb1b5475942c919ef3bb0d,,1,"No unstricted ether transfer, misuse of tx.origin, delegatecall, or suicidal"
+0x38c83b225eb17d44f33f8bb3bdc23d86733838db,1,,Secret leaking causing permission problem. 
+0x2e0794073ec7b08e40d80a41599bb31df042e4e5,1,,Secret leaking causing permission problem. 
+0xac87b21684af3809d1aa6fee9ee05068bdacb3fe,1,,Secret leaking causing permission problem. 
+0x98307e036c5d024447ea59296f6e41cb998b38d0,,1,"No unstricted ether transfer, misuse of tx.origin, delegatecall, or suicidal"
+0x78cf7525a755f3542a5652fe8eab87c23e910da5,1,,can specify the delegated function
+0x509cb8cb2f8ba04ae81eec394175707edd37e109,,1,"No unstricted ether transfer, misuse of tx.origin, delegatecall, or suicidal"
+0xf876c67ce21a03a848dbae562d583296ee5a8449,1,,can specify the delegated function
+0xd02b08f3e868da75a525646a60f836d1f983f3f7,1,,Secret leaking causing permission problem. 
+0x9f63a5d92162975a08555f54752503b96277526d,,1,"No unstricted ether transfer, misuse of tx.origin, delegatecall, or suicidal"
+0xfa1d63b87f40c92d27bfb255419c1ea8c49086de,1,,suicidal contract
+0xc302cedd1be4fd7053147b9e298077d9392f7584,,1,Hash collision problem. Impossible
+0x1ed8691cea15e9573282175ffa3e23281fce85c0,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x7d13261dde5121b8b87c82bbec6908cf070d47e0,1,,call  task function unrestrictedly write adimaddr
+0x1950fbe83c6ec6ed873db41cc5d8a33f74d31c90,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xbe4eee50c1fa98b8f2f0edcc4cccae6646b4ce2c,1,,call buyFirstTokens to withdraw ether money
+0xe486029478136c738d42525ab33d562a4dafe0cc,1,,call withdrawETH function to withdraw money
+0x52e2a7dbb799e402d33a36c6ecd5f0fc78c95031,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x99b001735036d937b4a11c17a9a44f86fbddf4d0,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xead71f4d060ddc7656c959b482fbdfaca95c5d9d,1,,suicidal contract
+0xee3dc775669d2415cad8b5b424e6c97ad60ebef5,1,,suicidal contract
+0x6a498c4d31aec7dd076d81e73d564f33c9a07764,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xaa8722fb1c9eec9b6c32a90dbe9aa4c9eff19f55,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x35e3d5c3d8fba3c61b385aecd3b3565b8327de09,1,,call sendEthvalue function to withdraw money
+0x1ab3edefecf4834903e3a02a8e0e5995f59ef7aa,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x1cfa0b95c531bc2c88a81a4263f6a6f5c1613b96,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xcec76159cb10f8c110e738809e4ee4b71f1de12e,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x371f24324e223a5ca99f26c4993aae53149b2597,1,,call mintToken to unrestrictedly mint tokens
+0x633d4a2a8d5f498dfbb8a9f59230f0a9d1446df4,1,,suicidal contract
+0x233265020cc69214aea3edd4192b96d5232bf5ca,1,,call Initiate to set swap
+0x843311a93665de5a3e7d68909862a1a7412f9bc3,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x28b6bf339afd2dceeeebd6b218e798b08f38a2e9,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x6a15488ef88d399cd1ac1823ef3e61e2ff215f87,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xdd97853ba34af302f3d6a6415a750ae38e26d1fc,1,,call loser and draw function to withdraw ether
+0x05f8b281410c9327a1bbf508db380fd967c31df6,1,,suicidal contract
+0x111501403818f9e1c59fa25bbdcebc900d246f02,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xed9ed56f704cd8847eeb052fe5ae3294efb1dbb0,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xbd596c144b199f0f609515c3ad7f1b9494ecc312,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x2fee479b98bce54f7b6466146e24512d8272ee6f,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xce566351442ffadaca79320e0c52788fa36910e1,1,,call sendEthvalue function to withdraw money
+0x57f82f1bc6c6ab01ddd9476ddaddfee6f03d1932,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xc801e2ca666fdfcb43cf29b972d7f3731436e4a1,1,,suicidal contract
+0xbc4774e29941ae1df68c21fd95325dc25f3cdf77,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x43f208d94a82cc2749a140b5e82636f31ce0390d,1,,call loser and draw function to withdraw ether
+0xfef736cfa3b884669a4e0efd6a081250cce228e7,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x979e4a97d610b83348c5af04d836ce8b968bcc68,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x9aca6abfe63a5ae0dc6258cefb65207ec990aa4d,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x88af078337afde014574dbc6027a1db75d629b76,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x0c78735435fbe36b39cccd5fe35fb4590e3da603,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x9ea5b12af209634b92129b7b011ed36cb3299dd3,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xbae533c9c0a67d5de2b89a8fd0bc01a2b450bd2d,1,,call returnEth to withdraw money
+0x3c3f481950fa627bb9f39a04bccdc88f4130795b,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xac6072986e985aabe7804695ec2d8970cf7541a2,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xb1ad803ea4f57401639c123000c75f5b66e4d123,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x32293366f73b94a9c2c054e2fbeff2658119ad2e,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x3e5314f7360d526171bdec2a36c3ab49e8761298,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xe995e03275dafdb7cc1fa17c6bbc21bfed379fdd,1,,call setPrice to unrestrictedly set token price
+0x64b09d1a4b01db659fc36b72de0361f2c6c521b1,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x9a2e9235f7a7ac7b899e5f3208fbb13c6985171a,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xd16dfe7a7f447b00122a01efd5acb99a7aee7c04,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x9766a5a384c1efb9f58aaf687bef00ea96442575,,1,﻿No UnrestrictedWrite UnrestrictedEtherFlow
+0x74a30d0ca07771fbd450ef4ded357e2e688ee59f,,1,﻿No UnrestrictedWrite UnrestrictedEtherFlow
+0xb5839ad7c812389fdaa21e5bce925daf239f93b6,,1,﻿No UnrestrictedWrite UnrestrictedEtherFlow
+0x331769de477c2122638fe1116808d3a9159ab13a,1,,call settleJackpot to write state variables
+0xd099c363eb969f405099f17b413e2ebdc7018a7d,1,,set setOperator to write operator variables
+0x526edd7ee821cce738c4acbe01fbec5c1e434c22,,1,call settleJackpot to write state variables
+0xce2ac722f8b9349a0bdcbe9ee9f9d877c8cfa7a0,,1,﻿No UnrestrictedWrite UnrestrictedEtherFlow
+0x06df142f76ae6efb9025779f58f1e109dce402f0,,1,﻿No UnrestrictedWrite UnrestrictedEtherFlow
+0xc999e5490773fb2e69557a863dcb8a7d3508604f,,1,﻿No UnrestrictedWrite UnrestrictedEtherFlow
+0xf2e88e0bfe61e5e41d9317e82c6938e67a913cc1,1,,call clearBlockchain to withdraw ether
+0xf5c7231632aa9b344093d82deb864fa1c00b8bde,,1,﻿No UnrestrictedWrite UnrestrictedEtherFlow
+0x6a15488ef88d399cd1ac1823ef3e61e2ff215f87,,1,"Contract balance is always zero, No unrestricted ether transfer,  suicidal, and delegated call"
+0x62cdc9baaf02e846611660782b12ba714f1ff038,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x34afa7ff9a8eb4d8e61145ca81e2d0dab7b03662,1,,suicidal contract
+0x6ec75c4eddd6838049478ac386dacd74d53c22cd,,1,No unrestricted suicidal contract
+0x5fba6dc859a305f890ec3911b9be2d7777c635ef,1,,"the delegated contract is protected, but function can be specified "
+0x8fc17ffddef41330b2d55e8266446a21f2e000b7,,1,"use of tx.origin is protected. No unrestricted ether transfer,  suicidal, and delegated call"
+0x843311a93665de5a3e7d68909862a1a7412f9bc3,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xc5559887f94ea5c406b3f6d582dc738c4cf0eace,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xe830d955cbe549d9bcf55e3960b86ffac6ef83f1,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x661a64dcc2f04117d0f8a919e2ac66af8d401d6f,,1,Hash collision problem. impossible
+0x99b001735036d937b4a11c17a9a44f86fbddf4d0,,1,"use of tx.origin is safe. No unrestricted ether transfer,  suicidal, and delegated call"
+0xb1bafca3737268a96673a250173b6ed8f1b5b65f,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x8592a29fc76ae1ddbe382f2b714c6ce9ef5a3faf,,1,"use of tx.origin is protected. No unrestricted ether transfer,  suicidal, and delegated call"
+0x9ea5b12af209634b92129b7b011ed36cb3299dd3,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x24e2aa3ec04972667ea69ef0bec3312cebe33985,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x1040c6fe8420a85697b03c28add9c105bcf3eda8,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x4c478ac32725872e30bca49957abc7dbb325cb21,1,,call masterFns to selfdestruct contract
+0x65d61179a248fa56235dd0691e0792582b5cb3f9,,1,"use of tx.origin is safe. No unrestricted ether transfer,  suicidal, and delegated call"
+0x1a51f16b4d385a06c542d3686412ab6517b5515d,1,,"mintTo, unrestrictedly mint tokens"
+0xbaa7d3ad047daba03e9dedbc65ec3db50677b42f,,1,"use of tx.origin is protected. No unrestricted ether transfer,  suicidal, and delegated call"
+0x2a45cc8d5239c41960b70740367fd9dabff379e1,,1,"use of tx.origin is protected. No unrestricted ether transfer,  suicidal, and delegated call"
+0x25b6bcc5f4a774fbe6de84eb52fd35f668eba990,,1,"use of tx.origin is protected. No unrestricted ether transfer,  suicidal, and delegated call"
+0x51f835d5671dece76c3fd11d648d1da00f8aa206,,1,"use of tx.origin is protected. No unrestricted ether transfer,  suicidal, and delegated call"
+0x69aaeed694cc5ca303406d2fe055099edf88723f,,1,"use of tx.origin is protected. No unrestricted ether transfer,  suicidal, and delegated call"
+0x098b6f16c0e6fff51b891cb3ef0248fda4c9f53b,,1,"use of tx.origin is protected. No unrestricted ether transfer,  suicidal, and delegated call"
+0x91151abe8cea8ee574b50cc01c18ce36cbba3195,1,,call setRelease to set Date variable
+0x78c2a1e91b52bca4130b6ed9edd9fbcfd4671c37,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xeb62b8c5c4f0f5d59a7f060554c13e8f38f4de9f,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xb5306879cb7f1fb18b86a2be62c0dc9ae62fa1eb,1,,"the delegated contract is protected, but function can be specified "
+0x126ae85a1ebf49dc946224f5268c6bd8338d49ae,1,,suicidal contract
+0xe272fddbd056240149c771f9fd917fa040dceb39,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xfd4a69e5c19a5d3399c707a1724cd5d54f034a39,1,,"the delegated contract is protected, but function can be specified "
+0x3597f78c7872db259ce023acc34511c7a79f42e3,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x4bbdeadf8334e8a85d3e22ec090af74c3a673118,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xce566351442ffadaca79320e0c52788fa36910e1,1,,call sendEthvalue function to withdraw money
+0xc8c6a31a4a806d3710a7b38b7b296d2fabccdba8,1,,unprotected use of tx.origin
+0x1cfa0b95c531bc2c88a81a4263f6a6f5c1613b96,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x960b236a07cf122663c4303350609a66a7b288c0,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xb8d24ac55866236b2c7b8fb046ca110d488fba02,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xb84fa29beb0a5ca786150a069765bd10bab179de,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x2920e0b7d86ab76aa09bcddffedef081faaf6e2c,1,,"mintTo, unrestrictedly mint tokens"
+0x818ebdad12d3decefabe6ccb16f33c9bbfe1b30a,1,,"mintTo, unrestrictedly mint tokens"
+0x998ffe1e43facffb941dc337dd0468d52ba5b48a,1,,"the delegated contract is protected, but function can be specified "
+0x8154eb22ebedc56cb1c72add3d3704d6b5578155,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x29171eeaa66a2565b8e26e5403e667258dcc1b3e,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0xaea5418057d0e37a6e69e588e7f393e946846d62,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x17114e96d507e478f738a5ad864f8c996c529fc7,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x0148179f1ff77e236e97b646502261ea29517d32,,1,"No unrestricted ether transfer,  suicidal, and delegated call"
+0x96299dc3cb5c2a936058a9b200a60f722c721b69,1,,change owner and suicide contract
+0x9d0a108fbb9b311e9976bc071d4469123659562f,1,,"mintTo, unrestrictedly mint tokens"
+0xa1d121abe654d2a7c44f5b0f4752599746162cc4,,1,"No unrestricted ether withdrawal, delegatecall or suicidal"
+0x656610729fc13e8283d96aa69cdf56c112222951,,1,Hash collision problem. Impossible
+0x9b91f3418f066d7a123918484666e8a3df98ffb4,,1,"No unrestricted ether withdrawal, delegatecall or suicidal"
+0x7a58b34e038627bb747254d52d1c25241b1cca8b,,1,"No unrestricted ether withdrawal, delegatecall or suicidal"
+0x2a605b89c3ddf839126daccd3fdaf6df8c18df76,,1,"No unrestricted ether withdrawal, delegatecall or suicidal"
+0xbea72b7da261bb0a488a5d07f01b16516ba2edef,,1,"No unrestricted ether withdrawal, delegatecall or suicidal"
+0xcbb27276964473552936299aafd72916fb213211,,1,"No unrestricted ether withdrawal, delegatecall or suicidal"
+0x28b61faf5f4b9381a9cdb38d9f87788c563e3644,,1,"No unrestricted ether withdrawal, delegatecall or suicidal"
+0xf91546835f756da0c10cfa0cda95b15577b84aa7,,1,Hash collision problem. Impossible
+0x97f599b5ab34dd6223a0a80c2794c04cddf59488,,1,"No unrestricted ether withdrawal, delegatecall or suicidal"
+0x7d152fe26431e6585dbff9ef37e375e49b862739,,1,"No unrestricted ether withdrawal, delegatecall or suicidal"
+0xcc208c28644d60fa0eae08c4b19521e27ebcddfa,,1,"No unrestricted ether withdrawal, delegatecall or suicidal"
+0x4830e1e8d533313d2bb426cf1ef306460f288524,,1,"No unrestricted ether withdrawal, delegatecall or suicidal"
+0x74cd98fbd837fe9200cf867f4b1ba9573c6d865e,,1,"No unrestricted ether withdrawal, delegatecall or suicidal"
+0xb453b2c67d70f1e19ce770296c7d2f35cb7cdfd8,,1,Hash collision problem. Impossible
+0x8d4feae082902b3c81675febbe35c2aaea9c8cab,1,,suicidal contract although needs to pay s
+0x58ab239b029e80132f907f098285055fa0c6a774,,1,protected use of tx.origin
+0x767b8c6fb76db2e2a547819ba7afd2006d3de6b2,,1,protected use of tx.origin
+0x42cbcda4ecd633c2d8f88f5b2bfda11da8c508b6,,1,safe use of tx.origin
+0x67e23d1e1ed3f0d5b07cebc84fe4835b0788cac6,,1,safe use of tx.origin
+0x61d0407edb149dc453c47fe31139fae9c1472da6,1,,misuse of tx.origin
+0x05cd27a978fc9f9919a5f4c5c03e5947ed7d4c4d,,1,safe use of tx.origin
+0x8fc17ffddef41330b2d55e8266446a21f2e000b7,,1,protected use of tx.origin
+0x1040c6fe8420a85697b03c28add9c105bcf3eda8,,1,protected use of tx.origin
+0xbf06e2b5b97e375f7c0b3d8c61b8337a9c7ea23c,,1,protected use of tx.origin
+0xf60c8366055b8c899976f21812b23efca8c97ffb,,1,safe use of tx.origin
+0x25c0eb1e68f70e9aa7eeb92efd2e31ddbfed0b92,,1,safe use of tx.origin
+0x162774441fb7f8a1bde335dc7f5accd51aac0d91,,1,safe use of tx.origin
+0xc99f359f73626e475ee86caab459a4b34ae93fea,1,,misuse of tx.origin
+0x8fd1c78ed8b3de2a025373b2bbd820c03939f760,,1,safe use of tx.origin
+0x707784ed2b464474f8fb763c058b33fcf8626db5,1,,misuse of tx.origin
+0xc2748e342411a2b1f84f9fa807d4e1c81365da1c,,1,safe use of tx.origin
+0xeb897ad24189a911cad00c071fc7182f5753a3d3,1,,misuse of tx.origin
+0xde2b11b71ad892ac3e47ce99d107788d65fe764e,,1,protected use of tx.origin
+0x10cc060f6f9b2e5dcdb23f1361e4b368a7daec73,1,,misuse of tx.origin
+0xaed5a41450b38fc0ea0f6f203a985653fe187d9c,,1,safe use of tx.origin
+0x1611ead58474528582420b089e9b3b55bc9af3c1,,1,safe use of tx.origin
+0xeb547ed1d8a3ff1461abaa7f0022fed4836e00a4,,1,safe use of tx.origin
+0x03e5793400dfb62f8eb469f4ffa84862cc1e6acc,,1,protected use of tx.origin
+0x3bb3354f82654dd609300e92c92cf2c7c1bf3171,1,,misuse of tx.origin
+0x9ef74f01c70c80f008b51ae434e56ee79b6f4016,1,,misuse of tx.origin
+0xb6d79827687d279f50c942c7d2152c50874d90ee,,1,safe use of tx.origin
+0xc5559887f94ea5c406b3f6d582dc738c4cf0eace,1,,misuse of tx.origin
+0x56d06701fd44a4a857cb96b266f505a2832950c5,1,,misuse of tx.origin
+0x2fb66959dfb573eee9268a8532a631874302772d,,1,safe use of tx.origin
+0xb731db6daf453383d4087450a1b1861d2ac5f6e1,,1,safe use of tx.origin
+0xd558f0c903ccac458495f0dc776dbcc78f1adf79,,1,safe use of tx.origin
+0x608c460a08b10ca06b9b5fe45451cf2552fa2e4f,,1,safe use of tx.origin
+0xa958f2404d1a1b33e2d22244aab118dcfcc358e3,,1,safe use of tx.origin
+0x251c81dd9e05d6c8e00a05381272c6946e2657ec,1,,misuse of tx.origin
+0xa540ffa17aa1256766355a84444f1bac68944622,,1,safe use of tx.origin
+0x37a857e007ba6ae7862bc5ab1104dd4396de7950,1,,misuse of tx.origin
+0x32a8c2da487ff26ef5778fd44dc8eaa73d7bb437,,1,safe use of tx.origin
+0xb5e7268539bbe78b8190ad61342dba7251551599,1,,misuse of tx.origin
+0xce566351442ffadaca79320e0c52788fa36910e1,1,,misuse of tx.origin
+0x7a8721a9d64c74da899424c1b52acbf58ddc9782,1,,misuse of tx.origin
+0x656038e97cee7c095673f7b9fad695b323a6f098,1,,misuse of tx.origin
+0x5041d5c444c2d730b406ae5ec9199cd8e47e463c,,1,safe use of tx.origin
+0xc7195560b102facce63786043394e25e5a5be343,,1,safe use of tx.origin
+0xd4616cbb5c26d39c858b9a963efa66d83747b244,,1,protected use of tx.origin
+0xd9c422d2205248e7ec4d4c21a6b270baa66784c0,,1,protected use of tx.origin
+0xa225ebe73347dd87492868332f9b746beb8499bb,,1,safe use of tx.origin
+0xe4d0c33807b4180fcbd3acff8ef0bf97cda7b9a5,,1,protected use of tx.origin
+0x80dad9f8184ba18297948ad8ad6a40e1d5e84a86,,1,safe use of tx.origin
+0x2bb4bacbb7cc6186454253dab673e22009a0b866,1,,misuse of tx.origin
+0x6954354a6c94b2d5c4d1b8e40b4bee1e0615d72e,,1,protected use of tx.origin
+0x607bad7a2969019ade64cb1b74f60fffa20cc3e5,,1,protected use of tx.origin
+0x001a589dda0d6be37632925eaf1256986b2c6ad0,1,,misuse of tx.origin
+0x02cb5958a36145efbacb99fac2614657bf20d4e8,,1,safe use of tx.origin
+0x567dc1d64bbc362caccfebb7a3bb5b900d22eefe,,1,protected use of tx.origin
+0x35546c78ef39de8b3a93cc309d07150e31cf9c82,,1,safe use of tx.origin
+0xd0bb45fd58e357c9b3a5e7a36a5c6b6b5d1cf9b2,,1,protected use of tx.origin
+0x58db9e7a4afca731d824eeefa55ce37666aa3eaf,,1,protected use of tx.origin
+0x3a82d482e7620b3257718d7926e47a0e53f21466,,1,safe use of tx.origin

@@ -1,0 +1,6 @@
+(library
+ (name say)
+ (public_name verismart.say)
+ (preprocess
+  (pps ppx_jane))
+ (libraries vocab))

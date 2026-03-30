@@ -1,0 +1,13 @@
+mapping(address=>uint256),2041
+uint256,1537
+address,1177
+mapping(address=>mapping(address=>uint256)),253
+mapping(address=>bool),115
+bool,86
+uint8,17
+string,4
+mapping(address=>Struct),4
+address[],3
+Contract,3
+mapping(uint256=>Struct),2
+Struct[],1

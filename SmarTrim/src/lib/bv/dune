@@ -1,0 +1,4 @@
+(library
+ (name bv)
+ (public_name verismart.bv)
+ (libraries vocab))

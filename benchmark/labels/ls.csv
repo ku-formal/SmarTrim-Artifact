@@ -1,0 +1,627 @@
+id,el,su,el-f,su-f,Explanation,Note,source,fp-el,fp-el-f,fp-su,fp-su-f
+incorrect_constructor_name1,32,,withdraw,,,,,,,,
+multiowned_vulnerable,57,,withdrawAll,,,,,,,,
+parity_wallet_bug_2,234/249,234,kill/execute,kill,,,,,,,
+rubixi,85/95/103,,collectAllFees/collectFeesInEther/collectPercentOfFees,,,,,,,,
+simple_suicide,13,13,sudicideAnyone,sudicideAnyone,,,,,,,
+wallet_02_refund_nosub,30/36,,withdraw/refund,,,,,,@fallback,,@fallback
+wallet_03_wrong_constructor,38,,migrateTo,,,,,30,withdraw,,
+wallet_04_confused_sign,31,,withdraw,,,,,,deposit,,deposit
+0x05f8b281410c9327a1bbf508db380fd967c31df6,,258,,selfdestructs,,,,244/262,sell/getEth,,
+0x07419940b9a2d1eb54e123bd4853240ffac77186,50/126,,getMeOutOfHere/withdraw/withdrawOld/@fallback,,,,,,,,
+0x0f7524d64ceb92dae1d1a56b20b6d520134795d4,56/150,,getMeOutOfHere/withdraw/withdrawOld/@fallback,,,,,,,,
+0x13a517751318cce71a524006b16f7930b3515ccf,248,,withdraw,,,,,,,,
+0x17e5f19d430788323863c6798ecd762a40de29f5,202,,withdraw,,,,,,,,
+0x1c98eea5fe5e15d77feeabc0dfcfad32314fd481,56/150,,getMeOutOfHere/withdraw/withdrawOld/@fallback,,,,,,,,
+0x310b15ad0a8b282ee8011d91c79feba80cb179c8,56/150,,getMeOutOfHere/withdraw/withdrawOld/@fallback,,,,,,,,
+0x39730ebfeb4e0c9c2e2645c528c00ee7b98ecfb2,202,,withdraw,,,,,,,,
+0x3bcaf56923335062e8f272d011efd2e40fa42147,84,207,withdraw:@fallback,admin,,,,,,,
+0x3da034753b42bda1bcfa682f29685e2fd6729016,248,,withdraw,,,,,,,,
+0x43efc486d1c7c5cb0193e409a73aa33786f5197c,272,,withdraw,,,,,,,,
+0x43f208d94a82cc2749a140b5e82636f31ce0390d,1160/1166/1171,,winnerReward/loser/draw,,,,,1077,createBet/@fallback,,
+0x50430b6201c9859c91a5590ac71700cc71499a0e,338,,withdraw,,,,,,,,
+0x5aef06ec39e98c05201ee1e54b653c372ecb9cf3,272,,withdraw,,,,,,,,
+0x612f1bdbe93523b7f5036efa87493b76341726e3,241,,withdraw,,,,,,,,
+0x724e3a236d3e9c8ad2c3d1aff181118e6e9b3026,247,,withdraw,,,,,,,,
+0x781fb4f25d07de3f3cfe2476645e52e0c661eefc,217,,withdraw,,,,,,,,
+0x7bd9084fdd5d021c226918d86c0721cb088b9b4a,38,,multiSendEth,,,,,36,,,
+0x8960eb9d4a2d153fd7b175c0f3eef8026eb95dfc,202,,withdraw,,,,,,,,
+0x8e9f6181371013194d48bc031adf7fe179fb37e3,279,,withdraw,,,,,,,,
+0x94603d4a41856bccb75cc3603af19fc161a7b6b6,50/126,,getMeOutOfHere/withdraw/withdrawOld/@fallback,,,,,,,,
+0x9db3fd94a5bb1acdaef28ae483fe6b0d49746678,209,,withdraw,,,,,,,,
+0x9f4fd6c336388f2ab7dc7bbe4740ae7b88b880d7,57/151,,getMeOutOfHere/withdraw/withdrawOld/@fallback,,,,,,,,
+0xa21c9a3ae47103b1fd1dfa04766c4d00c19e1ff6,361/363,,payout,,,,,217/222,purchase/_payout,,
+0xa7ca36f7273d4d38fc2aec5a454c497f86728a7a,56/150,,getMeOutOfHere/withdraw/withdrawOld/@fallback,,,,,,,,
+0xb34aa41593deabb2b17e7507e3e413c58f6e0c71,101/246,,getMeOutOfHere/withdraw/withdrawOld/@fallback,,,,,,,,
+0xb5630e5dfd604b3b88965f2a5103bbf5e31a7340,259,,withdraw,,,,,,,,
+0xb5c0e43a6330b9eb904ec57ea24d70269ae4652e,39,39,destroycontract,destroycontract,,,,,,,
+0xb60e133dacf00b6f560909dc0a5311ae7f9a659b,100,100,kill,kill,,,,,,,
+0xc825aa83f12e4d225ea1f21511a68e7aa78a002f,50/126,,getMeOutOfHere/withdraw/withdrawOld/@fallback,,,,,,,,
+0xd152f549545093347a162dce210e7293f1452150,13/16,,disperseEther,,,,,,,,
+0xd58132f2fbd65f02beee0626542e6ee059009ab4,221,,withdraw,,,,,,,,
+0xd7290307c040f4089f8650b7f7aac3cfe39cd6bd,267,,withdraw,,,,,,,,
+0xdd97853ba34af302f3d6a6415a750ae38e26d1fc,1159/1165/1170,,winnerReward/loser/draw,,,,,1076,createBet,,
+0xe30a76ec9168639f09061e602924ae601d341066,210,,withdraw,,,,,,,,
+0xe923dd860176d3ef69d7852257cc773900807f7c,56/150,,getMeOutOfHere/withdraw/withdrawOld/@fallback,,,,,,,,
+0xead71f4d060ddc7656c959b482fbdfaca95c5d9d,,259,,selfdestructs,,,,244,sell/getEth,,
+0xeefdfa0f6a921044e7901d18e6794c0a7baff4d7,209,,withdraw,,,,,,,,
+0xf34839b310097fcb4cf3a302dda8cc9b57501083,202,,withdraw,,,,,,,,
+0xf3dce610acbfbcbb4efc12c4c2e3be063128baad,56/150,,getMeOutOfHere/withdraw/withdrawOld/@fallback,,,,,,,,
+0xf55a32f0107523c14027c4a1e6177cd7291395a0,259,,withdraw,,,,,,,,
+0xfc79774fb9dedeea2325d0d5570554eddc4e6747,218,,withdraw,,,,,,,,
+0x860a8c64cbc7f9aac11428ef8df989f5770cda60_1,102/111,102,destoryContract/transferEtherToOwner,destoryContract,,,,,,,
+0x860a8c64cbc7f9aac11428ef8df989f5770cda60_2,102,102,destoryContract,destoryContract,,,,,,,
+0x860a8c64cbc7f9aac11428ef8df989f5770cda60_3,102/111,102,destoryContract/transferEtherToOwner,destoryContract,,,,,@fallback,,@fallback
+0xcd8f866ae90cef4c046101a1bc032cebecfaaa42_1,635/646,646,manualWithdrawEther/destructContract,destructContract,,,,,,,
+0xcd8f866ae90cef4c046101a1bc032cebecfaaa42_2,,646,,destructContract,,,,,,,
+0xcd8f866ae90cef4c046101a1bc032cebecfaaa42_3,635/646,646,manualWithdrawEther/destructContract,destructContract,,,,,,,
+0x5f7bb27f7a4702ebce052745cddc1f567ec89e15_1,203/206/214/489,203,stop/kill/withdrawFunds,stop,,,,,@fallback,,@fallback
+0x5f7bb27f7a4702ebce052745cddc1f567ec89e15_2,,203,,stop,,,,206/214/489,kill/withdrawFunds/@fallback/stop,,
+0x5f7bb27f7a4702ebce052745cddc1f567ec89e15_3,203/206/214/489,203,stop/kill/withdrawFunds,stop,,,,,@fallback,,@fallback
+0x11eba93a0a852fd34002f5411e1663cf864edb8b_1,160,245,withdraw,deprecateContract,,,,,,,
+0x11eba93a0a852fd34002f5411e1663cf864edb8b_2,,245,,deprecateContract,,,,160,withdraw,,
+0x11eba93a0a852fd34002f5411e1663cf864edb8b_3,160,245,withdraw,deprecateContract,,,,,,,
+0x0d0edbcf2c0da25ac9a79c9466989e46a8f96221_1,64/70,70,withdrawFunds/kill,kill,,EL:FP@L116(settleBet) : RNG unpredictable from the users' perspective,,116,settleBet/@fallback,,
+0x0d0edbcf2c0da25ac9a79c9466989e46a8f96221_2,64/70,70,withdrawFunds/kill,kill,,EL:FP@L116(settleBet) : RNG unpredictable from the users' perspective,,116,settleBet/@fallback,,@fallback
+0x34bc9a332350a41374aa650f1152c8d88e35a878_1,129,123,collectPlayerWinnings,collectOwnerWinnings,,,,,,,
+0x34bc9a332350a41374aa650f1152c8d88e35a878_2,,123,,collectOwnerWinnings,,EL:FP@L129(collectPlayerWinnings) : RNG unpredictable from the users' perspective,,129,collectPlayerWinnings,,
+0xfaf33ee481f6b1f878b68c06181e46a2e9226938_1,341/342/343/346,210,transferEthersToDividendManager,admin,,"EL:FP@L372(withdrawRefsPercent) : business logic (referrer gets money)
+EL:FP@L259(getPrize) : business logic (unpredictable random)",,259/372,withdrawRefsPercent/getPrize,,
+0xfaf33ee481f6b1f878b68c06181e46a2e9226938_2,,210,,admin,,"EL:FP@L372(withdrawRefsPercent) : business logic (referrer gets money)
+EL:FP@L259(getPrize) : business logic (unpredictable random)",,259/372,withdrawRefsPercent/transferEthersToDividendManager/getPrize,,transferEthersToDividendManager
+0x2120887e9e4889653770b228ee8d13231d0ef045_1,588/605,605,Transfer_anything/kill,kill,,,,,,,
+0x2120887e9e4889653770b228ee8d13231d0ef045_2,588,605,Transfer_anything,kill,,,,,,,
+0x2120887e9e4889653770b228ee8d13231d0ef045_3,588/605,605,Transfer_anything/kill,kill,,,,,,,
+0x9ac4883b0226fb37fa362dbd76564c539c4f0ee6_1,208/215/225,225,withdrawFunds/withdraw/finish,finish,,,,,,,
+0x9ac4883b0226fb37fa362dbd76564c539c4f0ee6_2,,225,,finish,,,,,,,
+0x9ac4883b0226fb37fa362dbd76564c539c4f0ee6_3,208/215/225,225,withdrawFunds/withdraw/finish,finish,,,,,,,
+0x3933e1bd030c3c14407f8eecce81493e066ab5e1_1,183,183,destruct,destruct,,,,,,,
+0x3933e1bd030c3c14407f8eecce81493e066ab5e1_2,,183,,destruct,,,,,,,
+0x3933e1bd030c3c14407f8eecce81493e066ab5e1_3,183,183,destruct,destruct,,,,,sell,,
+0x42e98f6ed27fc8f76118efb7d4fe9a254bf3bcc9_1,235/244,244,withdrawEther/close,close,,,,,,,
+0x42e98f6ed27fc8f76118efb7d4fe9a254bf3bcc9_2,,244,,close,,,,235,withdrawEther,,
+0x42e98f6ed27fc8f76118efb7d4fe9a254bf3bcc9_3,235/244,244,withdrawEther/close,close,,,,,,,
+0x0208a56ea43c3ff6c2611071948794c2674a16b9_1,175/180,180,drain/kill,kill,,,,,,,
+0x0208a56ea43c3ff6c2611071948794c2674a16b9_2,,180,,kill,,,,175,drain,,
+0x0208a56ea43c3ff6c2611071948794c2674a16b9_3,175/180,180,drain/kill,kill,,,,,,,
+0x287fda15f8f002e5df9f536f10bbfc0816960f36_1,161/167,167,@fallback/selfdestructs,selfdestructs,,,,,,,
+0x287fda15f8f002e5df9f536f10bbfc0816960f36_2,,167,,selfdestructs,,,,,,,
+0x287fda15f8f002e5df9f536f10bbfc0816960f36_3,161/167,167,@fallback/selfdestructs,selfdestructs,,,,,,,
+0xa78a974b487357ad5c17a072dfee4d31b839b331_1,99/154/166,210,sendAll/smallCheckOut/bigCheckOut,kill,,,,128,ticketConsume,,ticketConsume
+0xa78a974b487357ad5c17a072dfee4d31b839b331_2,99/154/166,210,sendAll/smallCheckOut/bigCheckOut,kill,,,,128,ticketConsume,,ticketConsume
+0xfbfa60a21b423cb364de616a37464b61c1bc4c88_1,188/444,188,kill/withdrawFunds,kill,,,,,,,
+0xfbfa60a21b423cb364de616a37464b61c1bc4c88_2,444,188,withdrawFunds,kill,,,,,,,
+0xfbfa60a21b423cb364de616a37464b61c1bc4c88_3,188/444,188,kill/withdrawFunds,kill,,,,,@fallback,,@fallback
+0x95195adfb67f28acfc07ce09eb496188527c0303_2,,517,,kill,,,,,,,
+0x95195adfb67f28acfc07ce09eb496188527c0303_3,517,517,kill,kill,,,,,,,
+0xfc1078a7bb4521881663df4148434acd991af14c_1,371,371,destroy,destroy,,,,,,,
+0xfc1078a7bb4521881663df4148434acd991af14c_2,371,371,destroy,destroy,,,,,,,
+0xfc1078a7bb4521881663df4148434acd991af14c_3,371,371,destroy,destroy,,,,,,,
+0xdcd03c274982b15341b570f39e0f72e730d11f32_1,294/312,,@fallback/finalizeIco,,,,,287,@fallback,,
+0xdcd03c274982b15341b570f39e0f72e730d11f32_3,294/312,,@fallback/finalizeIco,,,,,287,@fallback,,
+0xf7a3c5e0310ed2bafde8e782f43ab38c1cfa279d_1,398/599,,manualWithdrawEther/sellTokens,,,,,,,,
+0xf7a3c5e0310ed2bafde8e782f43ab38c1cfa279d_3,398/599,,manualWithdrawEther/sellTokens,,,,,,,,
+0x3f30a9ac5f4d9cccfe0331948f5a8f5df1ba3856_1,251,,sell,,,,,,,,
+0x3f30a9ac5f4d9cccfe0331948f5a8f5df1ba3856_3,251,,sell,,,,,,,,
+0x528732d7ff76a31bd419f1d57d549d7643c02db2_1,589,,payTokens:@fallback,,,,,,,,
+0x528732d7ff76a31bd419f1d57d549d7643c02db2_3,589,,payTokens:@fallback,,,,,,,,
+0x00685230359bdb9e16704e1d3918b553e9a015e2,,,,,,"EL:FP@L1505(withdraw): intended business model
+Users can buy NFTs cheaply and resell them at a premium",,1505,withdraw,,
+0x006ff3494c04680cfbf39b0396054486f3f6ad32,10/31,,Try/StopGame,,Important info can be stolen by on-chain tx - SetupPlay,KHP,,,,,
+0x00e2c3b903bec1131fb05283c92df8a94613ca4a,796,,buyWithETH,,Fake ERC721 tokens can be allocated to the market via unguarded `onERC721Received`,,,,,,
+0x013620bf5142f9d8487e92c1d514c38e1b086613,110/115/119,119,@fallback/callback/withrawFee/destroykill,destroykill,Incorrect constructor name & predictable `winningNumber` due to BR,,,,,,
+0x01b21934ba28dfd8a22c4d21c710290500a5081f,41,,play,,Predictable `secretNumber` in `shuffle` due to BR,,,,,,kill
+0x04bba664ea822924ff435ce1b3fad3e8dcc69481,,,,,,`claim-` functions are possibly intended,,3132/3154/3390,kingWithdrawTaxes/wayfarerWithdrawTaxes/distributeParliamentTaxes,,
+0x04ce99ba020bdac42fc42330da489afd6515a862,246,,withdraw,,Incorrect constructor name : Newvestoriatovestox vs. VEXTOXTEAM,,,,,,
+0x04ebe325519223119ab6bde2b84e23a6ecd05d65,73,,@fallback:buyTickets,,BR,,,,,,kill
+0x0595d187cac88f04466371eff3a6b6d1b12fb013,11/21,,GetGift,,The password for `GetGift` can be stolen via FR,,,,,,
+0x05cd27a978fc9f9919a5f4c5c03e5947ed7d4c4d,,11,,multi_x,TX,,,,multi_x,,
+0x064656852581472f9b315fea4730fe18fb7c579a,12/28,,Try/endGame,,Important info (response@startGame) can be stolen by on-chain tx data,KHP,,,,,
+0x0684a256b8a6434cf10ee81bc1bcdcbba3365daa,13/43,,Try/StopGame,,Important info (_response@StartGame) can be stolen by on-chain tx data,KHP,,,,,
+0x06c2452bcb4c1c1a046c520ffbad41fb8f48442b,12/28,,Answer/EndQuestion,,Important info (response@QuestionIs) can be stolen by on-chain tx data,KHP,,,,,
+0x06eb5444bd13815a77d72e336e8fe7dedb801709,8/11,8,end/get,end,"Ownership can be stolen via `own` 
+& Exploiters can steal all balances with investment of 1 ether",,,,,,
+0x07222fc4cdacedfbcfc03cbed6e72fb329e8d0b6,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,204/216/238/243,purchase/rent,,
+0x07678e4c603a26e92962b6e547df99929b708baa,214/308/464,,collect:withdraw/buy:@fallback/sell,,"Incorrect constructor name : Owned vs. owned / METADOLLAR vs STARTMETADOLLAR
+Then `sellPrice` can be hijacked",,,,,,
+0x07829cca2f215ced7aa41e51921f6dd42c906190,,,,,,RNG unpredictable from the users' perspective,prettysmart-achecker,83/211,kill/withdrawFunds/settleGame,83,kill
+0x07f5ddd0868782c86d7f1a86ab321a8db2c766fa,10/31,31,Try/StopGame,StopGame,Important info (_response@Start_just_try) can be stolen by on-chain tx data,KHP,,,,,
+0x0821f459bfbe966bb93ad220ece6e1bdfcadeab3,155,186,sell,selfdestructs,"Unguarded `selfdestructs` 
+& Users can directly exploit the airdrop policy without investment",,,190,getEth,,
+0x0846aadb38d580e2870ac0ba6f3625d8cf58cd4e,,,,,,,prettysmart-achecker,,,,
+0x08ade307321221677e837c8150bdbd4e891daf09,38,,withdraw:withdrawTo,,"Incorrect constructor name : Vault vs. initVault
+& `withdraw` does not decrement the deposit",,,,,,
+0x097581495f8f7b34ab4a0c8e48644117ba4393c2,265/300/519/521/522/523,,exit/withdraw/buy/reinvest/@fallback/sell,,"Incorrect constructor name : NeverEndingToken vs. NeverEndingApp
+-> `employeeFeeAddress[1-3]` & `marketingFeeAddress` can be stolen
+-> Benefits for them can be stolen
+& `withdraw` does not decrement the deposit",,,,,,
+0x098b6f16c0e6fff51b891cb3ef0248fda4c9f53b,,60,,admin,Anyone can destruct the contract via unguarded `admin`,EL:FP@L87(withdrawAffiliateCommision): This is a business logic (referrer gets money),,87,withdrawAffiliateCommision/investETH,,investETH
+0x0a0a7c26e72a9fdad30beeedf28ef8a3f5139ed9,1001,,getAllTheFunds,,"Unlimited impeachment rights can be obtained 
+via unguarded `setVirtualExchange`, `buyForHackerGold`,
+and then `executive` is stolen",,,,,,
+0x0bb6d7baee15e56663aabd8ef0ba33b50413d46d,,,,,,,prettysmart-achecker,,executeTxn,,
+0x0bc957a2dca7a6549f94fcab8cc3a900afdb1627,,,,,,"Incorrect constructor name : Exorbux vs. Exorbuscom
+However, ELs related to this PB are not found",,,exit,,
+0x0bf484a17015b8c999ddb64fa687e1f5e284120c,8/11,8,end/get,end,"Attackers can steal the contract's balance with an investment of 1 ether
+& The ownership can be stolen via `assign`",,,,,,
+0x0c2e5989a972f2a2c41163fb5adbf097fa92f93a,,,,,,,,5531/5535/5551/5570/5571/5572/5581/5582/5584,tokenFallback/deposit/withdraw/_withdraw,,
+0x0c4f0652d08951982d38f21e8deca798836a1597,241,,withdraw,,Incorrect constructor name : MEDELIN vs. LEGEND,,,,,,
+0x0cfa149c0a843e1f8d9bc5c6e6bebf901845cebe,43/54,,GetGift/Revoce,,Attackers can steal others' gift via `setPass`,KHP,,,@fallback,,@fallback
+0x0dc11b7ed751594906bce3a7091952b30528ee7e,,,,,,"EL:FP@L30,35(withdraw,kill): can never be effective since `this.balance` is 
+increased by `msg.value` before evaluating the if-condition@L20",,,withdraw/kill,,kill
+0x0e2354b2ea4a6312009b228d5171bf6a02c51150,10/34,,Try/StopGame,,Important info (_response@ActivateContract) can be stolen by on-chain tx data,KHP,,,,,
+0x0e35f4f608d4a8fa560595db79cfda02d790777b,30/39,,Play/StopGame,,Important info (_response@StartGame) can be stolen via on-chain tx data,KHP,,,,,
+0x0f3c1db76e44ca31e76698daa35e0d568f934f37,255,,withdraw,,Incorrect constructor name : CleanFoodCrypto vs. CFCDistribution,,,,,,
+0x0f82c7eab8f7efb577a2de9d2b7e1da1d0b6870e,138,,claim_bounty,,Anyone can steal the bounty via unguarded `claim_bounty`,,,68,withdraw/default_helper,,claim_bounty
+0x1016b4d3ef298d3fede4bda673b936de5f91435e,175,,sell,,Incorrect constructor name : x32323 vs. TokenERC20,,,,,,
+0x1044d3efad9a9bad4e77a1c0c86bc53636da0345,395,,@fallback:buy,,"Incorrect constructor name : MSRiseTokenSale vs. TokenSale
+and then `beneficiary` can be stolen",,,410,refund,,refund
+0x113058c101b2d78e001d4a7d2174a66b5ff3a4a7,,,,,,TL@L135(receiveApproval),,451,withdraw,,
+0x1142e1f922cde42756741b4e16ddc5a87ee94b3d,,,,,,,prettysmart-achecker,,withdraw,,
+0x11f4306f9812b80e75c1411c1cf296b04917b2f0,12/45,,@fallback/bet/releaseFunds,,Predictable `random()` due to BR,,,,,,
+0x1235b9042f7fe167f09450eaffdc07efcc3acb38,45,40,withdraw,kill,Incorrect constructor name : Deposit vs. Vault,,,,kill,,
+0x1237b26652eebf1cb8f59e07e07101c0df4f60f6,12/39,,Play/StopGame,,Important info (_response@StartGame) can be stolen by on-chain tx data,KHP,,,,,
+0x126ae85a1ebf49dc946224f5268c6bd8338d49ae,,31/36,,@fallback/debugDestruct,Anyone can destruct the contract via unguarded `fallback` & `debugDestruct`,,,,,,
+0x1277ee49236da5c07e93b8b9df29d629842f0ab9,,,,,,,prettysmart-achecker,223,startBuying,,
+0x129e719c424a7a6fbdeb7ca3d65186892d54ea8c,30/39,,Play/StopGame,,Important info (_response@StartGame) can be stolen by on-chain tx data,KHP,,,,,
+0x131288b47c92409d0778d0aa2fbb8367e3399d33,71,71,kill,kill,Anyone can destruct the contract via unguarded `kill`,,,,create,,create
+0x13c547ff0888a0a876e6f1304eaefe9e6e06fc4b,44/55,,GetGift/Revoce,,Attackers can steal others' gift via `setPass`,KHP,,,,,
+0x1442a8fd038e0253ab07fd0e6aa70413d961f315,,,,,,,prettysmart-slither,135,internalRelease,,
+0x147749ecf26c13c886a9b661f55f78e8ebd22e7a,11/35,,Try/StopGame,,Important info (_response@ActivateContract) can be stolen by on-chain tx data,,,,,,
+0x155e7e9ab193aa37c87d22f66002e3db64c9e0ce,,,,,,EL:FP@L51/52/61: PIB,,51/52/61,changeOwner/killContract,61,killContract
+0x156216c63ee80183368ca8dd9f10618522918784,248,,withdraw,,Incorrect constructor name : WarCoin vs. KingToken,,,,,,
+0x1590088b0003d63319bbfdb523e6f5966b18b6d0,612,,getMyRefund,,`getMyRefund` does not decrement the deposit,,,445/474/583/599,issueTokensExternal/burnTokens/getMntTokenBalance/setState/finishICO,,
+0x15dd447b5ecf63432909a4655037b43898fabf19,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,1318/1521,_payout/purchase,,
+0x1621530fec6f4b081712ab49f88ca78b60841ddf,13/17,13,end/get,end,Ownership can be stolen via `set`,,,,,,
+0x16aae4b322501c339ed31a41fb915ae305528585,12/28,,Guess/StopQuiz,,Important info (response@StartQuiz) can be stolen by onchain tx data,KHP,,,,,
+0x17683235257f2089e3e4acc9497f25386a529507,42/56,56,withdraw/recovery,recovery,Incorrect constructor name : HelpMeSave vs. MyTestWallet7,,,56,recovery,56,recovery
+0x18429dedafbb65443edf60402294df5c01aee1da,,,,,Incorrect constructor name,,,,,,
+0x191a70e9808c8d89be289cfe9001a7010dc3d78c,53,,redeem,,Attackers can steal ethers via exploiting the underflow in `burn` function,,,,,,gameOver
+0x197803b104641fbf6e206a425d9dc35dadc4f62f,19/43,43,Play/StopGame,StopGame,Important info (_number@StartRoulette) can be stolen by on chain tx data,KHP,,,,,
+0x19923eadf80ab042c0b0928aaf8b395d4269bbeb,16/20,16,end/get,end,"Ownership can be stolen via `assignOwner` 
+& exploiters can steal all balances with an investment of 1 ether",,,,,,
+0x19d0321ba91ed5edec4afe1da158a6b06bba03f0,12/28,,Answer/End,,Important info (response@Begin) can be stolen by onchain tx data,KHP,,,,,
+0x1a51f16b4d385a06c542d3686412ab6517b5515d,,,,,,"PB@L88(mintTo), unrestricted minting by unrestricted accounts
+However, there is no direct way to exchange token to ether",,51/52/61,changeOwner/killContract,61,changeOwner/killContract
+0x1b1c789fccdfc6a7b1fef651a1464043f0a38ada,74,82,withdraw,kill,Ownership can be stolen via `init` & `withdraw` does not decrement the deposit,,,,,,
+0x1b941ded58267a06f4ab028b446933e578389daf,206,,withdraw,,Incorrect constructor name : MGN vs. HP,,,,,,
+0x1b2f1ddb9696bb6869999636121277c271f6f23c,,,,,,,prettysmart-slither,810,beneficiaryWithdraw,,
+0x1d6a8165fb01a3e792fc913da2b41da2aabfac9b,,,,,,"Incorrect constructor name : MobileAppCoin vs. StoriqaCash
+However, StoriqaCash is actually an infeasible path because
+`totalDistributed = 2462, totalRemaining = 462` and the `distr` function inside
+`ZeroXEth` requires a safe sub of `totalRemaining - totalDistributed`",,275,withdraw,,
+0x1dabd43e0f8a684a02712bcd767056e25026061c,43/54,,GetGift/Revoce,,Attackers can steal others' gift via `setPass`,KHP,,,@fallback,,@fallback
+0x1d8cd6eab10ab7d673fa7b4c5f93fe167953d4f9,85,93,withdraw,kill,Ownership can be stolen via `init` & `withdraw` does not decrement the deposit,,,,,,
+0x1e5028fcb334d79633f5a6665347d2eaa02cb406,,,,,,,prettysmart-achecker,,,,
+0x1f7f65b220a0f2d48b28390380f57468e7a382fe,,,,,,,prettysmart-achecker,,,,
+0x20b3d3f8a3e4f7b23382d844f2ca1d7026d69479,,,,,,EL:FP@L108/136:PIB,,78/83/112/140,@fallback/payout/payoutSelf,108/136,payoutSelf/payout/@fallback
+0x21c852fb8e7ff1f9e6f8ba43652fd4d7907c38bc,361/363,,payout:_payout,,Incorrect constructor name : etherEmojis vs. Etheremojis,,,210/215,purchase,,
+0x22cd4b95c325b55a63e856d2d30e69f8c259e56b,139,,buy:buyRecipient,,Incorrect constructor name : GooglierToken vs. FirstBloodToken,,,,,,
+0x233265020cc69214aea3edd4192b96d5232bf5ca,172,,Initiate,,"The address `swap` can be arbitrary, and require@L170 actually cannot ensure `msg.value >= _premium` due to overflow",EL:FP@L185: considered as TL rather than EL,,177/185/188/190/191/192,Enter,,
+0x245233bc8604d2097bfcbf3338959c46da04d9e0,,166,,close_bank,Unguarded `close_bank`,,,,,,
+0x24a7de87b3bd7298bbf8966fdf170c558d69ecc4,214/307/458,,withdraw:collect/buy:buyToken:@fallback/sell,,"Incorrect constructor name : Owned vs. owned / METADOLLAR vs. STARTMETADOLLAR
+Then `sellPrice` can be modified by modifying `sellRate` and `ethRate` and
+call `STARTMETADOLLAR` again",,,,,,
+0x264979ffd35d608e69b69681f4bbcba9877e6c4a,10/30,30,Try/StopGame,StopGame,The important info (_response@start_qz_game) can be stolen by on-chain tx data,,,,,,
+0x265c91539255a96e1005a0fd11ca776c183d04f5,40,,GetGift,,Attackers can steal others' gift with an investment of 1 ether,,,,,,
+0x26b5962250b779ab0f33970738a46fcfb00a70b9,76,,withdraw,,Incorrect constructor name : NewLottery vs. LottoCount,"EL:FP@L81(shutdown): Owned::owner cannot be stolen via 
+`LottoCount` due to the variable shadowing of NewLottery::owner",,,,,shutdown
+0x2771ef07defb079c309542e11219d97b562ab6b0,,,,,,,prettysmart-securify,111/166,sendEther/@fallback,,sendEther/@fallback
+0x2823589ae095d99bd64deea80b4690313e2fb519,,,,,,PB@L163 allows minting for arbitrary users,,,,,
+0x28e0d54349c00607505aadc713147140fb60ea12,10/31,31,Try/StopGame,StopGame,The important info (_response@StartTheGame) can be stolen by on-chain tx data,,,,,,
+0x290d7f8b8d7da1e92903405a74667c934ca8f086,50,,withdrawTo:withdraw,,"The ownership can be stolen via `initWallet` 
+& `withdraw` does not decrement the deposit",,,,,,
+0x2910536d9d858760c440d89f7a3821a77708933c,,,,,,PB:FP@L79(ActiveAdmin): give ownership to a constant address,,,bid/setOwner/setDevFee/setRollover/setNextBidExpireBlockLength,,bid/setOwner/setDevFee/setRollover/setNextBidExpireBlockLength
+0x295b13831dc5c5df5e0ed3df874d9be83c79ac15,,,,,,,prettysmart-achecker,,@fallback,,
+0x29e577a56e32cb79442efb8c9275b46e6616951d,50,,failedByDeveloper,,`customerWallet` can be stolen via `@fallback`,,,41/55,completeOrderBySafePeriod/completed,,completed
+0x2a22e5cca00a3d63308fa39f29202eb1b39eef52,,,,,,,prettysmart-achecker,,approveAndCall/decreaseApprovalAndCall/increaseApprovalAndCall/transferAndCall/transferFromAndCall,,approveAndCall/decreaseApprovalAndCall/increaseApprovalAndCall/transferAndCall/transferFromAndCall
+0x2ab328ddcc578d897775f0dcc8c1ea495049031f,186,,@fallback,,Incorrect constructor name : Owned vs. Constructor,,,,,,
+0x2b34ebda72bade6e6e91883ca67eb23484b045fb,225/326,225,destroy/transferTo,destroy,important info (_response@StartTheGame) can be stolen by on-chain tx data,,,,,,
+0x2b98b39d39914b3aad05dd06a46868507156400d,12/44,,Play/StopGame,,important info (_response@StartGame) can be stolen by on-chain tx data,,,,,,
+0x2bb4bacbb7cc6186454253dab673e22009a0b866,90,,@fallback,,TX,,,,,,
+0x2be511409c976bdcd141642969ece04cd1171403,230,,withdraw,,Incorrect constructor name : MobileApp vs. MAC,,,,,,
+0x2ca72c9699b92b47272c9716c664cad6167c80b0,183,,finalize,,`ethFundDeposit` and `gunsFundDeposit` can be stolen via `initialize`,,,,refund,,
+0x2cbc88071f7c0eff084332b8acaa01f1f33eba50,64/236,64,kill/withdraw,kill,Incorrect constructor name : Owned vs. owned,,,,,,
+0x2cecf8f9f328d80d34cd456cc7dd15e20e45638a,,,,,,,prettysmart-securify,,,,
+0x2d1ea57f68e430da2e693db0c6a3887a705aed69,33,,@fallback,,"In `_forward`, `safeFalse` sends ether to msg.sender rather than `_to`",,,,,,
+0x2d4ca7d079415595f9e5b62602f7ae7d88b91e53,180,,@fallback,,Incorrect constructor name : Owned vs. Constructor,,,,,,
+0x2dfd9ec3000e5f9a0e585174d540f19322e90942,202,,withdraw,,Incorrect constructor name : BTTR vs. Leg,,,,,,
+0x2e0794073ec7b08e40d80a41599bb31df042e4e5,13/43,,Try/StopGame,,important info (_response@StartGame) can be stolen by on-chain tx data,,,,,,
+0x2f0433758bcc851d047d0fed1f423fa38e96da47,,,,,,,prettysmart-securify,,,,
+0x2fef874df01676d409163a65e5c2fc5e325f6479,253,,withdraw,,Incorrect constructor name : OminiraProtocal vs. ominiraprotocol,,,,,,
+0x300fc708cf85af94337acf3a752af2dc18327bcb,15,15,close,close,The ownership can be stolen via `setOwner`,,,,,,
+0x30699ca0288c96b5bd4f2b633b097889d59086d9,418/419,,receiveDividends,,"Users can forcibly take away NFT ownership using `purchase` function,
+which is also a permission for dividends",,prettysmart-mythril,418/419,receiveDividends,,
+0x30cefbcb5c26a5b19a019092ab8d09f8739c904f,,,,,,,prettysmart-slither,575,refund,,
+0x3285fd5707813fd5e07aa6f0ac37a8114c3d0dc0,11/25,,Guess/StopGame,,important info (response@StartGame) can be stolen by on-chain tx data,,,,,,
+0x331769de477c2122638fe1116808d3a9159ab13a,204/206/208/210,,settleJackpot,,BR,,,95/220,migrate/paySuperPrize,,
+0x33540976411534a8d96c715a4ff7f4392d2e52d1,56/151,137,getMeOutOfHere/@fallback/withdrawOld,approve,"Infamous POWHcoin hack
+& Unguarded `selfdestruct` in `approve`",,,,,,
+0x33c33b356bc3d715cf899c1de8fae4092a5ca264,,,,,,,prettysmart-slither,109/155,withdraw/sendTokens,,
+0x34afa7ff9a8eb4d8e61145ca81e2d0dab7b03662,,8,,destroy,Vulnerable function - destroy,,,,,,
+0x34bc4f174c027a68f94a7ea6a3b4930e0211b19d,45/56,,GetGift/Revoce,,Attackers can steal others' gift via `setPass`,PH,,,,,
+0x3512594d19870dabac2e033f15fcc6d9abd606ba,,60,,admin,unguarded selfdestruct,,,87,withdrawAffiliateCommision/investETH,,investETH
+0x3597f78c7872db259ce023acc34511c7a79f42e3,32/42,,GetGift/Revoce,,Attackers can steal others' gift via `setPass`,PH,,,,,
+0x35ba0d41cdf5e4cd2542a3ff8ea206398439a230,,,,,,,,,,,
+0x35e3d5c3d8fba3c61b385aecd3b3565b8327de09,465/471/538/543/585,,sendEthValue/sendEthProportion/bancorSendEthValue/bancorSendEthProportion/kyberSendEthProportion,,Attackers can steal ethers via unguarded functions `sendEthValue` & `sendEthProportion`,,,,,,
+0x35e44051799bd7cea091c4fad2cba9b37e364c5b,,,,,,"Incorrect constructor name : myPreICO vs. myICO
+However, the actual ownership is not stolen due to variable shadowing",,,,,
+0x362e7b025d52efb08681d9b5e42fd25070cf2bed,252,,exit,,Integer underflow is triggered in `dividendsOf`,,,,withdraw,,
+0x36f726e01cc85fdb0d998dfc442856379c569274,41/50,50,play/kill,kill,"Incorrect constructor name : EthRoulette vs. CryptoRoulette
+& Predictable `secretNumber` due to BR",,,,,,
+0x371f24324e223a5ca99f26c4993aae53149b2597,,,,,,"PB@L608(mintToken): unrestricted minting by unrestricted users
+EL@L97(sendFunds) is not the vuln of the main contract",,97,sendFunds/sell,,
+0x37a857e007ba6ae7862bc5ab1104dd4396de7950,850,,endUpgrade,,TX,,,943,solveTask,,
+0x38c83b225eb17d44f33f8bb3bdc23d86733838db,10/30,30,Try/StopGame,StopGame,important info (_response@start_try_to_play) can be stolen by on-chain tx data,,,,,,
+0x398193d0f35a132b9d8f7252c29d3c269c6f9965,781/785,781,withdraw/terminate,terminate,ownership can be stolen via `estalishOwnership`,,,,,,
+0x3990240a9ba025c1bdc0116521ed0bfd9b40ec99,,,,,,,prettysmart-slither,432,reclaimFund,,
+0x399a40838258af0836cad506cc58bf7a40061ee0,,,,,,,prettysmart-slither,448,withdraw,,destroy
+0x3a6984181f49c9ef64ada32373e736db0c9f1078,,,,,,FP@L176/178:PIB selfdestruct only after auction,,,cleanUpAfterYourself,176/178,cleanUpAfterYourself
+0x3c0dc66381a4e40d9afbfc33f74e503eb8099f27,,,,,,"PB@L103(withdraw):
+Anyone can call `withdraw` to foribly refund arbitrary user's balances,
+which is not the ctx of EL",,104,withdraw,,withdraw
+0x3cb8c8026557623bde4b3923c6ee0c398b85ce47,,,,,,,prettysmart-prettysmart,,,,
+0x3db9f293b2e992f8c339a543561a615559c375dd,,,,,,FP@L41(withdraw):PIB,,39/41,withdraw,,withdraw
+0x3e365d13828c398d1bd1694adce8998fd0139ba3,80,88,withdraw,kill,"ownership can be stolen via `init` 
+& `withdraw` does not decrement the deposit",,,,,,
+0x400038f498e601f623f364129ca76cf23fdd1891,216,,@fallback,,Incorrect constructor name : Owned vs. Constructor,,,,,,
+0x403e518f21f5ce308085dcf6637758c61f92446a,,,,,,"PB:`rc` and `onlyRC` is tainted due to TX vuln
+Attackers can force the contract to buy attackers' token(L426), which is not the ctx of EL",,346/352,refundEther/withdraw,,
+0x41a3bd762288d9dde5eb640efe4d21fc1da2f74d,217,,withdraw,,Incorrect constructor name : VotePumpCoin0x vs. VPCx,,,,,,
+0x42095468d0af5976caa589ad6db91a1b8913be4e,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,170/175/285/287,_payout/purchase,,
+0x42d7c0c40a153c49212a89d0129a8cec8c23935b,,,,,,,spcon-issta,,,,
+0x4556d522453633cfc6962cbde7cc4da840eb6707,,,,,,FP@L201 The main contract does not inherit the vulnerable `BaseWallet`,,201,invoke,,
+0x467532e79222670a2044c9b168bcbaa33b390ef5,10/30,,Try/StopGame,,important info (_response@start_qz_game) can be stolen by on-chain tx data,,,,,,
+0x468b9ec0747e3da866a06a10cff67d4f49ad9765,113/149,,withdraw/claim,,BR & `claim` does not decrement the stake,,,,,,
+0x49d2374241a0a4b407a71d359a753fc630c5d8d4,24,24,Kill,Kill,Anyone can destruct the contract via unguarded `Kill`,Note that a contract with no payable can actually hold ethers,,,,,
+0x4b17c05fc1566891e5a9220d22527b5aeab0e1d0,,,,,,"Incorrect constructor name : microICO vs. myICO
+However, the actual ownership is not stolen due to variable shadowing",,43,withdraw,,
+0x4b89f8996892d137c3de1312d1dd4e4f4ffca171,148,,sellTokenForLRC,,PB@sellTokenForLRC(CVE-2020-35962),,,,,,
+0x4c478ac32725872e30bca49957abc7dbb325cb21,293,293,masterFns,masterFns,"selfdestruct is guarded by passwords, but the answer is in the contract",,,,,,
+0x4c524b1e9d947c79be92e20c82e7281d783657dd,,,,,,PB@L26(Donate),,,Withdrawal,,Withdrawal
+0x4e00ca8c94af28f386a1d8fbeccfb02aff0c29f9,51,,@fallback,,incorrect constructor name: iBird vs Makindo,,,,,,
+0x4e0a88e9b30df014dc980ef237d6776f24f23222,,,,,,,,,,,
+0x4eb3ce14fda3a874ecad0e9ad988258c827bae82,214,,WithdrawToSponsor,,The ownership can be stolen via `init`,FP:EL@L162 PIB,,162,WitdrawLenderProfit,,WitdrawLenderProfit
+0x4ed184d6a9e449ecb984cb1fea7ed40db59439fd,,9,,kill,anyone can destruct the contract via unguarded `kill`,,,,,,
+0x4f494b04222c1893e87d25c7e75dbc0ecd3aadf8,14/28,,Play/Stop,,important info (resp@Setup) can be stolen by on-chain tx data,KHP,,,,,
+0x4fb718fdbf4a51d3fba11ea63309729b37ab76da,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,291/506/508,_payout/purchase,,
+0x5088b94cf8a1143eb228b6d3f008350ca742ddc2,46/53,,sellDrugs/buyDrugs,,incorrect constructor name: EtherCartel vs DrugDealer,,,47,,,
+0x50eae8e1505e46c6d35f64ec88e7693a0ac1d59e,99,,withdrawETH,,Anyone can withdraw the ether via `withdrawETH`,,,,,,
+0x50ec4b1f8434020e2d896c9cfb8a20d63af6136d,,,,,,,prettysmart-slither,158,sendInSoldier,,
+0x5162a13e4b2adf708878c71f2cad69525770601f,114/277,,buyAAC/@fallback/withdraw,,incorrect constructor name : AcuteAngelCoin vs. AAC,,,,,,
+0x53018f93f9240cf7e01301cdc4b3e45d25481f73,32,,GetGift,,The password for `GetGift` can be stolen via FR,,,,,,
+0x539da201f33a25e4a782d3b42eb0f0a83c0fd753,,,,,,,prettysmart-securify,,,,
+0x540449e4d172cd9491c76320440cd74933d5691a,,,,,,,prettysmart-slither,929,finalizeCrowdfunding,,
+0x559cd99b1eb1cd61224d9d2a9aec3f8634bfbef4,162,,executeLottery:@fallback,,BR,,,,,,
+0x55f854a1e2e67fef6754fdbc985b04423d20fbf1,13/17,13,end/get,end,"Attackers can steal the contract's balance with an investment of 1 ether
+& The ownership can be stolen via `set`",,,,,,
+0x56d06701fd44a4a857cb96b266f505a2832950c5,,,,,,"TX in `BasicAuth` contract, but the main contract does not inherit the vuln contract",,756/763/1082/1083/1113/1126/1128/1133,GetDayReward/Donate/Withdraw/MasterWithdraw,,
+0x57684f9059afbf7bb11b07263500292ac9d78e7b,19/43,,Play/StopGame,,important info (_number@StartRoulette) can be stolen by on-chain tx data,KHP,,,,,
+0x57831a0c76ba6b4fdcbadd6cb48cb26e8fc15e93,,,,,,,prettysmart-securify,,,,
+0x5822e54dbc2a20856a4740def71240c3e6f553ea,142,142,destroyContract,destroyContract,Incorrect constructor name : SelfDestructionContract vs. SelfDestruction,,,,,,
+0x59004a80a03dc611377866317f50988a9eefc3d7,,224,,selfdestructs,anyone can destruct the contract via unguarded `selfdestructs`,,,,getEth,,
+0x590d1d5ba0feb249d42c527ae21d12f2e5768a87,12/28,,Try/StopQ,,important info (response@StartQ) can be stolen by on-chain tx data,KHP,,,,,
+0x5943a67e4375b556df0856fdf08f972d02677b78,,,,,,,spcon-issta,,,,
+0x59670e7f172eafea08f44a308158c65e314a0df9,107,,sellCoin,,"Attackers can buy a coin and directly resell to get profits
+Since buying itself increase the coin price, the benefit is ensured automatically",,,,,,
+0x5a4cdcb676d40d939d013bb50909e835b8e3cabe,,,,,,,prettysmart-slither,133,@fallback,,
+0x5b0a2ade105dcea75cfb0f9785d17bf5167a7493,10/26,,Play/Stop,,The important info (resp@Setup) can be stolen by on-chain tx data,,,,,,
+0x5b2028602af2693d50b4157f4acf84d632ec8208,,,,,,The ownership cannot be stolen due to variable shadowing,,,,,kill
+0x5bd6a6d4b21d4b4952426cb23aea7f7bb4944c9b,,,,,,"PB: Incorrect constructor name : owned vs. ReconOwned, Owned vs. Owned1",,2331,cashBack,,
+0x5c3a228510d246b78a3765c20221cbf3082b44a4,,,,,,,prettysmart-prettysmart,,,,
+0x5c8546a7b86ba30202c09a84f5a72644a2a4f7ba,,52,,kill,Anyone can destruct the contract via unguarded `kill` when balance=0,"The ownership cannot be stolen by `initalize` due to variable shadowing
+`withdraw` does not decrement the deposit; however, only owner can call `withdraw`",,,kill,,
+0x5da354ebda60d93dab822b10fe0925489f0b9db7,246,,withdraw,,Incorrect constructor name : chaincybercmctmovie vs. cmctcybermovie,,,,,,
+0x5f6e7fb7fe92ea7822472bb0e8f1be60d6a4ea50,,,,,,PB@L240(PublicMine),,,,,
+0x5f9385d5f4e27c17d9b56a2687e56415083f0eef,72/166,,getMeOutOfHere/@fallback,,Infamous POWHCOIN hack,,,,,,
+0x5fbc020c3ee08c1a6909b2927e7dcab3afce8dea,1102/1105/1110/1009,,purchase/updateRegionPixelPrice:_processUpdateFee,,"Transfers to untrusted users, because return addresses from `_contract` are untrusted",,,1211,withdrawBalance,,
+0x600ff15d3cf655d1521c86dddb72c511c785b594,140,,buyRecipient,,Incorrect constructor name : GooglierToken vs. FirstBloodToken,,,,,,
+0x60f52581489e879df02d86f956bd8c634f6f4db9,112,,buyTickets:@fallback,,BR,,,,,,kill
+0x6197e674d1cfa8040b34a82e40d0494ebe5b8d67,14/28,,PlayQuiz/Stop,,The important info (resp@Config) can be stolen by on-chain tx data,,,,,,
+0x61d0407edb149dc453c47fe31139fae9c1472da6,,,,,,TX,,,,,
+0x625f220be6440c14f3481072f1cbe9a83a58ec75,48,,withdraw/withdrawTo,,`withdrawTo` does not decrement `deposit`,,,,,,
+0x633d4a2a8d5f498dfbb8a9f59230f0a9d1446df4,,224,,selfdestructs,unprotected `selfdestruct`,,,229,getEth,,
+0x63d3d0215922b924c782c7b2a351ef8604e18da7,13/43,,Try/StopGame,,The important info (_response@initialize_ether_quiz) can be stolen by on-chain tx data,,,,,,
+0x64669148bca4f3d1216127a46380a67b37bbf63e,32/42,,GetGift/Revoce,,Attackers can steal others' gift via `setPass`,PH,,,,,
+0x6490efefbe454d7a4aaad6d1a3359d38a1065e91,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL
+EL:FP@L215 PIB (rewards for NFT holders)",,351/356/215/395,buyTeam/payLastSixteenWinner,,destroy
+0x64d63840cfbcb5a7320c4e104b116f6aa31ce08b,,462,,stopCrowdsale,Anyone can destruct the contract via unguarded `stopCrowdsale`,,,,,,
+0x656038e97cee7c095673f7b9fad695b323a6f098,,,,,,TX,,,,,
+0x656610729fc13e8283d96aa69cdf56c112222951,36/44,,Play/End,,"The ownership can be stolen via `Start` with FR
+&& the answer can be stolen via `Play` with FR",,,,,,
+0x6594ac0a2ba54885ff7d314eb27c9694cb25698b,36/47,,GetGift/Revoce,,Attackers can steal others' gift via `setPass`,PH,,,,,
+0x65c52ae9b15dd6f30902e9f8164c91e912ee2be3,46,58,withdraw/withdrawTo,kill,"The ownership can be stolen via `init` 
+& `withdraw` does not decrement the deposit",,,,,,
+0x660fcb0834b1293117d472d65186534acf75af4f,68,76,withdraw,kill,"The ownership can be stolen via `init` 
+& `withdraw` does not decrement the deposit",,,,,,
+0x6612a2cac21a89159ad152488fd1f843d33843e4,48,,withdraw/withdrawTo,,"The ownership can be stolen via `initWallet` 
+& `withdraw` does not decrement the deposit",,,,,,
+0x6693bc7a3f8875b36c9bbe57c4917a1506e5a327,,,,,,`setOwner` will not considered as a PB because another contract is managing ownership,,,,,
+0x66d58f0a2a44742688843ceb8c0fa8d8567e3c54,173/106,,payout:ownerPayout/withdraw,,BR + incorrect constructor name : Owned vs. owned,,,,,,
+0x68af0f18c974a9603ec863fefcebb4ceb2589070,22/30,,CashOut,,The password for `CashOut` can be stolen via FR,,,,,,
+0x68cadbcdd5a14e89364f0535fdef62f0f1b9d025,238,,withdraw,,Incorrect constructor name : SurgeToken vs. withrawDev,,,,,,
+0x6970bbe0df628b1e2dce874daaa529c0ceff54ff,212,,withdraw,,Incorrect constructor name : XVOToken vs. XVOTOKEN,,,,,,
+0x6986c4b89add1ffbecb290f06e76107d72c6aba4,730,,drainFunds:_forwardFunds,,Incorrect constructor name : Owned vs. Ownable,,,157,@fallback,,
+0x6bd33d49d48f76abcd96652e5347e398aa3fda96,69,,buy,,Anyone can steal the reward via unguarded `buy`,,,48/95,withdraw/@fallback,,
+0x6d500e4b6565c3c25a6edd51839d52269e3d293f,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,207,purchase,,
+0x6f28b146804dba2d6f944c03528a8fdbc673df2c,,,,,,,prettysmart-spcon,,,,
+0x6f3d1879cd84fa1a7eec7fe936af6a84b67f4567,259/865,865,withdraw/kill,kill,"Incorrect constructor name : Fallback vs. fallback; 
+Anyone can steal the ownership via @fallback with an investment of 1 wei 
+and immediately steal ether of the contract",,,,,,
+0x6f5c1ed62a4fa41cfc332d81fafd3cd38aacbd85,80,88,withdraw,kill,"The ownership can be stolen via `init` 
+& `withdraw` does not decrement the deposit",,,,,,
+0x6fd570c64568a05b9cf3afcd7d31aa5e3c9b8350,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,227/256/260,recievePayout/createAuction,,
+0x707784ed2b464474f8fb763c058b33fcf8626db5,,,,,,TX,,756/763,MasterWithdraw/Withdraw,,
+0x70d146a7dc622772b9d4b4fc02f28516ce237011,272,,withdraw,,Incorrect constructor name : DartToken vs. testhash,,,,,,
+0x735ba26f91e1275fa4b504649b19ef74739fe7e7,,,,,,FP:SU@L93 PIB,,,,,reward
+0x73a25642d3cdd443b0d1dd006893b63c7fe8b64c,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,235/343/345,_payout/purchase,,purchase
+0x73b0ebea28f76be1368d578d13657354330472a9,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,319,purchase,,
+0x73bd0cba93bbb6bc332ad47ea0ae31ae05e44cb0,,,,,,PB@L50(Constructor),,,,,
+0x747616c4a19bd9bf1e2b6c8a77d206ea1f9c6018,,,,,,"Has another vuln that the contract owner can steal user's token ownership
+by calling `createToken` with existing `tokenID`, which is not the context of EL",,423/482/484/492/494,purchase/_payout/_withdrawFunds,,
+0x75e494f8a92ad1daa4fd6e78cbac33f84c2f25b9,61/207,61,kill/withdraw,kill,Incorrect constructor name : Owned vs. owned,,,,,,
+0x762b4644df07f502fcd6b48c779899af0987001d,28,,Try,,The important info (_response@start_qz_game) can be stolen by on-chain tx data,,,,,,
+0x766ce08cd40b31b79b3681bce55f61e6efc4edfa,2005,,reclaimEther,,Incorrect constructor name : TokenController vs. initialize,,,1924/1928/1934/1938/2014/2015/2018/2019,transferChild/issueClaimOwnership/reclaimToken,,
+0x768ae39a73131d5032e3fb9f35cd6179c44d2d26,10/31,,Try/StopGame,,The important info (_response@SetQGame) can be stolen by on-chain tx data,,,,,,
+0x76e7da54f22728f7f5afa35f974419ae9f41ba94,,,,,,PB@L105(init),,,,,
+0x77e00640a6343152a35542027ba76407bdde0bb6,10,,Try,,The important info (_response@start_qz_game) can be stolen by on-chain tx data,,,,,,
+0x78cf7525a755f3542a5652fe8eab87c23e910da5,,,,,,,prettysmart-mythril,,,,
+0x7a70299f8ede75836d47e37b9af192fb58ea6c51,,8,,BurnMe,Anyone can destruct the contract via unguarded `BurnMe`,,,,,,
+0x7a8721a9d64c74da899424c1b52acbf58ddc9782,,,,,,"TX,RE",,,,,
+0x7bb1e3424dd7ccfba46a55b659742112dfb503d5,290,,sell,,Incorrect constructor name : owned vs. Constructor,,,,,,
+0x7be8076f4ea4a4ad08075c2508e481d6c946d12b,,,,,,,prettysmart-slither,845/855,executeFundsTransfer,,
+0x7dd921651b1d6e92a09b92e03769e8f6360efefd,225,,withdraw,,Anyone can steal the ownership via `TeamTokenAllocation`,,,,,,
+0x7e7483db7765408fa66ef9c3f2af7efe365958ed,93,,withdrawEth,,`withdrawEth` does not decrement the deposit,,,92/100,@fallback,,@fallback
+0x7fea965a502f3f17851a57bcc57e95e03d83e98a,,,,,,,prettysmart-securify,866,transferEth,,
+0x7fefc8bf6e44784ed016d08557e209169095f0f3,11/21,,GetGift,,The password for `GetGift` can be stolen via FR,,,,,,
+0x7ffc2bd9431b059c509b45b33e77852d47de827d,26,,Get,,Attackers can steal the gift via unguarded `Put` with an investment of 0.5 ether,,,,,,
+0x809416858a4d0caa83a660c54b59c4180c6d1be3,,,,,,,prettysmart-securify,,,,
+0x812a935527dac8c340ae875ecb7713fcf85127c6,,,,,,,prettysmart-slither,,,,
+0x8170fdafa281530ab8353de4d29a3f45949ee50c,158,,transferFunds,,Incorrect constructor name : Owned vs. Own / Flame vs. Flames,,,,,,
+0x818b121e5c6435e1d3a7533c466804b817a18cd2,,,,,,"PB@L6(owned) incorrect constructor name
+which allows infinite minting for arbitrary attackers",,,,,
+0x818ebdad12d3decefabe6ccb16f33c9bbfe1b30a,,,,,,"PB@L88(mintTo), unrestricted minting by unrestricted accounts
+However, there is no direct way to exchange token to ether",,51/52/61,changeOwner/killContract,61,changeOwner/killContract
+0x8200341ffa058a4b2fa5bef16c8cca0330d529ed,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,385/387/234,_payout/purchase,,
+0x82aa987a16deafd8b4fab73ec316f94f4df43020,,,,,,,spcon-issta,,@fallback,,@fallback
+0x82b279b585c7bb848c36f23919d68b4d0262c184,133,,claim_bounty,,Anyone can steal the bounty via unguarded `claim_bounty`,,,131/73,@fallback,,
+0x833882e76f4967b9b18f52d70640bfcc82aa91e9,,,,,,,prettysmart-prettysmart,,,,
+0x845581267b3ffcde72a1a98efcffee48cb9ae0de,11/29,,Try/Stop,,Important info (_response@Start) can be stolen by on-chain tx data,,,,,,
+0x849c2ea2a8f0ed0fe6d28b17fa0f779d6a45dff1,,,,,,,spcon-issta,,,,
+0x84b774ac2140bb687a16817e33ad9b9909c25b73,140,,withdrawEther,,Incorrect constructor name : ANAToken vs. ANA,,,,,,
+0x8504242784fe16739ee100e348ab969031570bff,208,,withdraw,,incorrect constructor name : TrueTone_network vs. TodaNetwork,,,,,,
+0x85e4cd785887cad7c6be93f2f34d5fa683f9bfcd,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,,,,
+0x8615ddfe9d4c9e58abff01c999731f3e9e556e80,,,,,,,prettysmart-slither,711,withdrawAmount/withdraw,,
+0x870ed69ed12430c6a3d4abdb30c7eeb1918c62b1,64/234,64,kill/withdraw,kill,incorrect constructor name : Owned vs. owned,,,,,,
+0x876c6fbec71a498155cfa811f9d10fd3bb67e4c5,,,,,,,prettysmart-achecker,414,withdrawBalance,,
+0x881f21d3e2d2d4f48d815f41bea8dbdcf0e24e50,48,,withdrawTo:withdraw,,"incorrect constructor name : DepositVault vs. Vault 
+& `withdrawTo` does not decrement the deposit",,,,,,
+0x885a4819e899c772b439f05944096a3236315550,,,,,,FP@L215 PIB,,185,purchase,215,buyback/purchase
+0x8a36f3e0da7b36fd22fcf2844c21e812279372ac,12/28,,Guess/StopGame,,Important info (response@StartGame) can be stolen by on-chain tx data,,,,,,
+0x8a630b2d1e25f1ad066feaa090f5bdb63a1451cc,24,24,Kill,Kill,Unguarded vulnerable `kill`,,,,,,
+0x8ab65829fb1b2f117fc0f593725f04d4f85d1a6f,,,,,,,prettysmart-achecker,,,,
+0x8b099bdcfea93faecfac13d0dbc1d08c4e1ec595,24,,withdraw,,Incorrect constructor name : HelpMeSave vs. MyTestWallet7,,,40,recovery,40,recovery
+0x8be54acd944f301eb0185ea48fe03914d99e83b8,10/34,,Try/StopGame,,The answer can be stolen via FR,,,,,,
+0x8c4ccf23d8674a04665e9e7a64260aa4c0030aeb,,,,,,,prettysmart-prettysmart,,,,
+0x8c9d4a3b17f0e080ed9f6190181aac7058ced7ac,,,,,,,prettysmart-securify,,,,
+0x8cce51969a93ee5235e5955b8e3d649db7f10b81,40,40,GetGift,GetGift,Attackers can steal the gift via unguarded `SetGiftFor` with an investment of 1 ether,,,,,,
+0x8d4feae082902b3c81675febbe35c2aaea9c8cab,,,,,,SU:FP@L207 PIB,,180,purchase,207,buyback/purchase
+0x8e48f1fd56abd20d86bfb995f4b7ef1eb4f32d1c,,,,,,"EL:FP@L384(buyInMarket) PIB
+Users can buy skins cheaply and resell them at a premium",,384,buyInMarket,,
+0x8fd1c78ed8b3de2a025373b2bbd820c03939f760,,16,,fin,TX,EL:FP@L11 `msg.value >= this.balance` is never true,,11,pay,,fallback
+0x8ff1c8a8799dd59eca03d9cf52b12ae0ccc21762,,,,,,"EL:FP@L450(buyInMarket) PIB
+Users can buy skins cheaply and resell them at a premium",,450,buyInMarket,,
+0x90b12b97a52451f38090f49bce8bc2962dde4902,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,352/358/293/295,_payout/purchase,,
+0x91151abe8cea8ee574b50cc01c18ce36cbba3195,80,88,withdraw,kill,"Ownership can be stolen via `init` 
+& `withdraw` does not decrement the deposit",,,,,,
+0x92949bd74c4d21852a3d9f7dfb841fad2833302b,201,,@fallback,,Incorrect constructor name : basisneuro vs. JUST,,,,,,
+0x9348995663aadc44f725eaf56d42c9f74ce0162b,,,,,,This contract has a randomness problem but only admin can call this,,193/202/211,claimJackpot/giveMeRefund/payMeBitch,,
+0x9482a18ed523b1a2f097b480d38852dfff83e0b9,,,,,,,prettysmart-slither,1016,Initiate,,
+0x94cac9b8a8e597e5a934b91c0e5a06fe863bde13,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,450/452,_payout,,
+0x954a36b1c1e5e42f884c4f7aa9522e6fd21b11c3,43,,withdraw,,Incorrect constructor name : Vault vs. initVault,,,,,,
+0x96299dc3cb5c2a936058a9b200a60f722c721b69,8/11,8,end/get,end,,,,,@fallback,,@fallback
+0x96a3b6d2aa6241e1b2d539286958aeb6f1e49d69,99,,@fallback,,Ownership can be stolen via unguarded `setup`,,,,,,
+0x96fa4b2bebbbc9ffdb7d64ed18058de27680752c,11/25,,Answer/StopGame,,The important info (_response@StartGame) can be stolen by on-chain tx data,,,,,,
+0x9774126f3f470fb5c45d3ea8fd6198efb07c8eac,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,67/192,payoutFromContract/purchase,,
+0x97d25fc9024c689320dafbd9bbca8861ab669ccd,27/32,32,draw/destroy,destroy,Ownership can be stolen via unguarded `changeOwner`,,,,,,
+0x97fe19dfab95b1709bb0994af18ba7f793e28cba,221,,withdraw,,Incorrect constructor name : MYSELF vs. MYSLF,,,,,,
+0x9a78a1bcc4c254eba53b811bbb42dc0bf915e166,64/71/99,,buyEggs/getFreeShrimp/sellEggs,,Incorrect constructor name : EthOwls vs. ShrimpFarmer,,,,,,
+0x9ab4fd2234d75cfa894c394b367e48055b531e56,245,,sell,,Incorrect constructor name : Owned vs. owned,,,,,,
+0x9ad748cc73fa6bf6f48ec4af64cfe1181f6127a6,211/259,,@fallback/withDraw,,Incorrect constructor name : Owned vs. owned,,,,,,
+0x9b0f6a5a667cb92af0cd15dbe90e764e32f69e77,,,,,,,prettysmart-prettysmart,,,,
+0x9be9ff8410c15f9b1ede070bb2bfe6778496d585,168,168,tokenDestroy,tokenDestroy,Ownership can be stolen via unguarded `initialize`,,,,,,
+0x9d8b33f8719470478dbd48711d004a0736d86956,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,998,_sendFunds,,
+0x9e67c652aef503926e0dbaad1535b604ddb72db7,,,,,,,prettysmart-securify,,,,
+0x9e6c849ab00670ece0ddcb1b16afadfba7c21eb9,118,,bid,,incorrect constructor name : GVSFJackpot vs. KingOfTheEthill,,,,setOwner/setDevFee/setRollover/setNextBidExpireBlockLength,,setOwner/setDevFee/setRollover/setNextBidExpireBlockLength
+0x9ef74f01c70c80f008b51ae434e56ee79b6f4016,308/314/320/325,,sendEthValue/sendEthProportion/depositEtherTokenAmount/depositEtherTokenProportion,,Unguarded functions `sendEthValue` & `sendEthProportion`,,,,,,
+0x9f352d623371eda3a28f9d9c8ca73a5124f2d9fc,,,,,,SU:FP@L308: PIB,,308,end,308,end
+0x9fdca91d5f35f79b14f0a25649d2694b7896dc84,,,,,,,prettysmart-mythril,,,,
+0xa01a4dea8a096aa8cd8f9853495c09ed737315b2,253,,refundContribution,,Incorrect constructor name : Owned vs. owned,,,,,,
+0xa17473649eba280d5686bde1f2c468def29c1f99,101,,@fallback,,Ownership can be stolen via unguarded `setup`,,,,,,
+0xa21551510d28bc0bc40fa725aa980f64419d8eb1,263,,withdraw,,Incorrect constructor name : BFTToken vs. QMQCoin,,,,,,
+0xa225ebe73347dd87492868332f9b746beb8499bb,,,,,,,prettysmart-securify,269,internalRelease,,
+0xa2562cd0d8620dc2bec07872ecaadd4b6fbdc02f,5,5,destroy,destroy,Unguarded `destroy`,Note that a contract with no payable can actually hold ethers,,,,,
+0xa26640d8a467a957f195c1ff566e167d457a8087,,,,,,,prettysmart-securify,,pay,,pay
+0xa268e89bd94777c56a2ca740b0f26962e0548ea2,209,,withdraw,,Incorrect constructor name : SELFDROPICO vs. SLDR,,,,,,
+0xa2ce821f2a990dbd5de5a9e221c6bfba261a3807,608,,@fallback,,"Ownership can be stolen via unguarded `init`, and then `latestVersion` is tainted",,,,,,
+0xa3389a7bf3ab7b090e171f838034d12f8d3faa98,190/193,,clearBlockchain,,"Attackers can steal balances via FR, after the betting is ended",SU:FP@L190/L193: PIB,,115/123,getProfit/setResult,190/193,clearBlockchain
+0xa3db33ccfe990fdf89ff311754391b5c3af4ef04,,,,,,Unguarded calldata of delegatecall,,,,,
+0xa408fe5e47a8800a8981c2768bfa54e50f23f1a0,312,,@fallback:getTokens,,Incorrect constructor name : SOLARSale vs. DESALSale,,,,,,
+0xa4ec44afee34feffbae5ce4218d3c06ebd70455e,,,,,,PB@L244(endVoting),,,getLosersOnePercent,,
+0xa6c9e4d4b34d432d4aea793fa8c380b9940a5279,151,,sell,,Attackers can exploit unprotected `setPrices` to manipulate prices,,,,,,
+0xa7446cbb3644d14b3ebb1a27aa3a9c479b93a650,,,,,,`OAR` and `oraclize` are always trusted,,127,,,
+0xa82873dbb0835dca5c273363eeb006342e696036,691,,buy,,incorrect constructor name : EqvcTokens vs. EqvcToken,,,,,,
+0xa86914a1402f3cdcb27084e08a47445e8ab1bbab,208,,save,,incorrect constructor name : owned vs. constructor,,,,,,
+0xa8dbd8beab9a664fc5a74920bd47411e56966997,209,,withdraw,,incorrect constructor name : Predatex vs. Predatex1,,,,,,
+0xa96e6dbf0f21cfcc9934ad52dec8229e3321254e,,,,,,"FP@L24 might occur, but `msg.value >= this.balance` can only be satisfied
+when previous balance was 0",,18/24,claimBonus/releaseFunds,,
+0xa9b6e2381dee5dd4ea5d6e31e11b3c6f10d35afc,172,,Initiate,,"The address `swap` can be arbitrary, and require@L170 actually cannot ensure `msg.value >= _premium` due to overflow",FP@L185 will be considered as a token leak rather than EL,,175/185/188/190/191/192,Enter,,
+0xaa3a6f5bddd02a08c8651f7e285e2bec33ea5e53,26,,GetDiv,,Attackers can steal the gift via unguarded `PutDiv` with an investment of 0.25 ether,,,,,,
+0xaa93338ef3b64a50dcfb2eba57a1eb4ad59d955b,,107,,end_redeem_period,Unguarded `end_redeem_period`,,,95/72,refund_claims/refund_deposits,,
+0xaafd4fc990ffa78ced015d77f04cc65842a3e78a,108/124/136/155,155,kill/@fallback:buyTickets/endRaffle/getRefund,kill,"Incorrect constructor name : Ethraffle_v1b vs. Ethraffle
+&& `getRefund` does not decrement the refund",,,,,,
+0xac87b21684af3809d1aa6fee9ee05068bdacb3fe,18,,withdraw,,The important info (key@setup_key) can be stolen by on-chain tx data,KHP,,,,,clear
+0xacb8a40073d0a7e041b29381debcafc2b538cd7c,,,,,,PB@L83(init) KHP,,,,,Close
+0xacfc9577583ded00ae53ae79a0346cca4655c0bb,30/39,,Play/StopGame,,The important info (_response@StartGame) can be stolen by on-chain tx data,KHP,,,,,
+0xadcc3e3bd358767e3c372c026d2de71d532a2370,266,,withdraw,,Incorrect constructor name : Enumivo vs. UselessAirdroppedToken,,,,,,
+0xaf531dc0b3b1151af48f3d638eeb6fe6acdfd59f,19/43,43,Play/StopGame,StopGame,The important info (_number@StartRoulette) can be stolen by on-chain tx data,KHP,,,,,
+0xaf71b19e6292c6e1491ff3a54b3e63dbd41ef023,139,139,kill,kill,Incorrect constructor name / KAI vs. EGC,,,,,,
+0xafdd6fec9be6e31ad9dd7e28631625ac8e38f9c3,,,,,,,,,,,
+0xb052d4d50577e2081f85558ae84b47feb11a2fb8,,,,,,,,,,,
+0xb09b1500e55b845966705f0881187f4d3d8b64d8,342/421,,purchaseTokens:@fallback/close,,Incorrect constructor name : Owned vs. owned,,,,,,
+0xb11e0464cbcf0a06bbe29d8882c9fc7a96cca9fb,77,,withdraw,,,"SU:FP@L82(shutdown)
+The modifier `onlyOwner` is protected due to variable shadowing",,,,,shutdown
+0xb19117892e2b2aaa418e75f61d7d1c05f86b66bd,30/39,,Play/StopGame,,,,,,,,
+0xb221ac6622ae5348375d0048dcff0049ebb97d89,,,,,,,,542,_transferFunds,,
+0xb2d5468cf99176da50f91e46b2c06b7bdb9d2656,,,,,,PB@L64(addParticipant),,169,processPayment/@fallback/addParticipant,,
+0xb49b1dddf1b3d6e878fd9b73874da7ab0da7e004,44/55,,GetGift/Revoce,,Attackers can steal others' gift via `setPass`,KHP,,,,,
+0xb4c757a71d084df8f9f393cc47639701f595fd87,,,,,,,,,,,
+0xb4fe1fe5f36f239b811be635622d3c5a92ad3cd0,,,,,,,,788/1199/1266/1267/1268/1269/1270/1278/1280/1286/1289,BuyGoods/Withdraw,,
+0xb5306879cb7f1fb18b86a2be62c0dc9ae62fa1eb,,,,,,"FP@L528, 536 will be considered as a (potential) token leak rather than EL",,528/536,getProxyImplementation/getProxyAdmin,,
+0xb620cee6b52f96f3c6b253e6eea556aa2d214a99,124/128,,winPrize/claimPrize,,"Incorrect constructor name : DrainMe vs. DranMe
+& Predictable `secret` in `unlockSecret` due to BR
+(Although this function can be only called by the owner, the ownership can be stolen)",,,,callFirstTarget/callSecondTarget/manipulateSecret,,callFirstTarget/callSecondTarget
+0xb65e87523a06915210b98d440a554b850ee016f7,,,,,,,,,,,
+0xb69c5ef7ffd3f57baab250969d1698fdd9cfb830,,,,,,,,,,,
+0xb6bbf89c3dbba20cb4d5cabaa4a386acbbab455e,,,,,,EL:FP@L138(withdraw) business logic (interest),,138,withdraw,,
+0xb6c3f831d759599215033e55243853225f33b770,,,,,,,,230/242/243/390/392,_payout/_transferDivs/purchase,,
+0xb6f6f6f47e92e517876d30c04198f45a3bc1b281,19/42,,Play/StopGame,,The important info (_number@StartRoulette) can be stolen by on-chain tx data,KHP,,,,,
+0xb7177696646a98a70520c37740d4a7659362f5b3,,,,,,,,83,@fallback,,kill
+0xb7321c1dae3931abf91f8f5d68e3aaa42f526acb,,,,,,,,207/212/362/364,_payout/purchase,,
+0xb795be5b5fae8252bb4641b77c670431b1eab601,,,,,,,,,,,
+0xb8842b95a9c0cdbd4c0d6e0319b8d46792830677,61/205,61,kill/withdraw,kill,,,,,,,
+0xb8bf491636fb905eface49c2dbe23c9e7e564370,276,,sell,,Logic error @L235; attackers can 'copy' the balance of `this` via buying 0 tokens,,,,,,
+0xb9132c68dd9f8b35334ceb2171c6b9fc09fc9233,,,,,,PB@L235,,,@fallback/buy,,@fallback/buy
+0xb9b4a35f586660995eb78dbd486e26f3243f24ae,218,,@fallback,,Incorrect constructor name : Owned vs. Constructor,,,,,,
+0xbaa3de6504690efb064420d89e871c27065cdd52,,,,,,The modifier `onlyOwner` is protected due to variable shadowing,,,proxy,,proxy
+0xbae533c9c0a67d5de2b89a8fd0bc01a2b450bd2d,21,,returnEth,,Attackers can steal ether via unguarded `returnEth`,,,25,adopt/gimmeTendies,,adopt/gimmeTendies
+0xbb28bc9a43f60eb00e15e3654acc9e6ced43856f,,,,,,,prettysmart-mythril,,,,
+0xbbd5a76f72e876ff9f9bd4829298855a85c3fa51,,,,,,,prettysmart-securify,,,,
+0xbd2082ce6f9bf88564b50d59299a81864155cc39,,,,,,,prettysmart-securify,,,,
+0xbd9dc7d3a4b0f6777ba79f5d52ff2cc27688c45d,,,,,,"FP@L27:PIB
+Contains a DoS vulnerability, which is not our concern",,27,@fallback,,@fallback
+0xbdb0b3f3b4c154f55006ba428790dcb19391a7e8,,,,,,FP@L228:PIB,,,,228,transform
+0xbddd99e8aaeb85847703c31a83277856d49961d9,50,58,withdrawTo:withdraw,kill,"The ownership can be stolen via `init` 
+& `withdraw` does not decrement the deposit",,,,,,
+0xbe3aad36965853cbabbc9ae6110ced92fc9d51e8,95,,withdrawEth,,`withdraw` does not decrement the deposit,,,,@fallback,,@fallback
+0xbe44b9ecbca8afc16cb7fe146c16fe98cbeed14d,12/28,,Play/Stop,,The important info (resp@Setup) can be stolen by on-chain tx data,KHP,,,,,
+0xbe4eee50c1fa98b8f2f0edcc4cccae6646b4ce2c,437/443/492/497/539/602/632,,sendEthValue/sendEthProportion/bancorSendEthValue/bancorSendEthProportion/kyberSendEthProportion/buy/buyFirstTokens,,Unguarded functions `sendEthValue` & `sendEthProportion`,,,,,,
+0xbe66ccd76e2007a2af8ae7134ad5ab4b08cc0102,,,,,,,prettysmart-securify,324,@fallback,,
+0xc0c4a2d6c58ea46f5a3ca1af90a702c20487691a,260,,withdraw,,Incorrect constructor name : AlphaChain vs. AlphaChainConstructor,,,,,,
+0xc0d0a87b8e18811b863b50494867369588027063,,,,,,,prettysmart-securify,,,,
+0xc170db1795adf8115b75ac98e872195847b0d0d1,54/56/67,,batchSendETH/batchSendETH2,,unguarded function,,,65,,,
+0xc374bf3bba0a7c1e502e698741776a21e5f6eb9e,232,,claimTokens,,Incorrect constructor name : GlobexCrowdsale vs. Globex,,,,,,
+0xc3dc5b72cba5922b95ebc81606b2581e577feca0,,,,,,,prettysmart-mythril,,,,
+0xc5559887f94ea5c406b3f6d582dc738c4cf0eace,174,,accumulate,,TX,,,,,,
+0xc55e5e72911fab07ef912c58e6dc168d73348820,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,172,purchase,,
+0xc6389ef3d79cf17a5d103bd0f06f83cf76b14258,8/15,,GetGift,,Attackers can steal the gift via unguarded `Set_eth_gift` with an investment of 1 ether,KHP,,,,,
+0xc6876c8b392ed397b969cd4ddc5ff5c05de7cb89,,,,,,,prettysmart-securify,143,getEth,,
+0xc801e2ca666fdfcb43cf29b972d7f3731436e4a1,242,251,sell,selfdestructs,"Logic error @L246; the fallback function gives too many tokens
+& unguarded `selfdestructs`",,,,getEth,,
+0xc8a074de1c6bf01a75cd29892c91b6c354200f75,153,,ethReverse,,Attackers can steal the ownership via unguarded `ChangeOwner`,,,,,,
+0xc95c0910d39d1f6cd3bd71e4b689660c18172b7b,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,277/421/423,_payout/purchase,,
+0xc99f359f73626e475ee86caab459a4b34ae93fea,852,,bid,,Attackers can mint NFTs via TX@L595 and then sell,,,716,withdrawBalance,,
+0xca5228d1fe52d22db85e02ca305cddd9e573d752,,,,,,,prettysmart-achecker,,,,
+0xcb3123f81b2f3e7fbe0c1d9455a158ad1c217a8b,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,67/192,payoutFromContract/purchase,,
+0xcb71b51d9159a49050d56516737b4b497e98bb99,27,,GetGift,,Attackers can steal the gift via unguarded `PutGift` with an investment of 0.1 ether,KHP,,,,,
+0xcbbfaaddd045f0274a6e6d1ec8640c0a9b5fef46,,,,,,PB@L24 incorrect constructor name : Owned vs. owned,,,,,
+0xcc6a0dd80ff3fa8c1b37011765ee19efc480f825,,,,,,"Incorrect constructor name : EthereumDiamond vs. ZeroXEth
+However, ZeroXEth is actually an infeasible path because
+`totalDistributed = 980, totalRemaining = 10` and the `distr` function inside
+`ZeroXEth` requires a safe sub of `totalRemaining - totalDistributed`",,11387,withdraw,,
+0xce3e12f5512fb3b42e1a8c9c1d5d8cb321dfb776,,,,,,,spcon-issta,,,,
+0xce8296f1dacd7c6eca28453f37fe15e0596cdaea,,,,,,"EL:FP@L183: Transferring value is `msg.value`, so the contract ether is not drained
+PB: Anyone can call `createCC` and created contracts' owners are untrusted",,183,createCC,,
+0xcea86636608bacb632dfd1606a0dc1728b625387,12/39,,Play/StopGame,,Important info (_response@StartGame) can be stolen by on-chain tx data,,,,,,
+0xcf1cf009e01cfd0c36b9172726da1048a7254811,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,435/437/269/283,payout/_payout/purchase,,
+0xd03cdb4206084f15778ff6388b139d96c93ccaf7,400,,withdrawReturns,,`withdrawReturns` does not decrement the deposit,,,,,,
+0xd060792b45e31fbfff1afdb4236f7ae655b22321,14,,get,,Attackers can steal the ownership via unguarded `set`,,,,,,
+0xd079acf6491bbf8bbbbee6a5d73eaa0dcedec0c2,352/372/425,,buy/sell,,"Unguarded `msg.sender.transfer(address(this).balance)`
+Lots of preconditions are ignorable because function arguments are untrusted",,,,,,
+0xd099c363eb969f405099f17b413e2ebdc7018a7d,,,,,,,prettysmart-securify,203,pay,,
+0xd2606c9bc5efe092a8925e7d6ae2f63a84c5fdea,,,,,,,prettysmart-achecker,59/63,purchaseVideoGameItem,,
+0xd2e28752827a9431de9ddec552fbddae9f473ae5,35,,collect,,Incorrect constructor name : Templar vs. Mint,,,,,,
+0xd4dd63d658f603e9a0aa381e103e05457cd5e609,,,,,,,prettysmart-spcon,931,getFees,,
+0xd558f0c903ccac458495f0dc776dbcc78f1adf79,,,,,,,prettysmart-slither,2477/2186/2521,withdraw/reserveManyTokens,,destroy/destroyAndSend
+0xd71a90c6903c698b643ac007a7a279f34e444dc3,45,57,withdraw/withdrawTo,kill,"Incorrect constructor name : TimeLocker vs. TimeLockr 
+& `withdraw` does not decrement the deposit",,,,,,
+0xd731c88890ca047cd1bed2e6ea1562c7a425c29d,,,,,,,prettysmart-achecker,,,,
+0xd81fe2c11edd560c4d44fdd4f651f3608452beed,68,76,withdraw,kill,"The ownership can be stolen via `init` 
+& `withdraw` does not decrement the deposit",,,,,,
+0xd87d3d9fb80a5f009b3812b536256b6f457176b1,,,,,,"EL:FP@L110, SU:FP@L110:PIB",,80,refundOwner/@fallback,110,refundOwner
+0xd87eaad7afb256c69526a490f402a658f12246fd,19/43,43,Play/StopGame,StopGame,Important info (_number@StartRoulette) can be stolen by on-chain tx data,KHP,,,,,
+0xd8dfe62f20504bc474f00e9b3e6e305e46223c71,,8,,Play,"Vulnerable function: `Play` (triggered when this.balance=0, msg.value=0)",,,8,Play,,end
+0xd90f5ebc01914bbd357b754956aafb199f4d1624,,,,,,"EL:FP@L1417: we will consider this as a PIB
+that compensates people who pay gas fee on behalf of others",,1417/1564,_bid/bringKydyHome,,
+0xdab860de671cc76c4a341615b69f878a08bb9bbb,,,,,,PB@L113(admined),,,,,
+0xdb29bf190a4e6db3eab958f9614c4404906a2530,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,211/362/364,_payout/purchase,,
+0xdb6677db66d1b908d4813de47acf0b38251bfc35,,701,,destruct,"Special roles can by injected via `KeyHolder.addKey` 
+(the access-control-safe implementation, `ClaimHolder` is not used)",,,,,,
+0xdcfae5ec906742f66e57e09ce098f5adb76ababa,254,,WitdrawLenderProfit,,"Anyone can steal `Manager` via `init`
+Then the manager can set the profit rate arbitrarily high",,,,,,
+0xddaabbeb621fb90c8b10432783f228ff7f888b5f,,,,,,"SU:FP@L197,225 PIB",,,payout/@fallback,197/225,payoutSelf/default/payout/@fallback
+0xdeff1d547f5cf673b03edcdfb2a80341a42d7f38,10/34,,Try/StopGame,,Important info (_response@start_quiz_game) can be stolen by on-chain tx data,KHP,,,,,
+0xdf861993edbe95bafbfa7760838f8ebbd5afda9f,4,4,die,die,vulnerable function - die,,,,,,
+0xe15422570cb3cd88bd7ef87f14c6ca7c43f77398,241,,claim_bounty,,Anyone can steal the bounty via unguarded `claim_bounty`,EL:FP@L157(refund) unreachable due to infinite recursion,,157,refund/default_helper/@fallback/withdraw,,
+0xe2a4e17769788c960a5a23e08eaf5d79fe654528,,,,,,,prettysmart-securify,273,withdraw,,
+0xe2dd8cce2c33a04215074adb4b5820b765d8ed9d,,,,,,,prettysmart-achecker,474/489/502/163/591/599/606,_giveRuling/raiseDispute/executeTransaction/pay/reimburse,,executeTransaction/pay
+0xe54420ef4ecda25e08b82a71f72e043f83d7d808,,,,,,FP@L32/41:PIB,,29/32/40/41,withdraw/kill,41,kill/withdraw
+0xe683c31d91d73ae12770cc7082511846ea66f8d6,,,,,,,prettysmart-achecker,227,startBuying,,
+0xe716209f5d62efa8ca4cacdda1284bfff8df9e42,,,,,,,prettysmart-prettysmart,,,,
+0xe82062f270dbbd296ec4820845129d874ea35ace,87,,ClaimReward,,`tokenCreator` can be tainted via unguarded `CreateTokens`,,,,,,
+0xe91125f34fcef2854a890dcf02b74cb2dcbe377f,,,,,,"This contract has a problem of forcibly taking away NFT ownership 
+through purchase, which is not the context of EL",,233/384/386,_payout/purchase,,
+0xe91b8b5e38ad85358d6c5ca6c0092e12bd736b7e,,,,,,,prettysmart-securify,211,pay,,
+0xe952cbf5c1480032537c57874de3e949203ed623,,,,,,"EL:FP@L32(withdraw): `mineIsBigger` is never executed 
+because `msg.value>=address(this).balance` is never true",,,withdraw,,
+0xe995e03275dafdb7cc1fa17c6bbc21bfed379fdd,102,,sendEthToAddress,,Attackers can steal ethers via unguarded `sendEthToAddress`,,,,,,
+0xea0822a17b62bf1be91fa8c98154ce42a87589ff,36,,withdraw,,,,,,,,
+0xeb31c53605b2294fa5476326641d4a78ef2394ab,,15,,destroy,unguarded `selfdestruct`,,,,,,
+0xeb897ad24189a911cad00c071fc7182f5753a3d3,879,,endUpgrade,,TX@L319,,,966,solveTask,,
+0xed29ff5874fa64dcf47ed7dacb770857a5d164fb,74,88,withdraw,kill,,,,,,,
+0xed55fb58ea9de1f484addcc970463218b4d89cfe,12/28,,Answer/StopQuiz,,The important info (response@StartQuiz) can be stolen by on-chain tx data,,,,,,
+0xed98b38f4fc2fcc633465b699f6d983d96e1fe8c,158,,sell:transfer,,"Incorrect constructor name : x32323 vs. TokenERC20
+The incorrect constructor gives arbitrary users tokens, then attackers can sell them",,,158,sell,,
+0xef2742e5af727bd7d615d9e3d0e4f6efb1176447,,,,,,,,293,withdrawBalance,,
+0xf0cc17aa0ce1c6595e56c9c60b19c1c546ade50d,79,87,withdraw,kill,,,,,,,
+0xf0eeb04b00a9c5bc026d22433c1d94315b7219db,20/255,20,destruct/sell,destruct,Incorrect constructor name : OneExchangeToken vs. WorldSafetySecurityToken,,,,,,
+0xf24c63438ae11cb3facb84006f4cfa75458126ed,,,,,,,,1107/1259,_bid/giveBirth,,
+0xf290d6422c64222dabe98c5f4acd646acab6f81f,,,,,,FP@L1715 PIB,,1715,destroyDeed,,destroyDeed
+0xf2e88e0bfe61e5e41d9317e82c6938e67a913cc1,207/210,207/210,clearBlockchain,clearBlockchain,Can be selfdestructed before winners withdraw their profits,FP@L140 PIB,,132/140/173/174,getProfit/setResult,,
+0xf3ba18b53cff2ea3d45e8f06ffe6dc24a32a633e,14,,Guess,,Important info (_response@Start) can be stolen by on-chain tx data,,,26,Stop,,
+0xf3c8ed6c721774c022c530e813a369dfe78a6e85,,,,,,,,,,,
+0xf56414ae268293dc717878eec223567d960f2f7c,,,,,,,,,,,kill
+0xf62afd17037be692a00b181e959e3c9931076138,,,,,,,,,,,
+0xf6e7ec5d6983fafd6eb14c2a20c2dd354e09ce9b,79,,withdraw,,"The ownership can be stolen via `init` 
+& `withdraw` does not decrement the deposit",,,,,,
+0xf76557d533e7adf2e74a9d9d8b833c73809ba7c1,,,,,,,prettysmart-achecker,,,,destroy
+0xf77cead5b85f379aa7b9031a842ccd903d7966a7,592/614,592,tearDown/withdraw,tearDown,Attackers can steal the ownership via unguarded `setUp`,,,,,,
+0xf7f6b7164fb3ab456715d2e8b84e8baac8bd09a9,,,,,,EL:FP@L99/SU:FP@L99:PIB,,99,close,99,close
+0xf8a5f0be78b60ecb992a1765661d67c27d7a1a2b,29,29,withdraw,withdraw,`passphrase` can be stolen via FR,,,,,,
+0xfa82f0a05b732deaf9ae17a945c65921c28b16dd,303,,transferEther,,Incorrect constructor name : Ownedby vs. Owned,,,,,,
+0xfb58daa58c6f18a8e975ecd0deaaaced78a8463b,,,,,,EL:FP@L1211 PIB,,1211,release,,
+0xfb7f435fb300a3d66bb75ffb22b27c46407d9b12,,,,,,,prettysmart-prettysmart,,,,
+0xfd6ecfe1cc8cc5a0e49961b34c20ba6577c60df8,89,16,withdraw,kill,Ownership can be stolen via unguarded `init`,,,,kill,,
+0xfee1f560e167cd3c55992c356e712d5ee8c33d49,,,,,,BR,,,,,
+0xffc80f7403ff8c1aee200ad110fe0fa28d213445,63,71,withdraw,kill,"The ownership can be stolen via `init` 
+& `withdraw` does not decrement the deposit",,,,,,

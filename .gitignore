@@ -1,0 +1,16 @@
+__pycache__
+.DS_Store
+output*/*
+fail-*
+memo.txt
+
+node_modules/*
+package.json
+package-lock.json
+
+result/*
+result_*
+for-smartian
+.logs/*
+nohup.out
+x.sh

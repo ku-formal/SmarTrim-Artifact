@@ -1,0 +1,6 @@
+(library
+ (name vocab)
+ (public_name verismart.vocab)
+ (preprocess
+  (pps ppx_deriving.show ppx_jane))
+ (libraries batteries lwt.unix re yojson zarith))

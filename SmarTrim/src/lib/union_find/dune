@@ -1,0 +1,4 @@
+(library
+ (name union_find)
+ (public_name verismart.union_find)
+ (libraries batteries))

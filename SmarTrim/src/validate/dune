@@ -1,0 +1,8 @@
+(library
+ (name validate)
+ (public_name verismart.validate)
+ (flags
+  (:standard -open Vocab -open Vocab.Batteries -open Vocab.Shadow_batteries))
+ (preprocess
+  (pps ppx_deriving.show ppx_jane ppx_yojson_conv))
+ (libraries solc vocab reports))

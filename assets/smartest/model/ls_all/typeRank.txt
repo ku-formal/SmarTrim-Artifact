@@ -1,0 +1,11 @@
+address,203
+mapping(address=>uint256),66
+uint256,41
+Enum,34
+uint128,21
+sint256,13
+mapping(address=>sint256),13
+mapping(address=>bool),7
+mapping(uint256=>Struct),6
+bool,4
+mapping(address=>address),2

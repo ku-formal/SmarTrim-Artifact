@@ -1,0 +1,4 @@
+(library
+ (name crypto)
+ (public_name verismart.crypto)
+ (libraries digestif vocab))

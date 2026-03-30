@@ -1,0 +1,12 @@
+scripts
+output.txt
+memo.txt
+**/.DS_Store
+contracts/.DS_Store
+.*.csv
+
+*.py
+!d.py
+
+_workspace/*
+result/*

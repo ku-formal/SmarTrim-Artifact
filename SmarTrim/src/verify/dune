@@ -1,0 +1,4 @@
+(library
+ (name verify)
+ (public_name verismart.verify)
+ (libraries csv checker))

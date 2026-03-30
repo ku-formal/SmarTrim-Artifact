@@ -1,0 +1,18 @@
+(library
+ (name reports)
+ (public_name verismart.reports)
+ (flags
+  (:standard
+   -open
+   Ppx_yojson_conv_lib.Yojson_conv.Primitives
+   -open
+   Ppx_compare_lib.Builtin
+   -open
+   Vocab
+   -open
+   Vocab.Batteries
+   -open
+   Vocab.Shadow_batteries))
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.make ppx_jane ppx_yojson_conv))
+ (libraries vocab))

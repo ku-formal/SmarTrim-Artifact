@@ -1,0 +1,5 @@
+(library
+ (name dfa)
+ (public_name verismart.dfa)
+ (synopsis "A collection of DFA-relevant operations, including regexps")
+ (libraries batteries re))

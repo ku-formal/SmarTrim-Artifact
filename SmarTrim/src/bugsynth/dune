@@ -1,0 +1,4 @@
+(library
+ (name bugsynth)
+ (public_name verismart.bugsynth)
+ (libraries repair exploit))
