@@ -8,7 +8,12 @@ node_modules/*
 package.json
 package-lock.json
 
-result/*
+result/io/*
+result/ls/*
+result/re/*
+!result/io/.empty
+!result/ls/.empty
+!result/re/.empty
 result_*
 for-smartian
 .logs/*

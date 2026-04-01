@@ -13,7 +13,6 @@ execute() {
 } 
 
 execute io smartrim
-exit 1
 execute io smartrimbase
 execute io confuzzius
 execute io lent

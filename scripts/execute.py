@@ -44,7 +44,7 @@ def set_globals(args: argparse.Namespace, config):
     if key not in jobs_config:
         jobs = jobs_config['default']
     else:
-        jobs = jobs_config['key']
+        jobs = jobs_config[key]
         
     if "timeout" in config:
         TIMEOUT = str(config['timeout'])
@@ -295,7 +295,7 @@ def get_command_mythril(df: pd.DataFrame, dataset: str):
         commands.append(([
             "timeout", "--kill-after=10", KILL_TIMEOUT,
             "docker", "run", "--rm", 
-            "--volume", f"{ARTIFACT_REPO}/contracts/{dataset}:/tmp:ro",
+            "--volume", f"{BENCH_DIR}/contracts/{dataset}:/tmp:ro",
             "mythril/myth:latest", 
             "analyze", f"/tmp/{id}.sol:{main_name}",
             "--execution-timeout", TIMEOUT,
@@ -324,12 +324,16 @@ def get_command_lent(df: pd.DataFrame, dataset: str):
         elif dataset == 'pb':
             mo = "IntegerArithmetics"
             
+        lent_timeout = "10800"
+        if int(KILL_TIMEOUT) <= 20:
+            lent_timeout = KILL_TIMEOUT
+            
         commands.append(([
-            "timeout", "--kill-after=10", "10800",
+            "timeout", "--kill-after=10", lent_timeout,
             "docker", "run", "--rm", 
             "--volume", f"{BENCH_DIR}/contracts/{dataset}:/root/pgm:ro",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/tmp/output",
-            "my-lent:latest", 
+            "my-lent:fse26", 
             "analyze", f"/root/pgm/{id}.sol:{main_name}",
             "--solv", v,
             "--modules", mo,

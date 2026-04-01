@@ -4,79 +4,45 @@
 
 We describe the replication methods for Table 1 and Figure 3 in the table. The structure of our artifact is as follows:
 
-* `smartrim`: Source code of SmarTrim
+* `./SmarTrim`: Source code of SmarTrim
 
-* `smartrim-benchmarks`: Our [benchmark](https://anonymous.4open.science/r/SmarTrim-bench-FSE26-B2FF/README.md), including contracts, metadata and ground truths
+* `./benchmark`: Our [benchmark](https://anonymous.4open.science/r/SmarTrim-bench-FSE26-B2FF/README.md), including contracts, metadata and ground truths
 
-* `smartrim-experiments`: scripts for experiments and data processing
+* `./scripts`: scripts for experiments and data processing
 
-* `smartrim-result`: [summaries and raw results](https://anonymous.4open.science/r/SmarTrim-Result-FSE26-4045/README.md)
-
-If the link above does not work, please copy the link below directly:
-
-* `smartrim`: https://anonymous.4open.science/r/SmarTrim-FSE26-F65E/README.md
-* `smartrim-benchmarks`: https://anonymous.4open.science/r/SmarTrim-bench-FSE26-B2FF/README.md
-* `smartrim-result`: https://anonymous.4open.science/r/SmarTrim-Result-FSE26-4045/README.md
-* `smartrim-result` backup: https://anonymous.4open.science/r/SmarTrim-Result-2-8B82/README.md
+* `./result`: [summaries and raw results](https://anonymous.4open.science/r/SmarTrim-Result-FSE26-4045/README.md)
 
 ### Requirements
 
-* We recommend Ubuntu 22.04 or 24.04. (We tested on 22.04)
-
-* We recommend computers with 64 threads or more and 62 GB RAM or more.
-
-* `docker` ([install](https://docs.docker.com/engine/install/ubuntu/))
-
-  * To run `docker` without `sudo`, execute `sudo usermod -aG docker $USER`. (ref: https://askubuntu.com/a/739861)
-
-* `python` 3.9+ with `numpy`, `pandas`, `matplotlib`
+Please refer [REQUIREMENTS.md]().
 
 ### Installation
 
-* We assume this directory is installed in your home, i.e. the paths should be `~/SmarTrim-Artifact`.
+Please refer [INSTALL.md]().
 
-* Run
+### Experiment
 
-```bash
-$ chmod +x wrapper/*.sh
-$ wrapper/build.sh
-```
-
-### Reproducing Table 1 (Section 6.1)
-
-**Experiment**
+Execute
 
 ```bash
-# If you want to reproduce Section 6.1 only, run:
-wrapper/run-exp1.sh
-
-# If you want to reproduce both Section 6.1 and 6.2, run:
 wrapper/run.sh
 ```
 
-**Data Processing**
+### Reproducing Table 1 (Section 6.1)
 
 ```bash
 python scripts/analyze_tool.py
 ```
 
-This will generate `~/smartrim-result/summary/<dataset>/<tool>.csv` and `~/smartrim-result/summary/table.csv`. Read `~/smartrim-result/summary/table.csv` and compare to our Table 1.
+This will generate `~/SmarTrim-Artifact/result/summary/<dataset>/<tool>.csv` and `~/SmarTrim-Artifact/result/summary/table.csv`. `~/smartrim-result/summary/table.csv` corresponds to Table 1 in Section 6.1.
 
 ### Reproducing Figure 3 (Section 6.2)
-
-**Experiment**
-
-```bash
-wrapper/run-exp2.sh
-```
-
-**Data Processing**
 
 ```bash
 python scripts/analyze_ablation.py
 ```
 
-This will generate `~/smartrim-result/Inc-d4.pdf` and `~/smartrim-result/Random-d4.pdf`. Open this file and compare to our Figure 3.
+This will generate `~/SmarTrim-Artifact/result/Inc-d4.pdf` and `~/SmarTrim-Artifact/result/Random-d4.pdf`, which corrrespond to Fig.3 (a) and Fig.3 (b) in Section 6.2, respectively.
 
 ### Configuration
 
@@ -115,7 +81,9 @@ All tools were executed on 24 cores, except RLF (3 cores).
 |**Smartian**|10h|6h|1h|
 |**_Total_**|**_6d 2h 30m_**|**_2d 14h 30m_**|**_9h 30m_**|
 
-### Testing a Single Tool
+### Appendix
+
+**Testing a Single Tool**
 
 Run each program with
 
