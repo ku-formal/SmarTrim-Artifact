@@ -12,20 +12,14 @@ execute() {
     fi
 } 
 
-execute io smartrim
 execute io smartrimbase
-
-execute ls smartrim
-execute ls smartrimbase
-
-execute re smartrim
-execute re smartrimbase
-
 execute io smartrimr
 execute io smartrimbaser
 
+execute ls smartrimbase
 execute ls smartrimr
 execute ls smartrimbaser
 
+execute re smartrimbase
 execute re smartrimr
 execute re smartrimbaser

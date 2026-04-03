@@ -4,7 +4,7 @@ We are submitting our artifact for the Available and Reusable badges. We believe
 
   * Github:
 
-* **Reusable**: Our artifact is "Reusable" (and consequently "Functional") based on the following five criteria — the first four of which correspond to the requirements for the "Functional" badge — as specified in the [artifact submission guideline](https://conf.researchr.org/track/fse-2026/fse-2026-artifacts#submission-for-functional-reusable-and-available-badges).
+* **Reusable**: Our artifact is "Reusable" (and consequently "Functional") based on the following five criteria (the first four of which are the requirements for the "Functional" badge) as specified in the [artifact submission guideline](https://conf.researchr.org/track/fse-2026/fse-2026-artifacts#submission-for-functional-reusable-and-available-badges).
 
   * *Documented*: All necessary documentation for working with our artifact is included: (1) README, (2) REQUIREMENTS, (3) STATUS, (4) LICENSE, (5) INSTALL, and (6) a copy of the accepted paper.
   

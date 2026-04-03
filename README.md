@@ -12,15 +12,17 @@ We describe the replication methods for Table 1 and Figure 3 in the table. The s
 
 * `./result`: [summaries and raw results](https://anonymous.4open.science/r/SmarTrim-Result-FSE26-4045/README.md)
 
-### Requirements
+## Requirements
 
 Please refer [REQUIREMENTS.md]().
 
-### Installation
+## Installation
 
-Please refer [INSTALL.md]().
+Please refer [INSTALL.md](). 
 
-### Experiment
+You can also check a basic running example of SmarTrim (dockerized version) in [INSTALL.md]().
+
+## Experiment
 
 Execute
 
@@ -28,7 +30,15 @@ Execute
 wrapper/run.sh
 ```
 
-### Reproducing Table 1 (Section 6.1)
+## Reproducing Table 1 (Section 6.1)
+
+**Experiment**. Execute
+
+```bash
+wrapper/run-exp1.sh
+```
+
+**Data Processing**. Execute
 
 ```bash
 python scripts/analyze_tool.py
@@ -36,7 +46,15 @@ python scripts/analyze_tool.py
 
 This will generate `~/SmarTrim-Artifact/result/summary/<dataset>/<tool>.csv` and `~/SmarTrim-Artifact/result/summary/table.csv`. `~/smartrim-result/summary/table.csv` corresponds to Table 1 in Section 6.1.
 
-### Reproducing Figure 3 (Section 6.2)
+## Reproducing Figure 3 (Section 6.2)
+
+**Experiment**. Execute
+
+```bash
+wrapper/run-exp2.sh
+```
+
+**Data Processing**. Execute
 
 ```bash
 python scripts/analyze_ablation.py
@@ -44,7 +62,7 @@ python scripts/analyze_ablation.py
 
 This will generate `~/SmarTrim-Artifact/result/Inc-d4.pdf` and `~/SmarTrim-Artifact/result/Random-d4.pdf`, which corrrespond to Fig.3 (a) and Fig.3 (b) in Section 6.2, respectively.
 
-### Configuration
+## Configuration
 
 * We ran the experiment simultaneously using 24 cores (exception: 3 subprocesses for `rlf`, due to its high memory usage). The number of cores to use is managed in the `config.json` file. For example, if you want to run `confuzzius` on RE dataset with 40 cores, modify this file as follows:
 
@@ -58,7 +76,7 @@ This will generate `~/SmarTrim-Artifact/result/Inc-d4.pdf` and `~/SmarTrim-Artif
 }
 ```
 
-### Expected Runtime
+## Expected Runtime
 
 All tools were executed on 24 cores, except RLF (3 cores).
 
@@ -81,16 +99,24 @@ All tools were executed on 24 cores, except RLF (3 cores).
 |**Smartian**|10h|6h|1h|
 |**_Total_**|**_6d 2h 30m_**|**_2d 14h 30m_**|**_9h 30m_**|
 
-### Appendix
+## Tool Maintenance
 
-**Testing a Single Tool**
+SmarTrim will be maintained in a separate repository: [https://github.com/ku-formal/VeriSmart-public]()
+
+## Contact
+
+Hyegeun Song: [hyegeun_song@korea.ac.kr]()
+
+## Appendix
+
+### Testing a Single Tool
 
 Run each program with
 
 ```bash
-$ python scripts/x.py -t <tool> -d <dataset>
+$ python scripts/execute.py -t <tool> -d <dataset>
 # or
-$ python scripts/x.py --tool <tool> --dataset <dataset>
+$ python scripts/execute.py --tool <tool> --dataset <dataset>
 ```
 
 where
@@ -108,7 +134,7 @@ where
 
 `smartrimbase`, `smartrimr`, and `smartrimbaser` correspond to Inc, Random+Pruning, Random in Section 6.2, respectively.
 
-The command will use `~/smartrim-experiment/output/` as a workspace directory, and will finally store raw data in `~/smartrim-experiment/output-<dataset>-<tool>/`. Resulting format is as follows:
+The command will use `~/SmarTrim-Artifact/output/` as a workspace directory, and will finally store raw data in `~/SmarTrim-Artifact/result/<dataset>/<tool>`. Resulting format is as follows:
 
 * `OUTPUT/cmd_history.csv`: command lines, start times, end times, and return codes
 * `OUTPUT/took.txt`
@@ -116,6 +142,6 @@ The command will use `~/smartrim-experiment/output/` as a workspace directory, a
 * `OUTPUT/<sol-id>/.stderr.txt`: `stderr` of each tool
 * `OUTPUT/<sol-id>/(any other outputs of each tool)`
 
-where `OUTPUT = ~/smartrim-experiment/output-<dataset>-<tool>/` and `<sol-id>` is ID of each contract in our benchmark.
+where `OUTPUT = ~/SmarTrim-Artifact/result/<dataset>/<tool>` and `<sol-id>` is ID of each contract in our benchmark.
 
 
