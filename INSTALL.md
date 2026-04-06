@@ -16,7 +16,7 @@ $ wrapper/build.sh
 * To generate a vulnerable transaction sequence for [./SmarTrim/examples-public/leak_unsafe.sol](), run the following command:
 
 ```bash
-docker run --rm \
+docker run --rm --init \
   --volume "$(pwd)":/input \
   --volume smartrim-artifact-solc-select:/root/.solc-select:ro \
   --workdir /root/VeriSmart --entrypoint /root/VeriSmart/main.exe \

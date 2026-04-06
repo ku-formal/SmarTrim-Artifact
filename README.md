@@ -6,11 +6,11 @@ We describe the replication methods for Table 1 and Figure 3 in the table. The s
 
 * `./SmarTrim`: Source code of SmarTrim
 
-* `./benchmark`: Our [benchmark](https://anonymous.4open.science/r/SmarTrim-bench-FSE26-B2FF/README.md), including contracts, metadata and ground truths
+* `./benchmark`: Our benchmark, including contracts, metadata, and ground truths
 
-* `./scripts`: scripts for experiments and data processing
+* `./scripts`, `./wrapper`: Scripts for experiments and data processing
 
-* `./result`: [summaries and raw results](https://anonymous.4open.science/r/SmarTrim-Result-FSE26-4045/README.md)
+* `./result`: A directory for storing summaries and raw results
 
 ## Requirements
 
@@ -41,7 +41,7 @@ wrapper/run-exp1.sh
 **Data Processing**. Execute
 
 ```bash
-python scripts/analyze_tool.py
+wrapper/interp-exp1.sh
 ```
 
 This will generate `~/SmarTrim-Artifact/result/summary/<dataset>/<tool>.csv` and `~/SmarTrim-Artifact/result/summary/table.csv`. `~/smartrim-result/summary/table.csv` corresponds to Table 1 in Section 6.1.
@@ -57,10 +57,12 @@ wrapper/run-exp2.sh
 **Data Processing**. Execute
 
 ```bash
-python scripts/analyze_ablation.py
+wrapper/interp-exp2.sh
 ```
 
 This will generate `~/SmarTrim-Artifact/result/Inc-d4.pdf` and `~/SmarTrim-Artifact/result/Random-d4.pdf`, which corrrespond to Fig.3 (a) and Fig.3 (b) in Section 6.2, respectively.
+
+**Note**. 
 
 ## Configuration
 

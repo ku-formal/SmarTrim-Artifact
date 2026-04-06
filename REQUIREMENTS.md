@@ -15,5 +15,3 @@ We recommend computers with 64 threads or more and 62 GB RAM or more.
 We assume `docker` is installed in your hardware, as we will be reproducing the experiment in a Dockerized environment.
 
 To run `docker` without `sudo`, execute `sudo usermod -aG docker $USER`. (reference: https://askubuntu.com/a/739861)
-
-* `python` 3.9+ with `numpy`, `pandas`, `matplotlib`

@@ -97,12 +97,12 @@ def solc_select_path(version: str, *, raise_if_not_installed=True):
     return ret
 
 def meta(dataset):
-    df = pd.read_csv(os.path.join(BENCH_REPO, 'meta', f'{dataset}.csv'), dtype=np.object_)
+    df = pd.read_csv(os.path.join(BENCH_DIR, 'meta', f'{dataset}.csv'), dtype=np.object_)
     df = df[~df['actual_order'].isna()]
     return df
 
 def ground(dataset):
     ids = meta(dataset)[['id']]
-    df = pd.read_csv(os.path.join(BENCH_REPO, 'labels', f'{dataset}.csv'), dtype=np.object_)
+    df = pd.read_csv(os.path.join(BENCH_DIR, 'labels', f'{dataset}.csv'), dtype=np.object_)
     df = ids.merge(df, on='id', how='left')
     return df
