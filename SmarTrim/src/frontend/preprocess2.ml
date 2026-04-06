@@ -142,7 +142,14 @@ let rec convert_call_s (cnames : string list) (fmap : FuncMap.t) (stmt : Stmt.t)
       mk_eq (Lv (IndexAccess (Lv trust_map, Some target, EType Bool))) (V (Bool false))
     in
     let memo_invest_sum = Stmt.Assign (invest_sum_memo, Lv invest_sum, Loc.dummy) in
-    let memo_pay_amount = Stmt.Assign (pay_amount_memo, eth, Loc.dummy) in
+    let eth' =
+      match eth with
+      | BinOp (Mul, Lv v1, Lv (Var (v, _)), _)
+        when Options.Mode.(!mode = Verify) && String.starts_with_stdlib v ~prefix:"sellPrice" ->
+        Lv v1
+      | _ -> eth
+    in
+    let memo_pay_amount = Stmt.Assign (pay_amount_memo, eth', Loc.dummy) in
     let invest_sum_stmt =
       Stmt.Seq
         ( Seq (memo_invest_sum, memo_pay_amount),
