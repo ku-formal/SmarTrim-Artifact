@@ -5,10 +5,11 @@ import numpy as np
 import os
 import pandas as pd
 
+PWD = os.getcwd()
 HOME = os.path.expanduser('~')
-ARTIFACT_REPO = os.path.join(HOME, 'SmarTrim-Artifact')
+ARTIFACT_REPO = PWD
 BENCH_DIR = os.path.join(ARTIFACT_REPO, 'benchmark')
-RESULT_DIR = os.path.join(HOME, 'result')
+RESULT_DIR = os.path.join(PWD, 'result')
 
 solv_lst = [
     "0.4.11", "0.4.12", "0.4.13", "0.4.14", "0.4.15", "0.4.16", "0.4.17", "0.4.18", "0.4.19", 

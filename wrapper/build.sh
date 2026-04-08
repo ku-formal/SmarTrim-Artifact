@@ -3,7 +3,19 @@
 chmod +x docker/*.sh
 chmod +x wrapper/*.sh
 
-docker build . -f docker/artifact-setter.Dockerfile -t artifact-setter
+# install uv
+if ! command -v uv &> /dev/null
+then
+    echo "--- uv is not installed. Start installation. ---"
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    export PATH="$HOME/.local/bin:$PATH"
+    echo "--- uv installation is done. ---"
+else
+    uv --version
+fi
+# install uv end
+
+docker build . -f docker/artifact-setter.Dockerfile -t artifact-setter:fse26
 
 if [ $? -ne 0 ]; then 
     echo 'docker build artifact-setter: failed'; exit 1
@@ -13,20 +25,20 @@ docker volume create smartrim-artifact-solc-select
 docker volume create smartrim-artifact-4smartian
 
 docker run --rm --volume smartrim-artifact-solc-select:/root/.solc-select --entrypoint python \
-    artifact-setter /root/smartrim-experiment/scripts/install_solc.py
+    artifact-setter:fse26 /root/smartrim-experiment/scripts/install_solc.py
     
 docker run --rm --volume smartrim-artifact-solc-select:/root/.solc-select \
-    artifact-setter -c 'cp /root/sh-utils/solc-setter.sh /root/.solc-select/solc-setter.sh'
+    artifact-setter:fse26 -c 'cp /root/sh-utils/solc-setter.sh /root/.solc-select/solc-setter.sh'
     
 docker run --rm \
-    --volume $HOME/smartrim-benchmark:/root/smartrim-benchmark \
+    --volume $(pwd):/root/SmarTrim-Artifact \
     --volume smartrim-artifact-solc-select:/root/.solc-select \
-    --volume smartrim-artifact-4smartian:/root/smartrim-experiment/for-smartian \
-    --workdir /root/smartrim-experiment \
-    artifact-setter \
-    -c "python /root/smartrim-experiment/scripts/gen_abi_bin2.py --dataset io && \
-        python /root/smartrim-experiment/scripts/gen_abi_bin2.py --dataset ls && \
-        python /root/smartrim-experiment/scripts/gen_abi_bin2.py --dataset re \
+    --volume smartrim-artifact-4smartian:/root/SmarTrim-Artifact/for-smartian \
+    --workdir /root/SmarTrim-Artifact \
+    artifact-setter:fse26 \
+    -c "python /root/SmarTrim-Artifact/scripts/gen_abi_bin2.py --dataset io && \
+        python /root/SmarTrim-Artifact/scripts/gen_abi_bin2.py --dataset ls && \
+        python /root/SmarTrim-Artifact/scripts/gen_abi_bin2.py --dataset re \
         "
         
 if [ $? -ne 0 ]; then 

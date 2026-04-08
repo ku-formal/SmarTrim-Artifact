@@ -1,4 +1,5 @@
 docker run --rm --init \
+  --user "$(id -u):$(id -g)" \
   --volume "$(pwd)":/workspace \
   --workdir /workspace \
   --entrypoint python3 \

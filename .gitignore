@@ -19,3 +19,4 @@ for-smartian
 .logs/*
 nohup.out
 x.sh
+slack-webhook.json

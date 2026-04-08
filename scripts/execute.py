@@ -23,6 +23,7 @@ OUTPUT = f"{ARTIFACT_REPO}/output"
 
 TIMEOUT = str(1800)
 KILL_TIMEOUT = str(2100)
+CONFUZZIUS_KILL_TIMEOUT = str(2400)
 EFCF_KILL_TIMEOUT = str(3000)
 
 def get_program_cwd():
@@ -36,6 +37,8 @@ def set_globals(args: argparse.Namespace, config):
     global jobs
     global TIMEOUT
     global KILL_TIMEOUT
+    global EFCF_KILL_TIMEOUT
+    global CONFUZZIUS_KILL_TIMEOUT
     
     program = args.tool
         
@@ -51,6 +54,9 @@ def set_globals(args: argparse.Namespace, config):
         
     if "kill_timeout" in config:
         KILL_TIMEOUT = str(config['kill_timeout'])
+        if int(KILL_TIMEOUT) <= 20:
+            EFCF_KILL_TIMEOUT = KILL_TIMEOUT
+            CONFUZZIUS_KILL_TIMEOUT = KILL_TIMEOUT
         
     assert isinstance(jobs, int)
     
@@ -77,8 +83,11 @@ def start_alarm_to_slack():
     if platform.system() != 'Linux':
         print('The platform is not a server. Announce experiment start to stdout.')
         return
-    with open(f'{os.path.expanduser("~")}/slack-webhook.json', 'r') as f:
-        webhook = json.load(f)
+    try:   
+        with open(f'{ARTIFACT_REPO}/slack-webhook.json', 'r') as f:
+            webhook = json.load(f)
+    except FileNotFoundError:
+        return
     message = {'text': f"({webhook['username']}) ({program}) Experiment Started!"}
     response = requests.post(webhook['key'], json=message)
     if response.status_code != 200:
@@ -90,8 +99,11 @@ def end_alarm_to_slack():
         return
     endtime_datetime = datetime.datetime.now()
     diff = endtime_datetime - starttime_datetime
-    with open(f'{os.path.expanduser("~")}/slack-webhook.json', 'r') as f:
-        webhook = json.load(f)
+    try:   
+        with open(f'{ARTIFACT_REPO}/slack-webhook.json', 'r') as f:
+            webhook = json.load(f)
+    except FileNotFoundError:
+        return
     message = {'text': f"({webhook['username']}) Experiment Ended! (Time passed: {diff})"}
     response = requests.post(webhook['key'], json=message)
     if response.status_code != 200:
@@ -132,16 +144,17 @@ def get_command_smartrim(df_: pd.DataFrame, dataset: str, is_baseline=False, st=
             mo = "el,su"
         elif dataset == 're':
             mo = "re"
-            
+        
         cmd: list[str] = [
-            "timeout", "--kill-after=10", KILL_TIMEOUT,
-            "docker", "run", "--rm",
+            "docker", "run", "--rm", "--init",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/root/VeriSmart/output",
             "--mount", f"type=bind,src={BENCH_DIR}/contracts/{dataset}/{id}.sol,dst=/root/{id}.sol,ro",
             "--volume", "smartrim-artifact-solc-select:/root/.solc-select:ro",
             "--workdir", "/root/VeriSmart",
-            "--entrypoint", "/root/VeriSmart/main.exe",
+            "--entrypoint", "timeout",
             "my-smartrim:fse26",
+            "--kill-after=10", KILL_TIMEOUT,
+            "/root/VeriSmart/main.exe",
             "exploit",
             f"/root/{id}.sol",
             "--main", f"{main_name}",
@@ -170,17 +183,16 @@ def get_command_rlf(df: pd.DataFrame, dataset: str):
         row = df.loc[i]
         id = row['id']
         main_name = row['main_name']
-            
+        
         cmd: list[str] = [
-            "timeout", "--kill-after=10", KILL_TIMEOUT, 
-            "docker", "run",
-            "--rm", 
+            "docker", "run", "--rm", "--init", 
             "--volume", f"{ARTIFACT_REPO}/for-rlf/{id}:/rlf/input", 
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/rlf/output",
-            "--entrypoint", "python3",
+            "--entrypoint", "timeout",
             "--workdir", "/rlf",
             "damonhero/rlf:latest",
-            "-m", "rlf", 
+            "--kill-after=10", KILL_TIMEOUT,
+            "python3", "-m", "rlf", 
             "--proj", f"/rlf/input", "--contract", main_name, 
             "--fuzzer", "reinforcement", 
             "--reward", "cov+bugs", 
@@ -190,6 +202,7 @@ def get_command_rlf(df: pd.DataFrame, dataset: str):
             "--output_path", f"/rlf/output",
             "--limit_time", TIMEOUT,
         ]
+        
         commands.append((cmd, id))
         
     return commands
@@ -224,8 +237,7 @@ def get_command_smartest(df_: pd.DataFrame, dataset: str):
             train = f"{ARTIFACT_REPO}/assets/smartest/model/{dataset}_{fold}"
             
         cmd: list[str] = [
-            "timeout", "--kill-after=10", KILL_TIMEOUT, 
-            "docker", "run", "--rm", 
+            "docker", "run", "--rm", "--init",
             "--volume", "smartrim-artifact-solc-select:/build/.solc-select",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/build/verismart/output",
             "--volume", f"{train}:/build/verismart/src/exploit/train:ro",
@@ -235,6 +247,7 @@ def get_command_smartest(df_: pd.DataFrame, dataset: str):
             "bash", "-c", " ".join([
                 f"cp /build/.solc-select/artifacts/solc-{v}/solc-{v} /usr/local/bin/solc_{v}",
                 "&&",
+                "timeout", "--kill-after=10", KILL_TIMEOUT,
                 "./main.native",
                 "-input", f"/build/{id}.sol",
                 "-mode", "exploit",
@@ -258,12 +271,13 @@ def get_command_smartian(df: pd.DataFrame, dataset: str):
         id = row['id']
         
         commands.append(([
-            "timeout", "--kill-after=10", KILL_TIMEOUT,
-            "docker", "run", "--rm",
+            "docker", "run", "--rm", "--init",
             "--volume", "smartrim-artifact-4smartian:/root/for-smartian:ro",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/root/output",
-            "--entrypoint", "dotnet",
+            "--entrypoint", "timeout",
             "my-smartian:fse26",
+            "--kill-after=10", KILL_TIMEOUT,
+            "dotnet",
             "/root/Smartian/build/Smartian.dll",
             "fuzz",
             "--verbose", "1",
@@ -293,10 +307,12 @@ def get_command_mythril(df: pd.DataFrame, dataset: str):
             mo = "IntegerArithmetics"
         
         commands.append(([
-            "timeout", "--kill-after=10", KILL_TIMEOUT,
-            "docker", "run", "--rm", 
+            "docker", "run", "--rm", "--init",
             "--volume", f"{BENCH_DIR}/contracts/{dataset}:/tmp:ro",
-            "mythril/myth:latest", 
+            "--entrypoint", "timeout",
+            "mythril/myth:latest",
+            "--kill-after=10", KILL_TIMEOUT,
+            "/docker-entrypoint.sh",
             "analyze", f"/tmp/{id}.sol:{main_name}",
             "--execution-timeout", TIMEOUT,
             "--solv", v,
@@ -329,11 +345,13 @@ def get_command_lent(df: pd.DataFrame, dataset: str):
             lent_timeout = KILL_TIMEOUT
             
         commands.append(([
-            "timeout", "--kill-after=10", lent_timeout,
-            "docker", "run", "--rm", 
+            "docker", "run", "--rm", "--init",
             "--volume", f"{BENCH_DIR}/contracts/{dataset}:/root/pgm:ro",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/tmp/output",
-            "my-lent:fse26", 
+            "--entrypoint", "timeout",
+            "my-lent:fse26",
+            "--kill-after=10", lent_timeout,
+            "/usr/local/bin/myth",
             "analyze", f"/root/pgm/{id}.sol:{main_name}",
             "--solv", v,
             "--modules", mo,
@@ -363,13 +381,14 @@ def get_command_slither(df: pd.DataFrame, dataset: str):
             
             
         cmd = [
-            "timeout", "--kill-after=10", KILL_TIMEOUT,
-            "docker", "run", "--rm",
+            "docker", "run", "--rm", "--init",
             "--volume", "smartrim-artifact-solc-select:/root/.solc-select:ro", 
             "--volume", f"{OUTPUT}/{id}:/root/output",
             "--mount", f"type=bind,src={BENCH_DIR}/contracts/{dataset}/{id}.sol,dst=/root/{id}.sol,ro",
-            "--entrypoint", "slither",
+            "--entrypoint", "timeout",
             "my-slither:fse26", 
+            "--kill-after=10", KILL_TIMEOUT,
+            "slither",
             f"/root/{id}.sol",
             '--solc-solcs-bin', f'/root/.solc-select/artifacts/solc-{v}/solc-{v}',
             '--detect', mo,
@@ -388,13 +407,14 @@ def get_command_achecker(df: pd.DataFrame, dataset: str):
         id = row['id']
             
         cmd = [
-            "timeout", "--kill-after=10", KILL_TIMEOUT,
-            "docker", "run", "--rm",
+            "docker", "run", "--rm", "--init",
             "--volume", "smartrim-artifact-4smartian:/home/for-smartian:ro",
-            "--entrypoint", "python3",
+            "--entrypoint", "timeout",
             "--workdir", '/home/AChecker',
             "my-achecker:fse26",
-            f"bin/achecker.py", 
+            "--kill-after=10", KILL_TIMEOUT,
+            "python3",
+            "bin/achecker.py", 
             '--bytecode',
             '--file', f"/home/for-smartian/{dataset}.bin-runtime/{id}.bin_runtime",
             "--fib", '--sv'
@@ -414,13 +434,14 @@ def get_command_sailfish(df: pd.DataFrame, dataset: str):
         v = max_version(v, '0.4.11')
             
         cmd = [
-            "timeout","--kill-after=10", KILL_TIMEOUT,
-            "docker", "run", "--rm",
+            "docker", "run", "--rm", "--init",
             "--volume", f"{BENCH_DIR}/contracts/{dataset}:/root/pgm:ro",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/tmp/output",
             "--volume", f"smartrim-artifact-solc-select:/root/.solc-select:ro",
-            "--entrypoint", "python",
+            "--entrypoint", "timeout",
             "holmessherlock/sailfish:latest",
+            "--kill-after=10", KILL_TIMEOUT,
+            "python",
             "contractlint.py",
             "-c", f"/root/pgm/{id}.sol",
             "-o", "/tmp/output",
@@ -443,7 +464,6 @@ def get_command_slise(df: pd.DataFrame, dataset: str):
         id = row['id']
             
         cmd = [
-            "timeout", "--kill-after=10", KILL_TIMEOUT,
             "docker", "run", "--rm",
             "--volume", "smartrim-artifact-4smartian:/root/for-smartian:ro",   
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/output",
@@ -451,7 +471,7 @@ def get_command_slise(df: pd.DataFrame, dataset: str):
             "bash", "-c", " ".join([
                 f"source /SliSE_dev/py38/py38/bin/activate && ",
                 f"cd /SliSE_dev/SliSE/SliSE && ",
-                f"python SliSE.py /root/for-smartian/re.bin-runtime/{id}.bin_runtime -vt reentrancy && ",
+                f"timeout --kill-after=10 {KILL_TIMEOUT} python SliSE.py /root/for-smartian/re.bin-runtime/{id}.bin_runtime -vt reentrancy && ",
                 f"cp -r /SliSE_dev/SliSE/SliSE/detectiion_output/* /output",
             ])
         ]   
@@ -478,12 +498,13 @@ def get_command_efcf(df: pd.DataFrame, dataset: str):
             mo = ["--report-leaking-ether"]
             
         cmd = [
-            "timeout","--kill-after=10", EFCF_KILL_TIMEOUT,
-            "docker", "run", "--rm",
+            "docker", "run", "--rm", "--init",
             "--volume", f"{BENCH_DIR}/contracts/{dataset}:/root/pgm:ro",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/tmp/output",
-            "--entrypoint", "efcfuzz",
+            "--entrypoint", "timeout",
             "ghcr.io/uni-due-syssec/efcf-framework",
+            "--kill-after=10", EFCF_KILL_TIMEOUT,
+            "efcfuzz",
             "--out", "/tmp/output",
             "--source", f"/root/pgm/{id}.sol",
             "--solc-version", v,
@@ -507,15 +528,16 @@ def get_command_confuzzius(df: pd.DataFrame, dataset: str):
         v = max_version(v, '0.4.11')
             
         cmd = [
-            "timeout","--kill-after=10", "2400",
             "docker", "run", "--rm",
             "--volume", f"{BENCH_DIR}/contracts/{dataset}:/root/pgm:ro",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/tmp/output",
             "--volume", "smartrim-artifact-solc-select:/root/.solc-select:ro", 
             "--env", f"ARTIFACT_SOLC_VERSION={v}",
             "--env", f"ARTIFACT_SOLC_DEST_LOCATION=/usr/local/lib/python3.6/dist-packages/solcx/bin/solc-v{v}",
-            "--entrypoint", "/root/.solc-select/solc-setter.sh",
+            "--entrypoint", "timeout",
             "christoftorres/confuzzius",
+            "--kill-after=10", CONFUZZIUS_KILL_TIMEOUT,
+            "/root/.solc-select/solc-setter.sh",
             "python3", "fuzzer/main.py",
             "--evm", "byzantium",
             "--source", f"/root/pgm/{id}.sol",

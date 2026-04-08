@@ -8,7 +8,7 @@ import argparse
 import csv
 import subprocess
 import utils
-from utils import solc_select_path
+from utils import solc_select_path, BENCH_DIR
 from multiprocessing import Pool
 
 HOME = os.path.expanduser('~')
@@ -153,9 +153,9 @@ def main():
 
     args = parser.parse_args()
     if args.root_info == '': # default
-        args.root_info = f'{HOME}/smartrim-benchmark/meta/{args.dataset}.csv'
+        args.root_info = f'{BENCH_DIR}/meta/{args.dataset}.csv'
     if args.pgmdir == '': # default
-        args.pgmdir = f'{HOME}/smartrim-benchmark/contracts/{args.dataset}'
+        args.pgmdir = f'{BENCH_DIR}/contracts/{args.dataset}'
     print(args)
     
     global COMPILE_FOR

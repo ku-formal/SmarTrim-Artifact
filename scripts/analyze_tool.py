@@ -7,7 +7,7 @@ import pandas as pd
 import re
 import sys
 
-from utils import HOME, BENCH_REPO, RESULT_REPO, get_solv_from_str
+from utils import BENCH_DIR, RESULT_DIR, get_solv_from_str
 
 
 LS_TOOL = ['smartrim', 'smartest', 'efcf', 'smartian', 'confuzzius', 'rlf', 'mythril', 'lent', 'slither', 'achecker']
@@ -18,7 +18,7 @@ TOOL = sorted(set(LS_TOOL) | set(IO_TOOL) | set(RE_TOOL))
 
 def find_func(selector: str, dataset: str):
     selector = selector[2:] if selector.startswith('0x') else selector
-    selector_df = pd.read_csv(f"{BENCH_REPO}/misc/selectors/{dataset}.csv", dtype=np.object_)
+    selector_df = pd.read_csv(f"{BENCH_DIR}/misc/selectors/{dataset}.csv", dtype=np.object_)
     selectors = selector_df[selector_df['selector'] == selector]
     return list(selectors['function'])[0]
 
@@ -52,12 +52,12 @@ def normalize_fallback(s, tool):
     return s
 
 
-def extract_findings(df, tool: str, dataset: str, output_path: str = RESULT_REPO) -> pd.DataFrame:
+def extract_findings(df, tool: str, dataset: str, output_path: str = RESULT_DIR) -> pd.DataFrame:
     """
     :param output_path: where is the output of tools
     """
     bug_types = get_bug_types(dataset)
-    output_path = os.path.join(RESULT_REPO, dataset, tool)
+    output_path = os.path.join(RESULT_DIR, dataset, tool)
     
     if tool == 'smartrim':
         df_ret, df_bug = extract_from_smartrim(df, output_path, bug_types)
@@ -84,8 +84,11 @@ def extract_findings(df, tool: str, dataset: str, output_path: str = RESULT_REPO
         df_ret, df_bug = extract_from_efcf(df, output_path, bug_types)
     else:
         raise ValueError(f"unknown tool name: {tool}")
+        
+    bugdir = os.path.join(RESULT_DIR, 'summary', dataset, 'bugs')
+    os.makedirs(bugdir, exist_ok=True)
     
-    df_bug.to_csv(os.path.join(RESULT_REPO, 'summary', dataset, 'bugs', f'{tool}.csv'), index=False)
+    df_bug.to_csv(os.path.join(RESULT_DIR, 'summary', dataset, 'bugs', f'{tool}.csv'), index=False)
     df_ret = postproc(df_ret, df_bug, bug_types)
     return df_ret
 
@@ -615,7 +618,7 @@ def extract_from_slise(df_meta: pd.DataFrame, dataset: str, output_path):
     for i in df_meta.index:
         id = str(df_meta['id'][i])
         dir_path = os.path.join(output_path, id)
-        sol_file_path = os.path.join(f'{HOME}/smartrim-benchmark/contracts/re', f'{id}.sol')
+        sol_file_path = os.path.join(f'{BENCH_DIR}/contracts/re', f'{id}.sol')
         compiler_version = get_solv_from_str(df_meta.loc[i]['compiler_version'], minimum_required='0.4.16')
         if not os.path.isdir(dir_path):
             df.loc[i] = {'id': id, 'succeed': False}
@@ -703,7 +706,7 @@ def extract_from_confuzzius(df_meta: pd.DataFrame, dataset: str, output_path: st
                 if kind not in bug_types:
                     continue
                 if 'line' not in e:
-                    print(f'{id} why')
+                    print(f'{id}')
                     continue
                 line = e['line']
                 # func = e['individual'][-1]['transaction']['data'][2:10]
@@ -817,7 +820,7 @@ def analyze_main(args: argparse.Namespace, df):
     result_dir = f'result/{dataset}.{tool}'
     df_ret = extract_findings(df, tool, dataset, result_dir)
     df_ret = reassign_succeed(df_ret)
-    df_ret.to_csv(f'{RESULT_REPO}/summary/{dataset}/{tool}.csv', index=False)
+    df_ret.to_csv(f'{RESULT_DIR}/summary/{dataset}/{tool}.csv', index=False)
     
 # other utils
 def see_stderr(args: argparse.Namespace):
@@ -871,8 +874,8 @@ def compress_stdout(args: argparse.Namespace, df: pd.DataFrame):
         return
     for i in df.index:
         id = df.loc[i]['id']
-        readpath = f'{RESULT_REPO}/{args.dataset}/{args.tool}/{id}/.stdout.txt'
-        writepath = f'{RESULT_REPO}/{args.dataset}/{args.tool}/{id}/.stdout.rep.txt'
+        readpath = f'{RESULT_DIR}/{args.dataset}/{args.tool}/{id}/.stdout.txt'
+        writepath = f'{RESULT_DIR}/{args.dataset}/{args.tool}/{id}/.stdout.rep.txt'
         if not os.path.isfile(readpath) or os.path.getsize(readpath) < 1048576:
             continue
         print(f'compressing {id}')
@@ -889,8 +892,8 @@ def compress_stderr(args: argparse.Namespace, df: pd.DataFrame):
         return
     for i in df.index:
         id = df.loc[i]['id']
-        readpath = f'{RESULT_REPO}/{args.dataset}/{args.tool}/{id}/.stderr.txt'
-        writepath = f'{RESULT_REPO}/{args.dataset}/{args.tool}/{id}/.stderr.rep.txt'
+        readpath = f'{RESULT_DIR}/{args.dataset}/{args.tool}/{id}/.stderr.txt'
+        writepath = f'{RESULT_DIR}/{args.dataset}/{args.tool}/{id}/.stderr.rep.txt'
         if not os.path.isfile(readpath) or os.path.getsize(readpath) < 1048576:
             continue
         print(f'compressing {id}')
@@ -910,12 +913,12 @@ def compress(args: argparse.Namespace, df: pd.DataFrame):
 # ----- grader -----
 
 def _meta(dataset):
-    df = pd.read_csv(f"{HOME}/smartrim-benchmark/meta/{dataset}.csv", dtype=np.object_)
+    df = pd.read_csv(f"{BENCH_DIR}/meta/{dataset}.csv", dtype=np.object_)
     df = df[~df['actual_order'].isna()]
     return df
 
 def _ground(dataset):
-    df = pd.read_csv(f"{HOME}/smartrim-benchmark/labels/{dataset}.csv", dtype=np.object_)
+    df = pd.read_csv(f"{BENCH_DIR}/labels/{dataset}.csv", dtype=np.object_)
     return df
 
 def _count(dataset: str, kind: str, tool: str, func, common=False) -> tuple[int, int, int]:
@@ -923,11 +926,11 @@ def _count(dataset: str, kind: str, tool: str, func, common=False) -> tuple[int,
     read a bug report and count
     """
     is_func = "-f" if func == 'func' else "" if func == 'line' else exit(1)
-    df_ret = pd.read_csv(f'{RESULT_REPO}/summary/{dataset}/{tool}.csv', dtype=np.object_)
+    df_ret = pd.read_csv(f'{RESULT_DIR}/summary/{dataset}/{tool}.csv', dtype=np.object_)
     if dataset == 'ls':
-        df_candid = pd.read_csv(f'{HOME}/smartrim-benchmark/misc/candidates-{kind}.csv', dtype=np.object_)
+        df_candid = pd.read_csv(f'{BENCH_DIR}/misc/candidates-{kind}.csv', dtype=np.object_)
     if common:
-        df_common = pd.read_csv(f'{RESULT_REPO}/summary/{dataset}/common.csv', dtype=np.object_)
+        df_common = pd.read_csv(f'{RESULT_DIR}/summary/{dataset}/common.csv', dtype=np.object_)
         df_ret = df_common.merge(df_ret, how='left', on='id')
     df_ground = _ground(dataset)
     df = df_ret.merge(df_ground, how='left', on='id', suffixes=[f'-{tool}', ''])
@@ -1068,7 +1071,7 @@ def main():
                         help='(required) Analysis tool to use. e.g., mythril, slither, lent')
     parser.add_argument('-d', '--dataset', type=str, required=True, choices=['io', 'ls', 're'],
                         help='(required) Dataset name')
-    parser.add_argument('--bench-dir', type=str, default=f'{HOME}/smartrim-benchmark',
+    parser.add_argument('--bench-dir', type=str, default=BENCH_DIR,
                         help='benchmark directory location')
     
     # util arguments
@@ -1091,45 +1094,46 @@ def main():
 def do_all():
     for tool in LS_TOOL:
         os.system(f'python scripts/analyze_tool.py --tool {tool} --dataset ls')
-    df = pd.read_csv(os.path.join(HOME, 'smartrim-benchmark', 'meta', 'ls.csv'), dtype=np.object_)
+    df = pd.read_csv(os.path.join(BENCH_DIR, 'meta', 'ls.csv'), dtype=np.object_)
     df = df[~df['actual_order'].isna()]
     df = df[['id']]
     df1 = df.copy()
     for tool in LS_TOOL:
-        df2 = pd.read_csv(os.path.join(RESULT_REPO, 'summary', 'ls', f'{tool}.csv'), dtype=np.object_)
+        df2 = pd.read_csv(os.path.join(RESULT_DIR, 'summary', 'ls', f'{tool}.csv'), dtype=np.object_)
         df1 = df1.merge(df2, on='id', how='left')
         df1 = df1[~df1['succeed'].isna()]
         df1 = df1[['id']]
-    df1.to_csv(f'{RESULT_REPO}/summary/ls/common.csv', index=False)
+    df1.to_csv(f'{RESULT_DIR}/summary/ls/common.csv', index=False)
     
     for tool in IO_TOOL:
         os.system(f'python scripts/analyze_tool.py --tool {tool} --dataset io')
-    df = pd.read_csv(os.path.join(HOME, 'smartrim-benchmark', 'meta', 'io.csv'), dtype=np.object_)
+    df = pd.read_csv(os.path.join(BENCH_DIR, 'meta', 'io.csv'), dtype=np.object_)
     df = df[~df['actual_order'].isna()]
     df = df[['id']]
     df1 = df.copy()
     for tool in IO_TOOL:
-        df2 = pd.read_csv(os.path.join(RESULT_REPO, 'summary', 'io', f'{tool}.csv'), dtype=np.object_)
+        df2 = pd.read_csv(os.path.join(RESULT_DIR, 'summary', 'io', f'{tool}.csv'), dtype=np.object_)
         df1 = df1.merge(df2, on='id', how='left')
         df1 = df1[~df1['succeed'].isna()]
         df1 = df1[['id']]
-    df1.to_csv(f'{RESULT_REPO}/summary/io/common.csv', index=False)
+    df1.to_csv(f'{RESULT_DIR}/summary/io/common.csv', index=False)
     
     for tool in RE_TOOL:
         os.system(f'python scripts/analyze_tool.py --tool {tool} --dataset re')
-    df = pd.read_csv(os.path.join(HOME, 'smartrim-benchmark', 'meta', 're.csv'), dtype=np.object_)
+    df = pd.read_csv(os.path.join(BENCH_DIR, 'meta', 're.csv'), dtype=np.object_)
     df = df[~df['actual_order'].isna()]
     df = df[['id']]
     df1 = df.copy()
     for tool in RE_TOOL:
-        df2 = pd.read_csv(os.path.join(RESULT_REPO, 'summary', 're', f'{tool}.csv'), dtype=np.object_)
+        df2 = pd.read_csv(os.path.join(RESULT_DIR, 'summary', 're', f'{tool}.csv'), dtype=np.object_)
         df1 = df1.merge(df2, on='id', how='left')
         df1 = df1[~df1['succeed'].isna()]
         df1 = df1[['id']]
-    df1.to_csv(f'{RESULT_REPO}/summary/re/common.csv', index=False)
+    df1.to_csv(f'{RESULT_DIR}/summary/re/common.csv', index=False)
     
-    df_ret = pd.read_csv(os.path.join(RESULT_REPO, 'summary', 'table.csv'), index_col='tool')
-    df_ret = df_ret.fillna(0.0)
+    # df_ret = pd.read_csv(os.path.join(RESULT_DIR, 'summary', 'table.csv'), index_col='tool')
+    # df_ret = df_ret.fillna(0.0)
+    df_ret = pd.DataFrame()
     
     count_wrap(df_ret, 'ls', 'el', 'smartrim', 'func', False)
     count_wrap(df_ret, 'ls', 'el', 'smartrim', 'func', True)
@@ -1267,7 +1271,8 @@ def do_all():
         for tool in TOOL:
             compute_precision(df_ret, tool, kind)
     
-    df_ret.map(df_format_number).to_csv(os.path.join(RESULT_REPO, 'summary', 'table.csv'))
+    #df_ret.reindex(columns="tool,el-f,el,el-f-com,el-com,su-f,su,su-f-com,su-com,io-f,io,io-f-com,io-com,re-f,re,re-f-com,re-com,total-f,total,el-f-fp,el-fp,su-f-fp,su-fp,re-f-fp,re-fp,total-f-fp,total-fp,el-precision,su-precision,re-precision,total-precision,el-f-nongt,el-f-com-nongt,el-nongt,el-com-nongt,su-f-nongt,su-f-com-nongt,su-nongt,su-com-nongt,io-f-nongt,io-f-com-nongt,io-nongt,io-com-nongt,re-f-nongt,re-f-com-nongt,re-nongt,re-com-nongt".split(','))
+    df_ret.map(df_format_number).to_csv(os.path.join(RESULT_DIR, 'summary', 'table.csv'))
     
 
 if __name__ == '__main__':
