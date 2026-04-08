@@ -1,4 +1,4 @@
-# SmarTrim-Experiment (Submission for FSE 2026)
+# SmarTrim-Artifact
 
 `SmarTrim` is a symbolic executor for smart contracts driven by redundant transaction sequence pruning.
 

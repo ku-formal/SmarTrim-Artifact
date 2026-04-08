@@ -1,11 +1,11 @@
-# SmarTrim-Benchmark (Submission for FSE 2026)
+# SmarTrim-Benchmark
 
 ### Structure of Contents
 
 * `contracts`: Solidity smart contracts file.
-  * `contracts/io`: Contains 487 Solidity contracts reported in CVE due to integer over/underflow vulnerabilities.
-  * `contracts/ls`: Contains 1,015 Solidity contracts that have potential Ether leak and suicidal vulnerabilities.
-  * `contracts/re`: Contains 69 Solidity contracts with reentrancy vulnerabilities.
+  * `contracts/io`: Contains 487 Solidity contracts (273 after deduplication) reported in CVE due to integer over/underflow vulnerabilities.
+  * `contracts/ls`: Contains 1,015 Solidity contracts (491 after deduplication) that have potential Ether leak and suicidal vulnerabilities.
+  * `contracts/re`: Contains 69 Solidity contracts (49 after deduplication) with reentrancy vulnerabilities.
 * `meta`: This directory contains some metadata for contracts such as main contract name, contract address, etc.
   * `io.csv`
   * `ls.csv`
@@ -18,11 +18,12 @@
   * `ls.csv`
   * `re.csv`
     * `id`: Solidity contract id
-    * `<bug-id>`: line numbers with bugs of type `<bug-id>`. Separated by '/'.
-    * `<bug-id>-f`: functions that contain bugs of type `<bug-id>`. Note that multiple functions may exist that cause bug in the same location. In such cases, we use the separator ‘:’ instead of ‘/’.
-    * `Explanation`: reasons for TPs. Provided only for 407 contracts from `SPCon` and `PrettySmart`.
-    * `Note`: any other notes, including reasons for some (nontrivial) FPs.
-* `misc`: misc.
+    * `<bug-id>`: Line numbers with bugs of type `<bug-id>`. Separated by '/'.
+    * `<bug-id>-f`: Functions that contain bugs of type `<bug-id>`. Note that multiple functions may exist that cause bug in the same location. In such cases, we use the separator ‘:’ instead of ‘/’.
+    * `Explanation`: Reasons for TPs. Provided only for 407 contracts from `SPCon` and `PrettySmart`.
+    * `Note`: Any other notes, including reasons for some (nontrivial) FPs.
+  * `l4.csv`: Ground truths for bugs whose length is 4 or more (Section 6.2).
+* `misc`
   * `selectors/<dataset>.csv`: DB for all function selectors in our dataset. Useful when grading.
 * `sandbox`: Contains some proof-of-concept transaction sequences for showing vulnerabilities. Uses `foundry` framework.
   * build: `forge build --root sandbox`
@@ -53,6 +54,3 @@ Some explanations for EL/SU bugs in `labels/ls.csv` contain the following abbrev
 * PB: Permission bug
 * PIB: Possibly intended behavior
 * KHP: Known honeypot patterns
-
-## Reference
-* For the attack contracts used in the RE benchmarks, refer to the contracts in directories following the ``X_mallory`` format at https://github.com/ku-formal/SmartScenario-benchmarks.
