@@ -9,6 +9,10 @@ $ chmod +x wrapper/*.sh
 $ wrapper/build.sh
 ```
 
+* *Estimated build time: 21 minutes*
+
+* This command will install `uv` (A Python package manager) and 13 docker images in your machine.
+
 ### Basic Testing (A Running Example)
 
 * Assume we want to test a vulnerable contract [./SmarTrim/examples-public/leak_unsafe.sol](). Since anyone can become the owner via calling `setOwner` function, anyone can invoke the `exploit` function to drain all funds from the contract. 
