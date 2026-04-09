@@ -11,18 +11,18 @@ import pandas as pd
 import sys
 
 from analyze_tool import LS_TOOL, IO_TOOL, RE_TOOL
-from utils import BENCH_REPO, RESULT_REPO
+from utils import BENCH_DIR, RESULT_DIR
 
 HOME = os.path.expanduser('~')
 
 def _meta(dataset):
-    df = pd.read_csv(f"{HOME}/smartrim-benchmark/meta/{dataset}.csv", dtype=np.object_)
+    df = pd.read_csv(f"{BENCH_DIR}/meta/{dataset}.csv", dtype=np.object_)
     df = df[~df['actual_order'].isna()]
     return df
  
 def _ground(dataset):
     ids = _meta(dataset)[['id']]
-    df = pd.read_csv(f"{HOME}/smartrim-benchmark/labels/{dataset}.csv", dtype=np.object_)
+    df = pd.read_csv(f"{BENCH_DIR}/labels/{dataset}.csv", dtype=np.object_)
     df = ids.merge(df, on='id', how='left')
     return df
 
@@ -61,7 +61,7 @@ def _mk_smartrim_buginfo(dataset, kind: str, is_base=False, strategy='inc'):
         
     for i in df.index:
         id = df.loc[i]['id']
-        dir = f"{RESULT_REPO}/{dataset}/smartrim{base_suffix}{strategy_suffix}"
+        dir = f"{RESULT_DIR}/{dataset}/smartrim{base_suffix}{strategy_suffix}"
         if not os.path.exists(f"{dir}/{id}/{id}/{id}.json"):
             continue
         with open(f"{dir}/{id}/{id}/{id}.json", "r") as fp:
@@ -87,8 +87,11 @@ def _mk_smartrim_buginfo(dataset, kind: str, is_base=False, strategy='inc'):
     ret['kind'] = kind
     base_suffix2 = '.base' if is_base else ""
     strategy_suffix2 = '' if strategy_suffix == '' else '.' + strategy_suffix
+    filename = f'{RESULT_DIR}/summary/ablation/{dataset}.{kind}{base_suffix2}{strategy_suffix2}.csv'
+    dirname = os.path.dirname(filename)
+    os.makedirs(dirname, exist_ok=True)
     ret.to_csv(
-        f'{RESULT_REPO}/summary/ablation/{dataset}.{kind}{base_suffix2}{strategy_suffix2}.csv', 
+        f'{RESULT_DIR}/summary/ablation/{dataset}.{kind}{base_suffix2}{strategy_suffix2}.csv', 
         index=False
     )
     
@@ -113,7 +116,7 @@ def mk_smartrim_buginfo():
 def _get_smartrim_fp(dataset: str, kind: str):
     l = ground_as_buglist(dataset, kind)
     s = set(l)
-    df_found = pd.read_csv(f'{RESULT_REPO}/summary/ablation/{dataset}.{kind}.csv', dtype=np.object_)
+    df_found = pd.read_csv(f'{RESULT_DIR}/summary/ablation/{dataset}.{kind}.csv', dtype=np.object_)
     ret = []
     for i in df_found.index:
         id, line = df_found.loc[i]['id'], df_found.loc[i]['line']
@@ -135,7 +138,7 @@ def get_smartrim_fp():
     
 def _get_smartrim_fn(dataset: str, kind: str):
     l = ground_as_buglist(dataset, kind)
-    df_found = pd.read_csv(f'{RESULT_REPO}/summary/ablation/{dataset}.{kind}.csv', dtype=np.object_)
+    df_found = pd.read_csv(f'{RESULT_DIR}/summary/ablation/{dataset}.{kind}.csv', dtype=np.object_)
     s2: set[tuple[int, int]] = set()
     ret = []
     for i in df_found.index:
@@ -156,7 +159,7 @@ def get_smartrim_fn():
     _get_smartrim_fn('re', 're')
     
 def _count_validated(dataset: str, kind: str):
-    df_found = pd.read_csv(f'{RESULT_REPO}/summary/ablation/{dataset}.{kind}.csv', dtype=np.object_)
+    df_found = pd.read_csv(f'{RESULT_DIR}/summary/ablation/{dataset}.{kind}.csv', dtype=np.object_)
     return len(df_found), len(df_found[df_found['validated'] == '0'])
 
 def count_validated():
@@ -180,7 +183,7 @@ def _mk_statistics_unit(depth, dataset, is_base=False):
     base_suffix = "base" if is_base else ""
     for i in df.index:
         id = df.loc[i]['id']
-        dir = f"{RESULT_REPO}/{dataset}/smartrim{base_suffix}"
+        dir = f"{RESULT_DIR}/{dataset}/smartrim{base_suffix}"
         if not os.path.exists(os.path.join(dir, id, id, id + '.json')):
             continue
         with open(os.path.join(dir, id, id, id + '.json'), "r") as fp:
@@ -229,8 +232,8 @@ def _get_pruning_overhead(dataset):
     ret = []
     for i in df.index:
         id = df.loc[i]['id']
-        dir = f"{RESULT_REPO}/{dataset}/smartrim"
-        dir = f"{RESULT_REPO}/{dataset}/smartrim"
+        dir = f"{RESULT_DIR}/{dataset}/smartrim"
+        dir = f"{RESULT_DIR}/{dataset}/smartrim"
         if not os.path.exists(f"{dir}/{id}/{id}/{id}.json"):
             continue
         with open(f"{dir}/{id}/{id}/{id}.json", "r") as fp:
@@ -273,8 +276,8 @@ def ground_truth_info(dataset: str, kind: str):
     return func, line
 
 def count_pruning_regression(dataset: str, kind: str):
-    df1 = pd.read_csv(f'{RESULT_REPO}/summary/ablation/{dataset}.{kind}.csv')
-    df2 = pd.read_csv(f'{RESULT_REPO}/summary/ablation/{dataset}.{kind}.base.csv')
+    df1 = pd.read_csv(f'{RESULT_DIR}/summary/ablation/{dataset}.{kind}.csv')
+    df2 = pd.read_csv(f'{RESULT_DIR}/summary/ablation/{dataset}.{kind}.base.csv')
     df = df1.merge(df2, on=['kind', 'id', 'line', 'offset', 'len'], how='outer', suffixes=['p', 'b'])
     df = df[df['timep'].isna()]
     print(len(df))
@@ -290,10 +293,10 @@ def get_all_dataset_time(time=1800, depth=4, strategy='r', gt_filter=True):
     ptimes = []
     for dk in ['io.io', 'ls.el', 'ls.su', 're.re']:
         ids = _meta(dk.split('.')[0])[['id']]
-        dfb = pd.read_csv(f'{RESULT_REPO}/summary/ablation/{dk}.base.csv')
-        dfp = pd.read_csv(f'{RESULT_REPO}/summary/ablation/{dk}.csv')
-        dflb = pd.read_csv(f'{RESULT_REPO}/summary/ablation/{dk}.base.r.csv')
-        dflp = pd.read_csv(f'{RESULT_REPO}/summary/ablation/{dk}.r.csv')
+        dfb = pd.read_csv(f'{RESULT_DIR}/summary/ablation/{dk}.base.csv')
+        dfp = pd.read_csv(f'{RESULT_DIR}/summary/ablation/{dk}.csv')
+        dflb = pd.read_csv(f'{RESULT_DIR}/summary/ablation/{dk}.base.r.csv')
+        dflp = pd.read_csv(f'{RESULT_DIR}/summary/ablation/{dk}.r.csv')
         # dfb = ids.merge(dfb, on='id', how='left')
         # dfp = ids.merge(dfp, on='id', how='left')
         # dflb = ids.merge(dflb, on='id', how='left')
@@ -316,9 +319,9 @@ def get_all_dataset_time(time=1800, depth=4, strategy='r', gt_filter=True):
             df = df[df['depthrp'] != i]
         #df.to_csv(f'{RESULT_REPO}/summary/{dk}-depth4.csv', index=False)
         if gt_filter == True:
-            length_gt = pd.read_csv(os.path.join(BENCH_REPO, 'labels', 'l4.csv'))
+            length_gt = pd.read_csv(os.path.join(BENCH_DIR, 'labels', 'l4.csv'))
             df = length_gt.merge(df, on=on, how='left')
-            df = df[df['included'] != 'x']
+            df = df[df['included'] == 'o']
             
         if strategy == 'r':
             btimes.extend(df['timerb'])
@@ -357,7 +360,7 @@ def _draw_cac(strategy='inc'):
     plt.tight_layout()
     plt.xlim(0, 1800)
     plt.gca().xaxis.set_major_locator(MultipleLocator(250))
-    plt.savefig(f'{RESULT_REPO}/{strategy}-d{depth}.pdf')
+    plt.savefig(f'{RESULT_DIR}/{strategy}-d{depth}.pdf')
     
     
 def draw_cac():
@@ -375,11 +378,6 @@ def count_abl(dataset: str, kind: str, time: int):
     df1 = pd.read_csv(f'result/bugs.{dataset}.{kind}..csv')
     df2 = pd.read_csv(f'result/bugs.{dataset}.{kind}.base.csv')
     df = df1.merge(df2, on=['kind', 'id', 'line', 'offset', 'len'], how='outer', suffixes=['p', 'b'])
-    if dataset == 'cve':
-        df = df[df['validatedb'] != 1]
-        df = df[df['validatedp'] != 1]
-        df = df[df['validatedb'] != 2]
-        df = df[df['validatedp'] != 2]
     dfb = df[~df['timeb'].isna()]
     dfp = df[~df['timep'].isna()]
     dfb = dfb[dfb['timeb'] < time]
@@ -404,16 +402,16 @@ def count_abl(dataset: str, kind: str, time: int):
     print(cntb, cntp)
     
 def count_abl2():
-    df1 = pd.read_csv(f'{RESULT_REPO}/summary/ablation/io.io.csv', dtype=np.object_)
-    df2 = pd.read_csv(f'{RESULT_REPO}/summary/ablation/ls.el.csv', dtype=np.object_)
-    df3 = pd.read_csv(f'{RESULT_REPO}/summary/ablation/ls.su.csv', dtype=np.object_)
-    df4 = pd.read_csv(f'{RESULT_REPO}/summary/ablation/re.re.csv', dtype=np.object_)
+    df1 = pd.read_csv(f'{RESULT_DIR}/summary/ablation/io.io.csv', dtype=np.object_)
+    df2 = pd.read_csv(f'{RESULT_DIR}/summary/ablation/ls.el.csv', dtype=np.object_)
+    df3 = pd.read_csv(f'{RESULT_DIR}/summary/ablation/ls.su.csv', dtype=np.object_)
+    df4 = pd.read_csv(f'{RESULT_DIR}/summary/ablation/re.re.csv', dtype=np.object_)
     df_p = pd.concat([df1, df2, df3, df4])
     print(len(df_p))
-    df1 = pd.read_csv(f'{RESULT_REPO}/summary/ablation/io.io.base.csv', dtype=np.object_)
-    df2 = pd.read_csv(f'{RESULT_REPO}/summary/ablation/ls.el.base.csv', dtype=np.object_)
-    df3 = pd.read_csv(f'{RESULT_REPO}/summary/ablation/ls.su.base.csv', dtype=np.object_)
-    df4 = pd.read_csv(f'{RESULT_REPO}/summary/ablation/re.re.base.csv', dtype=np.object_)
+    df1 = pd.read_csv(f'{RESULT_DIR}/summary/ablation/io.io.base.csv', dtype=np.object_)
+    df2 = pd.read_csv(f'{RESULT_DIR}/summary/ablation/ls.el.base.csv', dtype=np.object_)
+    df3 = pd.read_csv(f'{RESULT_DIR}/summary/ablation/ls.su.base.csv', dtype=np.object_)
+    df4 = pd.read_csv(f'{RESULT_DIR}/summary/ablation/re.re.base.csv', dtype=np.object_)
     df_b = pd.concat([df1, df2, df3, df4])
     print(len(df_b))
     df_all = df_b.merge(df_p, how='inner', on=['kind', 'id', 'line', 'offset', 'len'], suffixes=['b', 'p'])
@@ -434,13 +432,13 @@ def find_smartrim_only(dataset: str):
     else:
         assert False
         
-    df = pd.read_csv(os.path.join(RESULT_REPO, 'summary', dataset, 'bugs', f'smartrim.csv'), dtype=np.object_)
+    df = pd.read_csv(os.path.join(RESULT_DIR, 'summary', dataset, 'bugs', f'smartrim.csv'), dtype=np.object_)
     
     for tool in tools:
         if tool.startswith('smartrim'):
             continue
         
-        df1 = pd.read_csv(os.path.join(RESULT_REPO, 'summary', dataset, 'bugs', f'{tool}.csv'), dtype=np.object_)
+        df1 = pd.read_csv(os.path.join(RESULT_DIR, 'summary', dataset, 'bugs', f'{tool}.csv'), dtype=np.object_)
         df1['label'] = True
         if 'line' in df1.keys():
             my_on = 'line'
@@ -451,7 +449,7 @@ def find_smartrim_only(dataset: str):
         df = df[df['label'].isna()]
         df = df[['id', 'kind', 'func', 'line']]
         
-    df.to_csv(os.path.join(RESULT_REPO, 'summary', f'{dataset}-only-smartrim.csv'), index=False)
+    df.to_csv(os.path.join(RESULT_DIR, 'summary', f'{dataset}-only-smartrim.csv'), index=False)
     return df
     
 def help():
