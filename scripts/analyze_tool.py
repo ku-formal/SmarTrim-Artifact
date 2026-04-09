@@ -1133,7 +1133,7 @@ def do_all():
     
     # df_ret = pd.read_csv(os.path.join(RESULT_DIR, 'summary', 'table.csv'), index_col='tool')
     # df_ret = df_ret.fillna(0.0)
-    df_ret = pd.DataFrame()
+    df_ret = pd.DataFrame(columns=",el-f,el,el-f-com,el-com,su-f,su,su-f-com,su-com,io-f,io,io-f-com,io-com,re-f,re,re-f-com,re-com,total-f,total,el-f-fp,el-fp,su-f-fp,su-fp,re-f-fp,re-fp,total-f-fp,total-fp,el-precision,su-precision,re-precision,total-precision,el-f-nongt,el-f-com-nongt,el-nongt,el-com-nongt,su-f-nongt,su-f-com-nongt,su-nongt,su-com-nongt,io-f-nongt,io-f-com-nongt,io-nongt,io-com-nongt,re-f-nongt,re-f-com-nongt,re-nongt,re-com-nongt".split(','))
     
     count_wrap(df_ret, 'ls', 'el', 'smartrim', 'func', False)
     count_wrap(df_ret, 'ls', 'el', 'smartrim', 'func', True)
@@ -1271,7 +1271,6 @@ def do_all():
         for tool in TOOL:
             compute_precision(df_ret, tool, kind)
     
-    #df_ret.reindex(columns="tool,el-f,el,el-f-com,el-com,su-f,su,su-f-com,su-com,io-f,io,io-f-com,io-com,re-f,re,re-f-com,re-com,total-f,total,el-f-fp,el-fp,su-f-fp,su-fp,re-f-fp,re-fp,total-f-fp,total-fp,el-precision,su-precision,re-precision,total-precision,el-f-nongt,el-f-com-nongt,el-nongt,el-com-nongt,su-f-nongt,su-f-com-nongt,su-nongt,su-com-nongt,io-f-nongt,io-f-com-nongt,io-nongt,io-com-nongt,re-f-nongt,re-f-com-nongt,re-nongt,re-com-nongt".split(','))
     df_ret.map(df_format_number).to_csv(os.path.join(RESULT_DIR, 'summary', 'table.csv'))
     
 
