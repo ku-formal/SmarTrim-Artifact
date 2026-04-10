@@ -12,6 +12,8 @@ result/io/*
 result/ls/*
 result/re/*
 result/summary/*
+result/Inc-d4.pdf
+result/Random-d4.pdf
 !result/io/.empty
 !result/ls/.empty
 !result/re/.empty
