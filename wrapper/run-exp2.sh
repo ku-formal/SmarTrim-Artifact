@@ -1,3 +1,5 @@
+#!/bin/bash
+
 execute() {
     local arg1="$1"
     local arg2="$2"

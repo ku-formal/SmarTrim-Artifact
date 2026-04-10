@@ -58,7 +58,7 @@ This will generate `~/SmarTrim-Artifact/result/summary/<dataset>/<tool>.csv` and
 
 * `total-f`, `total`: The number of total vulnerable functions (`el-f` + `su-f` + `io-f` + `re-f`) and total vulnerable lines (`el` + `su` + `io` + `re`), respectively. Correspond to `Total` column in Table 1.
 
-  * `el-f-fp`, `el-fp`, `su-f-fp`, `su-fp`, `re-f-fp`, `re-fp`, `total-f-fp`, `total-fp`: Same as above, but these are the number of false positives.
+  * `el-f-fp`, `el-fp`, `su-f-fp`, `su-fp`, `re-f-fp`, `re-fp`, `total-f-fp`, `total-fp`: Same as above, but these are the number of false positives. Note that, this process can be automated because we are treating bugs that do not exist in the ground truth as false positives. This was possible because we iterated through the detection results from each tool and added new bugs to the ground truth if found.
 
   * `el-precision`, `su-precision`, `re-precision`, `total-precision`: #TP / (#TP + #FP) of each tool. See Section 7, 'False Positive' paragraph.
 

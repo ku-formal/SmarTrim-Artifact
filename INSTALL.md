@@ -9,7 +9,7 @@ $ chmod +x wrapper/*.sh
 $ wrapper/build.sh
 ```
 
-* *Estimated build time: 21 minutes*
+* *Estimated build time: 26 minutes*
 
 * This command will install `uv` (A Python package manager) and 13 docker images in your machine.
 

@@ -24,7 +24,7 @@ fi
 docker volume create smartrim-artifact-solc-select
 docker volume create smartrim-artifact-4smartian
 
-docker run --rm --volume smartrim-artifact-solc-select:/root/.solc-select --entrypoint python \
+docker run --rm --volume smartrim-artifact-solc-select:/root/.solc-select --init --entrypoint python \
     artifact-setter:fse26 /root/smartrim-experiment/scripts/install_solc.py
     
 docker run --rm --volume smartrim-artifact-solc-select:/root/.solc-select \
