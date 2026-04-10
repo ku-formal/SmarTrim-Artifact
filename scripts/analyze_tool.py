@@ -1006,11 +1006,11 @@ def _count(dataset: str, kind: str, tool: str, func, common=False) -> tuple[int,
                         if candidates is not None and f_name not in candidates:
                             continue
                     unknown_fps.append(f'{id} (ground: {known_tp}) {f_name}')
-    if len(unknown_fps) > 0:
-        print(f'========== unknown alarms for {tool}-{dataset}-{kind} ==========')
-        for s in unknown_fps:
-            print(s)     
-        print()       
+    # if len(unknown_fps) > 0:
+    #     print(f'========== unknown alarms for {tool}-{dataset}-{kind} ==========')
+    #     for s in unknown_fps:
+    #         print(s)     
+    #     print()       
                 
     return tp, non_gt, fp
 

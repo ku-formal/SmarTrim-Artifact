@@ -109,7 +109,7 @@ def end_alarm_to_slack():
     if response.status_code != 200:
         print(f"Slack API Failed: {response.status_code}")
 
-def run_command(cmd: list[str], id: str):
+def run_command(cmd: list[str], id: str, i, n):
     output_dir = f"{OUTPUT}/{id}"
     temp_stdout_path = f"{OUTPUT}/{id}.stdout.txt"
     temp_stderr_path = f"{OUTPUT}/{id}.stderr.txt"
@@ -117,7 +117,7 @@ def run_command(cmd: list[str], id: str):
     stderr_path = os.path.join(output_dir, ".stderr.txt")
     try:
         start = datetime.datetime.now()
-        print(f"{start}", " ".join(cmd), flush=True)
+        print(f"{start} {i}/{n}", flush=True)
         with open(temp_stdout_path, "wb") as f_stdout, open(temp_stderr_path, "wb") as f_stderr:
             result = subprocess.run(cmd, stdout=f_stdout, stderr=f_stderr, cwd=get_program_cwd())
         end = datetime.datetime.now()
@@ -622,12 +622,19 @@ def main():
     
     commands = get_command(df, args.dataset)
     
+    commands_with_count = []
+    i = 0
+    for cmd, id in commands:
+        i += 1
+        commands_with_count.append((cmd, id, i))
+    
     if config['start_alarm_to_slack'] == True:
         start_alarm_to_slack()
     
+    n = len(commands_with_count)
     try:
         with Pool(processes=jobs) as pool:
-            rets = [pool.apply_async(run_command, args=(cmd, id)) for cmd, id in commands]
+            rets = [pool.apply_async(run_command, args=(cmd, id, i, n)) for cmd, id, i in commands_with_count]
             results = [res.get() for res in rets]
     
         pd.DataFrame({

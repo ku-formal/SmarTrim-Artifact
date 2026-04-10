@@ -11,6 +11,7 @@ package-lock.json
 result/io/*
 result/ls/*
 result/re/*
+result/summary/*
 !result/io/.empty
 !result/ls/.empty
 !result/re/.empty

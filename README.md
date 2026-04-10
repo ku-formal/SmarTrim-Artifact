@@ -2,7 +2,9 @@
 
 `SmarTrim` is a symbolic executor for smart contracts driven by redundant transaction sequence pruning.
 
-We describe the replication methods for Table 1 and Figure 3 in the table. The structure of our artifact is as follows:
+The purpose of this artifact is to enable replication of the paper's key experimental results by readers, i.e. Table 1 and Figure 3 in the paper.
+
+The structure of our artifact is as follows:
 
 * `./SmarTrim`: Source code of SmarTrim
 
@@ -76,6 +78,22 @@ wrapper/interp-exp2.sh
 
 This will generate `~/SmarTrim-Artifact/result/Inc-d4.pdf` and `~/SmarTrim-Artifact/result/Random-d4.pdf`, which corrrespond to Fig.3 (a) and Fig.3 (b) in Section 6.2, respectively.
 
+## Reproducing SmarTrim's experiment result only
+
+**Experiment**. Execute
+
+```bash
+wrapper/run-smartrim-only.sh
+```
+
+**Data Processing**. Execute
+
+```
+wrapper/interp-exp1.sh
+```
+
+Similar to 'Reproducing Table 1 (Section 6.1)' section, this will generate a table but it will contain SmarTrim's result only.
+
 ## Configuration
 
 * We ran the experiment simultaneously using 24 cores (exception: 3 subprocesses for `rlf`, due to its high memory usage). The number of cores to use is managed in the `config.json` file. For example, if you want to run `confuzzius` on RE dataset with 40 cores, modify this file as follows:
@@ -92,7 +110,7 @@ This will generate `~/SmarTrim-Artifact/result/Inc-d4.pdf` and `~/SmarTrim-Artif
 
 ## Expected Runtime
 
-All tools were executed on 24 cores, except RLF (3 cores).
+All tools were executed on 24 cores, except RLF (3 cores). The expected runtime of all tools is **9d 2h 30m**.
 
 |Tool|LS|IO|RE|
 |---|---|---|---|
