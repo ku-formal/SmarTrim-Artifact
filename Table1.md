@@ -50,4 +50,4 @@ This will generate `~/SmarTrim-Artifact/result/summary/<dataset>/<tool>.csv` and
   
 ### Small-scale Experiment (Partial reproduction of Table 1)
 
-Since fully reproducing Table 1 by running ``wrapper/run-exp1.sh`` takes a long time (7d 18h 30m), we provide instructions for a small-scale experiment that reproduces only the SmarTrim results in Table 1. Please refer to [Table1-Partial.md](Table1-Partial.md]).
+Since fully reproducing Table 1 by running ``wrapper/run-exp1.sh`` takes a long time (7d 18h 30m), we provide instructions for a small-scale experiment that reproduces only the SmarTrim results in Table 1. Please refer to [Table1-Partial.md](Table1-Partial.md).
