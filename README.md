@@ -2,7 +2,7 @@
 
 `SmarTrim` is a symbolic executor for smart contracts driven by redundant transaction sequence pruning.
 
-The purpose of this artifact is to enable replication of the paper's key experimental results by readers, i.e. Table 1 and Figure 3 in the paper.
+The goal of this artifact is to enable replication of the paper's key experimental results by readers, i.e., **Table 1** and **Figure 3** in the paper.
 
 The structure of our artifact is as follows:
 
