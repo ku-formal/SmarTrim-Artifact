@@ -35,78 +35,99 @@ wrapper/run.sh
 ## Reproducing Table 1 (Section 6.1)
 
 ### Full Experiment
-
-**Experiment**. Execute
-
+* **Running Experiments**. Execute
 ```bash
 wrapper/run-exp1.sh
 ```
+The expected total runtime of the script is **7d 18h 30m**:
+  
+|Tool|LS Dataset|IO Dataset|RE Dataset|
+|---|---|---|---|
+|**SmarTrim**|5h|6h|30m|
+|**AChecker**|1h|_n/a_|_n/a_|
+|**Confuzzius**|6h 30m|5h|1h|
+|**EF/CF**|11h|_n/a_|1h|
+|**LENT-SSE**|22h|17h|4h|
+|**Mythril**|9h|6h|1h|
+|**RLF**|2d 14h|_n/a_|_n/a_|
+|**Sailfish**|_n/a_|_n/a_|<2m|
+|**SliSE**|_n/a_|_n/a_|30m|
+|**Slither**|<1m|_n/a_|<1m|
+|**SmarTest**|6h|6h|_n/a_|
+|**Smartian**|10h|6h|1h|
+|**_Total_**|**_XXX_**|**_XXX_**|**_XXX_**|
 
-**Expected Runtime: 7d 18h 30m** 
+  
 
-**Data Processing**. Execute
-
-```bash
+* **Generating Table 1**. After the script ``wrapper/run-exp1.sh`` terminates, execute
+```
 wrapper/interp-exp1.sh
 ```
+This will generate `~/SmarTrim-Artifact/result/summary/<dataset>/<tool>.csv` and `~/SmarTrim-Artifact/result/summary/table.csv`. The latter corresponds to Table 1 in Section 6.1.
 
-This will generate `~/SmarTrim-Artifact/result/summary/<dataset>/<tool>.csv` and `~/SmarTrim-Artifact/result/summary/table.csv`. **`~/SmarTrim-Artifact/result/summary/table.csv` corresponds to Table 1 in Section 6.1.**
+* **Interpreting Table 1**. The meaning of each column in Table 1 (`~/SmarTrim-Artifact/result/summary/table.csv`) is as follows.
+  * `el-f`, `su-f`, `io-f`, `re-f`: The number of functions detected by each tool, which have EL, SU, IO, and RE vulnerability, respectively. Correspond to `All`-`Func` columns in Table 1.
 
-* `el-f`, `su-f`, `io-f`, `re-f`: The number of functions detected by each tool, which have EL, SU, IO, and RE vulnerability, respectively. Correspond to `All`-`Func` columns in Table 1.
+  * `el`, `su`, `io`, `re`: The number of lines detected by each tool, which have EL, SU, IO, and RE vulnerability, respectively. Correspond to `All`-`Line` columns in Table 1.
 
-* `el`, `su`, `io`, `re`: The number of lines detected by each tool, which have EL, SU, IO, and RE vulnerability, respectively. Correspond to `All`-`Line` columns in Table 1.
+  * `el-f-com`, `su-f-com`, `io-f-com`, `re-f-com`: The number of vulnerable functions, but the results are on contracts that were commonly examined by all tools without timeouts or runtime errors. Correspond to `Com`-`Func` columns in Table 1.
 
-* `el-f-com`, `su-f-com`, `io-f-com`, `re-f-com`: The number of vulnerable functions, but the results are on contracts that were commonly examined by all tools without timeouts or runtime errors. Correspond to `Com`-`Func` columns in Table 1.
+  * `el-com`, `su-com`, `io-com`, `re-com`: The number of vulnerable lines, but the results are on contracts that were commonly examined by all tools without timeouts or runtime errors. Correspond to `Com`-`Line` columns in Table 1.
 
-* `el-com`, `su-com`, `io-com`, `re-com`: The number of vulnerable lines, but the results are on contracts that were commonly examined by all tools without timeouts or runtime errors. Correspond to `Com`-`Line` columns in Table 1.
+  * `total-f`, `total`: The number of total vulnerable functions (`el-f` + `su-f` + `io-f` + `re-f`) and total vulnerable lines (`el` + `su` + `io` + `re`), respectively. Correspond to `Total` column in Table 1.
 
-* `total-f`, `total`: The number of total vulnerable functions (`el-f` + `su-f` + `io-f` + `re-f`) and total vulnerable lines (`el` + `su` + `io` + `re`), respectively. Correspond to `Total` column in Table 1.
-
-  * `el-f-fp`, `el-fp`, `su-f-fp`, `su-fp`, `re-f-fp`, `re-fp`, `total-f-fp`, `total-fp`: Same as above, but these are the number of false positives. 
+    * `el-f-fp`, `el-fp`, `su-f-fp`, `su-fp`, `re-f-fp`, `re-fp`, `total-f-fp`, `total-fp`: Same as above, but these are the number of false positives. 
   
-    * Note that this process can be automated because, for EL/SU/RE bugs, we are treating bugs that do not exist in the ground truth as false positives (Section 6.1, 'ground truth' paragraph). This was possible because we iterated through the detection results from each tool and added new bugs to the ground truth if found. For IO bugs, we do not count the number of false positives.
+      * Note that this process can be automated because, for EL/SU/RE bugs, we are treating bugs that do not exist in the ground truth as false positives (Section 6.1, 'ground truth' paragraph). This was possible because we iterated through the detection results from each tool and added new bugs to the ground truth if found. For IO bugs, we do not count the number of false positives.
 
   * `el-precision`, `su-precision`, `re-precision`, `total-precision`: #TP / (#TP + #FP) of each tool. See Section 7, 'False Positive' paragraph.
   
-### Small-scale Experiment
+### Small-scale Experiment (Partial reproduction of Table 1)
 
-Because our artifact takes a long time to run, we provide a small-scale experiment for those who wish to reproduce only the SmarTrim experiment.
+Since fully reproducing Table 1 by running ``wrapper/run-exp1.sh`` takes a long time (7d 18h 30m), we provide instructions for a small-scale experiment that reproduces only the SmarTrim results in Table 1.
 
-**Experiment**. Execute
+* **Running Experiments**. Execute
 
 ```bash
 wrapper/run-smartrim-only.sh
 ```
+The expected total runtime of the script is **11h 30m** (corresponding to the SmarTrim row in the expected runtime table above).
 
-**Expected Runtime: 11h 30m**
-
-**Data Processing**. Execute
-
+* **Generating Table 1 (SmarTrim row only)**. Execute
 ```
 wrapper/interp-exp1.sh
 ```
+As in the ``Reproducing Table 1 (Section 6.1)``, this script generates a table summarizing the results. However, the generated table contains only the SmarTrim row in Table 1.
 
-Similar to 'Reproducing Table 1 (Section 6.1)' section, this will generate a table but it will contain SmarTrim's result only.
 
 ## Reproducing Figure 3 (Section 6.2)
 
-**Note**. To proceed to this step, the previous experiment must be completed (at a minimum, the small-scale experiment must be completed). To reproduce Figure 3, we will test the four variants of SmarTrim: Inc, Inc+Pruning, Random, and Random+Pruning. Since Inc+Pruning matches the original SmarTrim, we will use the SmarTrim data from the previous experiment directly.
+* **Prerequisite**. Before proceeding, you must have completed the chapter  **Reproducing Table 1 (Section 6.1)** (at least the **Small-scale experiment** in that chapter). This is because ``Inc+Pruning`` in Figure 3 corresponds to SmarTrim in Table 1, and we therefore reuse the SmarTrim data obtained from the previous experiment. In other words, this chapter runs the remaining three variants in Figure 3 (``Inc``, ``Random``, and ``Random+Pruning``) and reproduces Figure 3 by combining their results with the previously obtained ``Inc+Pruning`` results.
 
-**Experiment**. Execute
+
+* **Running Experiments**. Execute
 
 ```bash
 wrapper/run-exp2.sh
 ```
+The expected total runtime of the script is **1d 8h**:
 
-**Expected Runtime: 1d 8h**
+|Tool|LS Dataset|IO Dataset|RE Dataset|Note|
+|---|---|---|---|---|
+|**Inc+Pruning**|n/a|n/a|n/a| Requires no additional time (see **Prerequisite**). |
+|**Inc**|5h 30m|6h|30m| |
+|**Random+Pruning**|4h|5h|30m| |
+|**Random**|4h 30m|5h 30m|30m| |
+|**_Total_**|**_XXX_**|**_XXX_**|**_XXX_**| |
 
-**Data Processing**. Execute
+
+* **Generating Figure 3**. Execute
 
 ```bash
 wrapper/interp-exp2.sh
 ```
-
 This will generate `~/SmarTrim-Artifact/result/Inc-d4.pdf` and `~/SmarTrim-Artifact/result/Random-d4.pdf`, which corrrespond to Fig.3 (a) and Fig.3 (b) in Section 6.2, respectively.
+
 
 ## Configuration
 
@@ -121,29 +142,6 @@ This will generate `~/SmarTrim-Artifact/result/Inc-d4.pdf` and `~/SmarTrim-Artif
     }, ...
 }
 ```
-
-## Expected Runtime of Each Tools
-
-All tools were executed on 24 cores, except RLF (3 cores). The expected runtime of all tools is **9d 2h 30m**.
-
-|Tool|LS Dataset|IO Dataset|RE Dataset|
-|---|---|---|---|
-|**SmarTrim-Inc+Pruning**|5h|6h|30m|
-|**SmarTrim-Inc**|5h 30m|6h|30m|
-|**SmarTrim-Random+Pruning**|4h|5h|30m|
-|**SmarTrim-Random**|4h 30m|5h 30m|30m|
-|**AChecker**|1h|_n/a_|_n/a_|
-|**Confuzzius**|6h 30m|5h|1h|
-|**EF/CF**|11h|_n/a_|1h|
-|**LENT-SSE**|22h|17h|4h|
-|**Mythril**|9h|6h|1h|
-|**RLF**|2d 14h|_n/a_|_n/a_|
-|**Sailfish**|_n/a_|_n/a_|<2m|
-|**SliSE**|_n/a_|_n/a_|30m|
-|**Slither**|<1m|_n/a_|<1m|
-|**SmarTest**|6h|6h|_n/a_|
-|**Smartian**|10h|6h|1h|
-|**_Total_**|**_6d 2h 30m_**|**_2d 14h 30m_**|**_9h 30m_**|
 
 ## Tool Maintenance
 
