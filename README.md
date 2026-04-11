@@ -54,19 +54,9 @@ We ran the experiment simultaneously using 24 cores (exception: 3 subprocesses f
 }
 ```
 
-## Tool Maintenance
+## Appendix: Running Each Tool on a Single Dataset
 
-SmarTrim will be maintained in a separate repository: [https://github.com/ku-formal/VeriSmart-public]()
-
-## Contact
-
-Hyegeun Song: [hyegeun_song@korea.ac.kr]()
-
-## Appendix
-
-### Testing a Single Tool
-
-Run each program with
+Run each tool with
 
 ```bash
 $ python scripts/execute.py -t <tool> -d <dataset>
@@ -98,5 +88,15 @@ The command will use `~/SmarTrim-Artifact/output/` as a workspace directory, and
 * `OUTPUT/<sol-id>/(any other outputs of each tool)`
 
 where `OUTPUT = ~/SmarTrim-Artifact/result/<dataset>/<tool>` and `<sol-id>` is ID of each contract in our benchmark.
+
+
+
+## Tool Maintenance
+
+SmarTrim will be maintained in a separate repository: [https://github.com/ku-formal/VeriSmart-public]()
+
+## Contact
+
+Hyegeun Song: [hyegeun_song@korea.ac.kr]()
 
 
