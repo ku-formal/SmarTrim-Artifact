@@ -19,7 +19,7 @@ The expected total runtime of the script is **1d 8h**:
 |**Inc**|5h 30m|6h|30m| |
 |**Random+Pruning**|4h|5h|30m| |
 |**Random**|4h 30m|5h 30m|30m| |
-|**_Total_**|**_XXX_**|**_XXX_**|**_XXX_**| |
+|**_Total_**|**_14h_**|**_16h 30m_**|**_1h 30m_**| |
 
 
 * **Generating Figure 3**. Execute

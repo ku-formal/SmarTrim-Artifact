@@ -5,7 +5,7 @@
 ```
 wrapper/run-exp1.sh
 ```
-The expected total runtime of the script is **7d 18h 30m**:
+The expected total runtime of the script is **7d 19h 30m**:
   
 |Tool|LS Dataset|IO Dataset|RE Dataset|
 |---|---|---|---|
@@ -21,9 +21,7 @@ The expected total runtime of the script is **7d 18h 30m**:
 |**Slither**|<1m|_n/a_|<1m|
 |**SmarTest**|6h|6h|_n/a_|
 |**Smartian**|10h|6h|1h|
-|**_Total_**|**_XXX_**|**_XXX_**|**_XXX_**|
-
-  
+|**_Total_**|**_5d 12h 30m_**|**_1d 22h_**|**_9h_**|
 
 * **Generating Table 1**. After the script ``wrapper/run-exp1.sh`` terminates, execute
 ```

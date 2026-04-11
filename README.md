@@ -22,21 +22,11 @@ Please refer to [REQUIREMENTS.md](./REQUIREMENTS.md).
 
 Please refer to [INSTALL.md](./INSTALL.md), which also provides a basic example of running the dockerized version of SmarTrim.
 
-## Experiment
-
-Execute
-
-```bash
-wrapper/run.sh
-```
-
 ## Reproducing Table 1 (Section 6.1)
 Please refer to [Table1.md](./Table1.md).
 
-
 ## Reproducing Figure 3 (Section 6.2)
 Please refer to [Figure3.md](./Figure3.md).
-
 
 ## Adjusting the Number of Cores
 

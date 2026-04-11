@@ -1,6 +1,6 @@
 ### Small-scale Experiment (Partial reproduction of Table 1)
 
-Since fully reproducing Table 1 by running ``wrapper/run-exp1.sh`` takes a long time (7d 18h 30m),
+Since fully reproducing Table 1 by running ``wrapper/run-exp1.sh`` takes a long time (7d 19h 30m),
 we provide instructions for a small-scale experiment that reproduces only the SmarTrim results in Table 1.
 
 * **Running Experiments**. Execute

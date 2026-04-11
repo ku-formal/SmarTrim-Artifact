@@ -3,8 +3,6 @@
         "ls:rlf": 3,
         "default": 24
     },
-    "timeout": 10,
-    "kill_timeout": 15,
-    "start_alarm_to_slack": false,
-    "end_alarm_to_slack": false
+    "timeout": 1800,
+    "kill_timeout": 2100
 }
