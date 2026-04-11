@@ -8,7 +8,7 @@ we provide instructions for a small-scale experiment that reproduces only the Sm
 ```
 wrapper/run-smartrim-only.sh
 ```
-The expected total runtime of the script is **11h 30m** (corresponding to the SmarTrim row in the expected runtime table of [Figure3.md](Figure3.md).
+The expected total runtime of the script is **11h 30m** (corresponding to the SmarTrim row in the expected runtime table of [Table1.md](Table1.md).
 
 * **Generating Table 1 (SmarTrim row only)**. Execute
 ```
