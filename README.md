@@ -34,11 +34,15 @@ wrapper/run.sh
 
 ## Reproducing Table 1 (Section 6.1)
 
+### Full Experiment
+
 **Experiment**. Execute
 
 ```bash
 wrapper/run-exp1.sh
 ```
+
+**Expected Runtime: 7d 18h 30m** 
 
 **Data Processing**. Execute
 
@@ -63,30 +67,18 @@ This will generate `~/SmarTrim-Artifact/result/summary/<dataset>/<tool>.csv` and
     * Note that this process can be automated because, for EL/SU/RE bugs, we are treating bugs that do not exist in the ground truth as false positives (Section 6.1, 'ground truth' paragraph). This was possible because we iterated through the detection results from each tool and added new bugs to the ground truth if found. For IO bugs, we do not count the number of false positives.
 
   * `el-precision`, `su-precision`, `re-precision`, `total-precision`: #TP / (#TP + #FP) of each tool. See Section 7, 'False Positive' paragraph.
+  
+### Small-scale Experiment
 
-## Reproducing Figure 3 (Section 6.2)
-
-**Experiment**. Execute
-
-```bash
-wrapper/run-exp2.sh
-```
-
-**Data Processing**. Execute
-
-```bash
-wrapper/interp-exp2.sh
-```
-
-This will generate `~/SmarTrim-Artifact/result/Inc-d4.pdf` and `~/SmarTrim-Artifact/result/Random-d4.pdf`, which corrrespond to Fig.3 (a) and Fig.3 (b) in Section 6.2, respectively.
-
-## Reproducing SmarTrim's experiment result only
+Because our artifact takes a long time to run, we provide a small-scale experiment for those who wish to reproduce only the SmarTrim experiment.
 
 **Experiment**. Execute
 
 ```bash
 wrapper/run-smartrim-only.sh
 ```
+
+**Expected Runtime: 11h 30m**
 
 **Data Processing**. Execute
 
@@ -96,9 +88,29 @@ wrapper/interp-exp1.sh
 
 Similar to 'Reproducing Table 1 (Section 6.1)' section, this will generate a table but it will contain SmarTrim's result only.
 
+## Reproducing Figure 3 (Section 6.2)
+
+**Note**. To proceed to this step, the previous experiment must be completed (at a minimum, the small-scale experiment must be completed). To reproduce Figure 3, we will test the four variants of SmarTrim: Inc, Inc+Pruning, Random, and Random+Pruning. Since Inc+Pruning matches the original SmarTrim, we will use the SmarTrim data from the previous experiment directly.
+
+**Experiment**. Execute
+
+```bash
+wrapper/run-exp2.sh
+```
+
+**Expected Runtime: 1d 8h**
+
+**Data Processing**. Execute
+
+```bash
+wrapper/interp-exp2.sh
+```
+
+This will generate `~/SmarTrim-Artifact/result/Inc-d4.pdf` and `~/SmarTrim-Artifact/result/Random-d4.pdf`, which corrrespond to Fig.3 (a) and Fig.3 (b) in Section 6.2, respectively.
+
 ## Configuration
 
-* We ran the experiment simultaneously using 24 cores (exception: 3 subprocesses for `rlf`, due to its high memory usage). The number of cores to use is managed in the `config.json` file. For example, if you want to run `confuzzius` on RE dataset with 40 cores, modify this file as follows:
+* We ran the experiment simultaneously using 24 cores (exception: 3 subprocesses for `rlf`, due to its high memory usage). The number of cores to use is managed in the `config.json` file. For example, if you want to run `confuzzius` on RE Dataset with 40 cores, modify this file as follows:
 
 ```json
 {
@@ -110,11 +122,11 @@ Similar to 'Reproducing Table 1 (Section 6.1)' section, this will generate a tab
 }
 ```
 
-## Expected Runtime
+## Expected Runtime of Each Tools
 
 All tools were executed on 24 cores, except RLF (3 cores). The expected runtime of all tools is **9d 2h 30m**.
 
-|Tool|LS|IO|RE|
+|Tool|LS Dataset|IO Dataset|RE Dataset|
 |---|---|---|---|
 |**SmarTrim-Inc+Pruning**|5h|6h|30m|
 |**SmarTrim-Inc**|5h 30m|6h|30m|

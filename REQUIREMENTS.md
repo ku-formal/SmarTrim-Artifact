@@ -6,7 +6,7 @@ We recommend Ubuntu 22.04 or 24.04. (We tested on 22.04)
 
 ### Hardware
 
-We recommend computers with 64 threads or more and 62 GB RAM or more.
+To ensure stable reproduction of the experimental results, we recommend a computer with at least 64 threads and 62 GB of RAM.
 
 ### Software
 
