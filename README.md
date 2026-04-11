@@ -112,7 +112,7 @@ wrapper/run-exp2.sh
 ```
 The expected total runtime of the script is **1d 8h**:
 
-|Tool|LS Dataset|IO Dataset|RE Dataset|Note|
+|SmarTrim Variant |LS Dataset|IO Dataset|RE Dataset|Note|
 |---|---|---|---|---|
 |**Inc+Pruning**|n/a|n/a|n/a| Requires no additional time (see **Prerequisite**). |
 |**Inc**|5h 30m|6h|30m| |
