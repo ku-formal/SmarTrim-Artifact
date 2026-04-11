@@ -16,13 +16,13 @@ The structure of our artifact is as follows:
 
 ## Requirements
 
-Please refer [REQUIREMENTS.md]().
+Please refer to [REQUIREMENTS.md](./REQUIREMENTS.md).
 
 ## Installation
 
-Please refer [INSTALL.md](). 
+Please refer to [INSTALL.md](./INSTALL.md). 
 
-You can also check a basic running example of SmarTrim (dockerized version) in [INSTALL.md]().
+You can also check a basic running example of SmarTrim (dockerized version) in [INSTALL.md](./INSTALL.md).
 
 ## Experiment
 
