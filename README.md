@@ -40,9 +40,9 @@ Please refer to [Table1.md](./Table1.md).
 Please refer to [Figure3.md](./Figure3.md).
 
 
-## Configuration
+## Adjusting the Number of Cores
 
-* We ran the experiment simultaneously using 24 cores (exception: 3 subprocesses for `rlf`, due to its high memory usage). The number of cores to use is managed in the `config.json` file. For example, if you want to run `confuzzius` on RE Dataset with 40 cores, modify this file as follows:
+We ran the experiment simultaneously using 24 cores (exception: 3 subprocesses for `rlf`, due to its high memory usage). The number of cores to use is managed in the [config.json](./config.json) file. For example, if you want to run `confuzzius` on RE Dataset with 40 cores, modify [config.json](./config.json) as follows:
 
 ```json
 {
