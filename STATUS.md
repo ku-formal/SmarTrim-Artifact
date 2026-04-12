@@ -12,4 +12,4 @@ We are submitting our artifact for the Available and Reusable badges. We believe
   
   * *Exercisable*: Scripts and the relevant commands needed to run experiments are fully provided.
   
-  * *Reusable for Future Researches*: Detailed instructions are provided for applying SmarTrim to new Solidity contracts, enabling other researchers to incorporate SmarTrim into their own work.
+  * *Reusable for Future Researches*: Detailed instructions are provided in [USAGE.md](./USAGE.md) for applying SmarTrim to new Solidity contracts, enabling other researchers to incorporate SmarTrim into their own work.
