@@ -1,8 +1,8 @@
 # SmarTrim-Artifact
 
-`SmarTrim` is a symbolic executor for smart contracts driven by redundant transaction sequence pruning.
+`SmarTrim` is a symbolic executor for smart contracts driven by redundant transaction sequence pruning. This repository contains the artifact needed to replicate the key  experimental results (i.e., **Table 1** and **Figure 3**) from our paper, which was accepted at FSE 2026:
 
-The goal of this artifact is to enable replication of the paper's key experimental results by readers, i.e., **Table 1** and **Figure 3** in the paper.
+  * [SmarTrim: Symbolic Execution for Smart Contracts Powered by Redundant Transaction-Sequence Pruning](./paper.pdf)
 
 The structure of our artifact is as follows:
 
@@ -32,7 +32,7 @@ Please refer to [Table1.md](./Table1.md).
 ## Reproducing Figure 3 (Section 6.2)
 Please refer to [Figure3.md](./Figure3.md).
 
-## Adjusting the Number of Cores
+## Appendix: Adjusting the Number of Cores
 
 In the [config.json](./config.json) file, you can adjust the number of cores to use and the timeout. It looks like this:
 
