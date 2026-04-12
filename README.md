@@ -82,7 +82,7 @@ where
 
 `smartrimbase`, `smartrimr`, and `smartrimbaser` correspond to Inc, Random+Pruning, Random in Section 6.2, respectively.
 
-The command will use `~/SmarTrim-Artifact/output/` as a workspace directory, and will finally store raw data in `~/SmarTrim-Artifact/result/<dataset>/<tool>`. Resulting format is as follows:
+The command will use `~/SmarTrim-Artifact/output/` as a workspace directory, and will ultimately store raw data in `~/SmarTrim-Artifact/result/<dataset>/<tool>`. The resulting format is as follows:
 
 * `OUTPUT/cmd_history.csv`: command lines, start times, end times, and return codes
 * `OUTPUT/took.txt`

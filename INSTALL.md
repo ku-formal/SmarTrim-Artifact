@@ -15,4 +15,4 @@ $ wrapper/build.sh
 
 ### Basic Testing
 
-To validate that SmarTrim is installed correctly, you can run a command from the 'A Running Example' section in the [USAGE.md](./USAGE.md) file.
+To validate that SmarTrim is installed correctly, You can find the command to test SmarTrim in the 'A Running Example' section of [USAGE.md](./USAGE.md) file.
