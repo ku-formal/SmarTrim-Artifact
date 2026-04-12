@@ -10,17 +10,17 @@ The expected total runtime of the script is **7d 19h 30m**:
 |Tool|LS Dataset|IO Dataset|RE Dataset|
 |---|---|---|---|
 |**SmarTrim**|5h|6h|30m|
-|**AChecker**|1h|_n/a_|_n/a_|
-|**Confuzzius**|6h 30m|5h|1h|
-|**EF/CF**|11h|_n/a_|1h|
-|**LENT-SSE**|22h|17h|4h|
-|**Mythril**|9h|6h|1h|
-|**RLF**|2d 14h|_n/a_|_n/a_|
-|**Sailfish**|_n/a_|_n/a_|<2m|
-|**SliSE**|_n/a_|_n/a_|30m|
-|**Slither**|<1m|_n/a_|<1m|
 |**SmarTest**|6h|6h|_n/a_|
+|**EF/CF**|11h|_n/a_|1h|
 |**Smartian**|10h|6h|1h|
+|**Confuzzius**|6h 30m|5h|1h|
+|**RLF**|2d 14h|_n/a_|_n/a_|
+|**Mythril**|9h|6h|1h|
+|**AChecker**|1h|_n/a_|_n/a_|
+|**Slither**|<1m|_n/a_|<1m|
+|**LENT-SSE**|22h|17h|4h|
+|**SliSE**|_n/a_|_n/a_|30m|
+|**Sailfish**|_n/a_|_n/a_|<2m|
 |**_Total_**|**_5d 12h 30m_**|**_1d 22h_**|**_9h_**|
 
 * **Generating Table 1**. After the script ``wrapper/run-exp1.sh`` terminates, execute
