@@ -33,9 +33,9 @@ docker run --rm --init \
 
 ### A Running Example
 
-* Assume we want to test a vulnerable contract [./SmarTrim/examples-public/leak_unsafe.sol](). Since anyone can become the owner via calling `setOwner` function, anyone can invoke the `exploit` function to drain all funds from the contract. 
+* Assume we want to test a vulnerable contract [./SmarTrim/examples-public/leak_unsafe.sol](./SmarTrim/examples-public/leak_unsafe.sol). Since anyone can become the owner via calling the `setOwner` function, anyone can invoke the `exploit` function to drain all funds from the contract. 
 
-* To generate a vulnerable transaction sequence for [./SmarTrim/examples-public/leak_unsafe.sol](), run the following command:
+* To generate a vulnerable transaction sequence for [./SmarTrim/examples-public/leak_unsafe.sol](./SmarTrim/examples-public/leak_unsafe.sol), run the following command:
 
 ```bash
 docker run --rm --init \
@@ -45,7 +45,7 @@ docker run --rm --init \
   my-smartrim:fse26 exploit /input/SmarTrim/examples-public/leak_unsafe.sol --kind el
 ```
 
-* Then, you will see an output on your terminal similar to the following.
+* Then, you will see output on your terminal similar to the following.
 
 ```text
 ===== Report =====

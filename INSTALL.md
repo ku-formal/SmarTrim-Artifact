@@ -1,6 +1,6 @@
 ## Installation
 
-* We assume this directory is installed in your home, i.e. the paths should be `~/SmarTrim-Artifact`.
+* We assume this directory is installed in your home, i.e. the path should be `~/SmarTrim-Artifact`.
 
 * Run
 

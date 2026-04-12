@@ -18,9 +18,13 @@ The structure of our artifact is as follows:
 
 Please refer to [REQUIREMENTS.md](./REQUIREMENTS.md).
 
-## Installation and Basic Testing
+## Installation
 
-Please refer to [INSTALL.md](./INSTALL.md), which also provides a basic example of running the dockerized version of SmarTrim.
+Please refer to [INSTALL.md](./INSTALL.md).
+
+## Basic Testing
+
+Please refer to [USAGE.md](./USAGE.md).
 
 ## Reproducing Table 1 (Section 6.1)
 Please refer to [Table1.md](./Table1.md).
@@ -30,17 +34,28 @@ Please refer to [Figure3.md](./Figure3.md).
 
 ## Adjusting the Number of Cores
 
-We ran the experiment simultaneously using 24 cores (exception: 3 subprocesses for `rlf`, due to its high memory usage). The number of cores to use is managed in the [config.json](./config.json) file. For example, if you want to run `confuzzius` on RE Dataset with 40 cores, modify [config.json](./config.json) as follows:
+In the [config.json](./config.json) file, you can adjust the number of cores to use and the timeout. It looks like this:
 
 ```json
 {
     "jobs": {
         "ls:rlf": 3,
-        "re:confuzzius": 40,
         "default": 24
-    }, ...
+    },
+    "timeout": 1800,
+    "kill_timeout": 2100
 }
 ```
+
+The contents of this file are as follows:
+
+* `jobs`: the number of program instances to run simultaneously
+* `timeout`: the timeout passed to the tool
+* `kill_timeout`: external timeout (forcefully terminated by system call if exceeded)
+
+We ran the experiment simultaneously using 24 cores (exception: 3 subprocesses for `rlf`, due to its high memory usage). 
+
+Adjusting `timeout` and `kill_timeout` is not recommended, as it does not align with the purpose of reproducing our experiments.
 
 ## Appendix: Running Each Tool on a Single Dataset
 
