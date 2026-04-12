@@ -47,9 +47,9 @@ We ran the experiment simultaneously using 24 cores (exception: 3 subprocesses f
 Run each tool with
 
 ```bash
-$ python scripts/execute.py -t <tool> -d <dataset>
+$ uv run scripts/execute.py -t <tool> -d <dataset>
 # or
-$ python scripts/execute.py --tool <tool> --dataset <dataset>
+$ uv run scripts/execute.py --tool <tool> --dataset <dataset>
 ```
 
 where

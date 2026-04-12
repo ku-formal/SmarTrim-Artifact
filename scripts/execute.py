@@ -79,36 +79,6 @@ def max_version(s1: str, s2: str) -> str:
     else:
         return s2
 
-def start_alarm_to_slack():
-    if platform.system() != 'Linux':
-        print('The platform is not a server. Announce experiment start to stdout.')
-        return
-    try:   
-        with open(f'{ARTIFACT_REPO}/slack-webhook.json', 'r') as f:
-            webhook = json.load(f)
-    except FileNotFoundError:
-        return
-    message = {'text': f"({webhook['username']}) ({program}) Experiment Started!"}
-    response = requests.post(webhook['key'], json=message)
-    if response.status_code != 200:
-        print(f"Slack API failed: {response.status_code}")
-        exit(1)
-
-def end_alarm_to_slack():
-    if platform.system() != 'Linux':
-        return
-    endtime_datetime = datetime.datetime.now()
-    diff = endtime_datetime - starttime_datetime
-    try:   
-        with open(f'{ARTIFACT_REPO}/slack-webhook.json', 'r') as f:
-            webhook = json.load(f)
-    except FileNotFoundError:
-        return
-    message = {'text': f"({webhook['username']}) Experiment Ended! (Time passed: {diff})"}
-    response = requests.post(webhook['key'], json=message)
-    if response.status_code != 200:
-        print(f"Slack API Failed: {response.status_code}")
-
 def run_command(cmd: list[str], id: str, i, n):
     output_dir = f"{OUTPUT}/{id}"
     temp_stdout_path = f"{OUTPUT}/{id}.stdout.txt"
@@ -628,9 +598,6 @@ def main():
         i += 1
         commands_with_count.append((cmd, id, i))
     
-    if config['start_alarm_to_slack'] == True:
-        start_alarm_to_slack()
-    
     n = len(commands_with_count)
     try:
         with Pool(processes=jobs) as pool:
@@ -651,8 +618,7 @@ def main():
             print(f'Time passed: {diff}', file=f)
         os.system(f'mv -f {OUTPUT} {output_replace}')
     finally:
-        if config['end_alarm_to_slack'] == True:
-            end_alarm_to_slack()
+        pass
     
 
 if __name__ == '__main__':
