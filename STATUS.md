@@ -2,9 +2,9 @@ We are submitting our artifact for the Available and Reusable badges. We believe
 
 * **Available**: Our artifact is "Available" given that it can be publicly accessed via the repository below.
 
-  * Github: https://github.com/ku-formal/SmarTrim-Artifact
+  * Github: https://github.com/ku-formal/SmarTrim-Artifact/releases/tag/fse2026
   
-  * Zenodo: https://doi.org/10.5281/zenodo.19535432
+  * Zenodo: https://doi.org/10.5281/zenodo.19535654
 
 * **Reusable**: Our artifact is "Reusable" (and consequently "Functional") based on the following five criteria (the first four of which are the requirements for the "Functional" badge) as specified in the [artifact submission guideline](https://conf.researchr.org/track/fse-2026/fse-2026-artifacts#submission-for-functional-reusable-and-available-badges).
 
