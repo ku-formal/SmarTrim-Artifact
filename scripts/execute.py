@@ -122,7 +122,7 @@ def get_command_smartrim(df_: pd.DataFrame, dataset: str, is_baseline=False, st=
             mo = "re"
         
         cmd: list[str] = [
-            "docker", "run", "--rm", "--init",
+            "docker", "run", "--rm",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/root/VeriSmart/output",
             "--mount", f"type=bind,src={BENCH_DIR}/contracts/{dataset}/{id}.sol,dst=/root/{id}.sol,ro",
             "--volume", "smartrim-artifact-solc-select:/root/.solc-select:ro",
@@ -161,7 +161,7 @@ def get_command_rlf(df: pd.DataFrame, dataset: str):
         main_name = row['main_name']
         
         cmd: list[str] = [
-            "docker", "run", "--rm", "--init", 
+            "docker", "run", "--rm",
             "--volume", f"{ARTIFACT_REPO}/for-rlf/{id}:/rlf/input", 
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/rlf/output",
             "--entrypoint", "timeout",
@@ -213,7 +213,7 @@ def get_command_smartest(df_: pd.DataFrame, dataset: str):
             train = f"{ARTIFACT_REPO}/assets/smartest/model/{dataset}_{fold}"
             
         cmd: list[str] = [
-            "docker", "run", "--rm", "--init",
+            "docker", "run", "--rm",
             "--volume", "smartrim-artifact-solc-select:/build/.solc-select",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/build/verismart/output",
             "--volume", f"{train}:/build/verismart/src/exploit/train:ro",
@@ -247,7 +247,7 @@ def get_command_smartian(df: pd.DataFrame, dataset: str):
         id = row['id']
         
         commands.append(([
-            "docker", "run", "--rm", "--init",
+            "docker", "run", "--rm",
             "--volume", "smartrim-artifact-4smartian:/root/for-smartian:ro",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/root/output",
             "--entrypoint", "timeout",
@@ -283,7 +283,7 @@ def get_command_mythril(df: pd.DataFrame, dataset: str):
             mo = "IntegerArithmetics"
         
         commands.append(([
-            "docker", "run", "--rm", "--init",
+            "docker", "run", "--rm",
             "--volume", f"{BENCH_DIR}/contracts/{dataset}:/tmp:ro",
             "--entrypoint", "timeout",
             "mythril/myth:latest",
@@ -321,7 +321,7 @@ def get_command_lent(df: pd.DataFrame, dataset: str):
             lent_timeout = KILL_TIMEOUT
             
         commands.append(([
-            "docker", "run", "--rm", "--init",
+            "docker", "run", "--rm",
             "--volume", f"{BENCH_DIR}/contracts/{dataset}:/root/pgm:ro",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/tmp/output",
             "--entrypoint", "timeout",
@@ -357,7 +357,7 @@ def get_command_slither(df: pd.DataFrame, dataset: str):
             
             
         cmd = [
-            "docker", "run", "--rm", "--init",
+            "docker", "run", "--rm",
             "--volume", "smartrim-artifact-solc-select:/root/.solc-select:ro", 
             "--volume", f"{OUTPUT}/{id}:/root/output",
             "--mount", f"type=bind,src={BENCH_DIR}/contracts/{dataset}/{id}.sol,dst=/root/{id}.sol,ro",
@@ -383,7 +383,7 @@ def get_command_achecker(df: pd.DataFrame, dataset: str):
         id = row['id']
             
         cmd = [
-            "docker", "run", "--rm", "--init",
+            "docker", "run", "--rm",
             "--volume", "smartrim-artifact-4smartian:/home/for-smartian:ro",
             "--entrypoint", "timeout",
             "--workdir", '/home/AChecker',
@@ -410,7 +410,7 @@ def get_command_sailfish(df: pd.DataFrame, dataset: str):
         v = max_version(v, '0.4.11')
             
         cmd = [
-            "docker", "run", "--rm", "--init",
+            "docker", "run", "--rm",
             "--volume", f"{BENCH_DIR}/contracts/{dataset}:/root/pgm:ro",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/tmp/output",
             "--volume", f"smartrim-artifact-solc-select:/root/.solc-select:ro",
@@ -474,7 +474,7 @@ def get_command_efcf(df: pd.DataFrame, dataset: str):
             mo = ["--report-leaking-ether"]
             
         cmd = [
-            "docker", "run", "--rm", "--init",
+            "docker", "run", "--rm",
             "--volume", f"{BENCH_DIR}/contracts/{dataset}:/root/pgm:ro",
             "--volume", f"{ARTIFACT_REPO}/output/{id}:/tmp/output",
             "--entrypoint", "timeout",
