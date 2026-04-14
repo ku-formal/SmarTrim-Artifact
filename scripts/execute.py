@@ -89,7 +89,13 @@ def run_command(cmd: list[str], id: str, i, n):
         start = datetime.datetime.now()
         print(f"{start} {i}/{n}", flush=True)
         with open(temp_stdout_path, "wb") as f_stdout, open(temp_stderr_path, "wb") as f_stderr:
-            result = subprocess.run(cmd, stdout=f_stdout, stderr=f_stderr, cwd=get_program_cwd())
+            result = subprocess.run(
+                cmd, 
+                stdout=f_stdout, 
+                stderr=f_stderr, 
+                cwd=get_program_cwd(), 
+                start_new_session=True
+            )
         end = datetime.datetime.now()
         print(f'END {id} time:{end - start} ret:{result.returncode}', flush=True)
         os.rename(temp_stdout_path, stdout_path)
@@ -122,7 +128,7 @@ def get_command_smartrim(df_: pd.DataFrame, dataset: str, is_baseline=False, st=
             "--volume", "smartrim-artifact-solc-select:/root/.solc-select:ro",
             "--workdir", "/root/VeriSmart",
             "--entrypoint", "timeout",
-            "my-smartrim:fse26",
+            "my-smartrim:fse26-2",
             "--kill-after=10", KILL_TIMEOUT,
             "/root/VeriSmart/main.exe",
             "exploit",
