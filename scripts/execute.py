@@ -128,7 +128,7 @@ def get_command_smartrim(df_: pd.DataFrame, dataset: str, is_baseline=False, st=
             "--volume", "smartrim-artifact-solc-select:/root/.solc-select:ro",
             "--workdir", "/root/VeriSmart",
             "--entrypoint", "timeout",
-            "my-smartrim:fse26-2",
+            "my-smartrim:fse26",
             "--kill-after=10", KILL_TIMEOUT,
             "/root/VeriSmart/main.exe",
             "exploit",
